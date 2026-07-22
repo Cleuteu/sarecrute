@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SaRecrute — Recrutement vétérinaire France, Suisse, Espagne, Belgique</title>
+  <meta name="description" content="Cabinet de recrutement vétérinaire exclusivement composé de vétérinaires ayant exercé en clinique. France, Suisse, Espagne, Belgique." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='20%2014%2080%2052'%3E%3Ccircle%20cx='46'%20cy='40'%20r='24'%20fill='none'%20stroke='%236E9278'%20stroke-width='9'/%3E%3Ccircle%20cx='74'%20cy='40'%20r='24'%20fill='none'%20stroke='%23C87355'%20stroke-width='9'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #F8F4EA;
+      --warm-white: #FFFDF8;
+      --sand: #E7D8C3;
+      --sage: #6E9278;
+      --sage-dark: #426354;
+      --deep: #203832;
+      --terracotta: #C87355;
+      --terracotta-dark: #A85A3F;
+      --amber: #DCA85E;
+      --muted: #64736E;
+      --line: rgba(32, 56, 50, 0.11);
+      --line-strong: rgba(32, 56, 50, 0.18);
+      --shadow: 0 22px 55px rgba(32, 56, 50, 0.14);
+      --shadow-soft: 0 8px 24px rgba(32, 56, 50, 0.07);
+      --radius: 24px;
+      --radius-sm: 14px;
+      --display: 'Fraunces', Georgia, serif;
+      --body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--body);
+      background: var(--cream);
+      color: var(--deep);
+      line-height: 1.6;
+      overflow-x: hidden;
+      font-feature-settings: "ss01", "cv11";
+    }
+
+    /* Subtle paper texture overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(110, 146, 120, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(200, 115, 85, 0.03) 0%, transparent 50%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    h1, h2, h3 {
+      font-family: var(--display);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .container { width: min(1180px, 92%); margin: auto; position: relative; z-index: 2; }
+
+    /* ============ HEADER ============ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 244, 234, 0.85);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--display);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      font-size: 1.35rem;
+    }
+
+    .logo-mark {
+      width: 54px;
+      height: 36px;
+      flex-shrink: 0;
+      display: block;
+    }
+    .logo-mark svg { display: block; width: 100%; height: 100%; }
+    .logo-mark .ring-a { fill: none; stroke: var(--sage); }
+    .logo-mark .ring-b { fill: none; stroke: var(--terracotta); }
+    .logo-mark .lens { fill: var(--sage-dark); opacity: 0.16; }
+    .logo .logo-r { color: var(--terracotta); }
+
+    .nav-right { display: flex; align-items: center; gap: 18px; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 0.93rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+      position: relative;
+    }
+    .nav-links a:hover { color: var(--deep); }
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding: 3px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid var(--line);
+    }
+
+    .language-switch button {
+      border: none;
+      background: transparent;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      font-family: var(--body);
+    }
+    .language-switch button.active {
+      background: var(--deep);
+      color: var(--warm-white);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      background: var(--deep);
+      color: var(--warm-white);
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .nav-cta:hover { background: var(--sage-dark); transform: translateY(-1px); }
+
+    /* Mobile nav */
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--line);
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-toggle span {
+      display: block;
+      width: 18px;
+      height: 1.5px;
+      background: var(--deep);
+      position: relative;
+    }
+    .mobile-toggle span::before,
+    .mobile-toggle span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 1.5px;
+      background: var(--deep);
+    }
+    .mobile-toggle span::before { top: -6px; }
+    .mobile-toggle span::after { top: 6px; }
+
+    /* ============ BUTTONS ============ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.97rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+      border: none;
+      font-family: var(--body);
+    }
+
+    .btn-primary {
+      background: var(--deep);
+      color: var(--warm-white);
+      box-shadow: 0 10px 24px rgba(32, 56, 50, 0.22);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(32, 56, 50, 0.28);
+      background: var(--sage-dark);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--deep);
+      border: 1px solid var(--line-strong);
+    }
+    .btn-secondary:hover {
+      background: var(--warm-white);
+      border-color: var(--deep);
+    }
+
+    .btn-arrow {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .btn:hover .btn-arrow { transform: translateX(3px); }
+
+    /* ============ HERO ============ */
+    .hero {
+      padding: 90px 0 110px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(110, 146, 120, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.81rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      padding: 7px 14px;
+      background: rgba(110, 146, 120, 0.1);
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      box-shadow: 0 0 0 4px rgba(200, 115, 85, 0.18);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5.2vw, 3.9rem);
+      margin-bottom: 24px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--terracotta);
+      font-weight: 400;
+    }
+
+    .hero-lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+    .hero-lead strong {
+      color: var(--deep);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* Hero panel - editorial card stack */
+    .hero-panel {
+      position: relative;
+    }
+
+    .map-card {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      position: relative;
+    }
+
+    .map-card::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 30px;
+      right: 30px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--sage) 0%, var(--terracotta) 100%);
+      border-radius: 0 0 3px 3px;
+    }
+
+    .map-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .map-card > p {
+      color: var(--muted);
+      font-size: 0.93rem;
+      margin-bottom: 22px;
+    }
+
+    .mini-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .mini-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 12px 14px;
+      background: var(--cream);
+      border-radius: 12px;
+      border-left: 3px solid var(--sage);
+    }
+
+    .mini-item strong {
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      font-weight: 600;
+    }
+
+    .mini-item span {
+      font-size: 0.94rem;
+      color: var(--deep);
+    }
+
+    .floating-card {
+      background: var(--deep);
+      color: var(--warm-white);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      margin-top: 18px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .floating-card h3 {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--amber);
+      margin-bottom: 14px;
+      font-family: var(--body);
+    }
+
+    .profile-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      gap: 12px;
+    }
+    .profile-line:last-child { border-bottom: none; }
+
+    .profile-line strong {
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .profile-line span {
+      font-size: 0.8rem;
+      color: rgba(255, 253, 248, 0.55);
+      text-align: right;
+    }
+
+    /* ============ SECTION DEFAULTS ============ */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-title {
+      max-width: 720px;
+      margin-bottom: 60px;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 18px;
+      padding-left: 28px;
+      position: relative;
+    }
+    .section-kicker::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 18px;
+      height: 1px;
+      background: var(--terracotta);
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+      margin-bottom: 18px;
+    }
+
+    .section-title > p {
+      color: var(--muted);
+      font-size: 1.04rem;
+      max-width: 640px;
+    }
+
+    /* ============ SERVICES ============ */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      border: 1px solid var(--line);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--terracotta);
+      transition: width 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-soft);
+      border-color: var(--line-strong);
+    }
+    .service-card:hover::before { width: 100%; }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: rgba(110, 146, 120, 0.12);
+      color: var(--sage-dark);
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+    }
+    .service-icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--sage-dark);
+      stroke-width: 1.6;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .service-card:hover .service-icon {
+      background: rgba(200, 115, 85, 0.14);
+    }
+    .service-card:hover .service-icon svg {
+      stroke: var(--terracotta-dark);
+    }
+
+    .service-card h3 {
+      font-size: 1.18rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* ============ VALUE SECTION ============ */
+    .value-section {
+      background: var(--deep);
+      color: var(--warm-white);
+      border-radius: 40px;
+      margin: 0 4%;
+      padding: 90px 0;
+    }
+
+    .value-section .section-kicker { color: var(--amber); }
+    .value-section .section-kicker::before { background: var(--amber); }
+    .value-section h2 { color: var(--warm-white); }
+    .value-section .section-title > p { color: rgba(255, 253, 248, 0.7); }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .value-card {
+      padding: 28px 24px;
+      border-left: 2px solid rgba(220, 168, 94, 0.4);
+    }
+
+    .value-card h3 {
+      font-size: 1.1rem;
+      color: var(--warm-white);
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      color: rgba(255, 253, 248, 0.68);
+      font-size: 0.93rem;
+    }
+
+    /* ============ COMMITMENTS ============ */
+    .commit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .commit-card {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      padding: 30px 26px;
+      border: 1px solid var(--line);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .commit-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-soft);
+      border-color: var(--line-strong);
+    }
+
+    .commit-check {
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      background: rgba(110, 146, 120, 0.12);
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+    }
+    .commit-check svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--sage-dark);
+      stroke-width: 2.2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .commit-card h3 { font-size: 1.08rem; margin-bottom: 10px; }
+    .commit-card p { color: var(--muted); font-size: 0.92rem; }
+
+    /* ============ PROFILES ============ */
+    .profiles-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .profile-card {
+      background: var(--warm-white);
+      padding: 26px 22px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      transition: background 0.2s ease;
+    }
+    .profile-card:hover { background: var(--sand); }
+
+    .profile-card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* ============ DOMAINS ============ */
+    .domains {
+      background: var(--sand);
+      margin: 0 4%;
+      border-radius: 40px;
+    }
+
+    .domains-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .domain-card {
+      background: var(--warm-white);
+      padding: 36px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .domain-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .domain-card .domain-intro {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .domain-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .domain-list li {
+      padding: 9px 16px;
+      background: var(--cream);
+      border-radius: 999px;
+      font-size: 0.92rem;
+      color: var(--deep);
+      border: 1px solid var(--line);
+      font-weight: 500;
+    }
+
+    /* ============ METHOD ============ */
+    .method-grid {
+      display: grid;
+      gap: 0;
+    }
+
+    .method-step {
+      display: grid;
+      grid-template-columns: 80px 1fr 2.5fr;
+      gap: 30px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+    }
+    .method-step:last-child { border-bottom: none; }
+
+    .method-num {
+      font-family: var(--display);
+      font-size: 2.6rem;
+      font-weight: 400;
+      color: var(--terracotta);
+      line-height: 1;
+      font-style: italic;
+    }
+
+    .method-step h3 {
+      font-size: 1.25rem;
+    }
+
+    .method-step p {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    /* ============ DATA / METRICS ============ */
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .data-card {
+      background: var(--warm-white);
+      padding: 32px 26px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      position: relative;
+    }
+
+    .data-card strong {
+      display: block;
+      font-family: var(--display);
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: var(--sage-dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+
+    .data-card p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .data-note {
+      margin-top: 24px;
+      font-size: 0.83rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ============ TESTIMONIALS ============ */
+    .testimonials {
+      background: var(--cream);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial {
+      background: var(--warm-white);
+      padding: 36px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      position: relative;
+    }
+
+    .testimonial::before {
+      content: "“";
+      position: absolute;
+      top: 12px;
+      right: 24px;
+      font-family: var(--display);
+      font-size: 4rem;
+      color: var(--sand);
+      line-height: 1;
+    }
+
+    .testimonial-text {
+      font-family: var(--display);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--deep);
+      line-height: 1.45;
+      margin-bottom: 22px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .testimonial-author-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--sage);
+      color: var(--warm-white);
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .testimonial-author strong {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .testimonial-author span {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    .testimonials-coming {
+      grid-column: span 2;
+      text-align: center;
+      padding: 30px;
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius);
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-style: italic;
+    }
+
+    /* ============ TEAM ============ */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .team-card {
+      background: var(--warm-white);
+      padding: 36px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+    .team-card > div:last-child {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+      color: var(--warm-white);
+      display: grid;
+      place-items: center;
+      font-family: var(--display);
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      box-shadow: 0 8px 22px rgba(66, 99, 84, 0.25);
+      overflow: hidden;
+      position: relative;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .avatar.avatar-placeholder {
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,0.25), transparent 55%),
+        linear-gradient(135deg, var(--sage), var(--terracotta));
+    }
+
+    .team-contact {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      align-items: center;
+      font-size: 0.88rem;
+    }
+    .team-contact a {
+      color: var(--sage-dark);
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease, color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .team-contact a:hover {
+      color: var(--terracotta-dark);
+      border-bottom-color: var(--terracotta-dark);
+    }
+    .team-contact svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .team-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+
+    .role {
+      font-size: 0.86rem;
+      color: var(--terracotta);
+      font-weight: 500;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .team-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* ============ CONTACT ============ */
+    .contact-section {
+      padding: 100px 0;
+    }
+
+    .cta {
+      background: var(--deep);
+      color: var(--warm-white);
+      border-radius: 40px;
+      padding: 80px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(220, 168, 94, 0.15) 0%, transparent 70%);
+    }
+    .cta::after {
+      content: "";
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(200, 115, 85, 0.12) 0%, transparent 70%);
+    }
+
+    .cta > * { position: relative; z-index: 1; }
+
+    .cta h2 {
+      color: var(--warm-white);
+      font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+      max-width: 700px;
+      margin: 0 auto 18px;
+    }
+
+    .cta p {
+      color: rgba(255, 253, 248, 0.72);
+      max-width: 580px;
+      margin: 0 auto 32px;
+      font-size: 1.02rem;
+    }
+
+    .cta .btn-primary {
+      background: var(--warm-white);
+      color: var(--deep);
+    }
+    .cta .btn-primary:hover {
+      background: var(--cream);
+    }
+
+    .cta-emails {
+      margin-top: 22px;
+      font-size: 0.88rem;
+      color: rgba(255, 253, 248, 0.55);
+    }
+    .cta-emails a {
+      color: var(--amber);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .cta-emails a:hover { border-bottom-color: var(--amber); }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--cream);
+      border-top: 1px solid var(--line);
+      padding: 50px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 36px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--body);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--deep);
+      margin-bottom: 14px;
+    }
+
+    .footer-col a, .footer-col p {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--deep); }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 14px;
+      max-width: 320px;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    /* ============ LEGAL OVERLAY ============ */
+    .legal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(32, 56, 50, 0.55);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+    }
+    .legal-overlay.open { display: flex; }
+
+    .legal-modal {
+      background: var(--warm-white);
+      max-width: 700px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      border-radius: var(--radius);
+      padding: 40px 42px;
+      position: relative;
+    }
+
+    .legal-modal h2 {
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+    }
+
+    .legal-modal h3 {
+      font-size: 1rem;
+      margin-top: 22px;
+      margin-bottom: 8px;
+    }
+
+    .legal-modal p {
+      font-size: 0.93rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .legal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: var(--deep);
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 960px) {
+      .hero { padding: 60px 0 70px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 50px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .value-grid { grid-template-columns: 1fr 1fr; }
+      .commit-grid { grid-template-columns: 1fr 1fr; }
+      .profiles-grid { grid-template-columns: 1fr 1fr; }
+      .domains-grid { grid-template-columns: 1fr; }
+      .data-grid { grid-template-columns: 1fr 1fr; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .testimonials-coming { grid-column: span 1; }
+      .team-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .method-step { grid-template-columns: 60px 1fr; gap: 20px; }
+      .method-step > div:nth-child(2) { grid-column: 2; }
+      .method-step > div:nth-child(3) { grid-column: 1 / -1; padding-left: 80px; }
+      section { padding: 70px 0; }
+      .value-section, .domains { margin: 0 3%; padding: 70px 0; }
+      .cta { padding: 60px 30px; }
+      .nav-links { display: none; }
+      .mobile-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .value-grid { grid-template-columns: 1fr; }
+      .commit-grid { grid-template-columns: 1fr; }
+      .profiles-grid { grid-template-columns: 1fr; }
+      .data-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .team-card { grid-template-columns: 1fr; text-align: center; }
+      .team-card .avatar { margin: 0 auto; }
+      .legal-modal { padding: 30px 24px; }
+    }
+
+    /* Reveal animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      animation: fadeUp 0.7s ease both;
+    }
+    .reveal-delay-1 { animation-delay: 0.1s; }
+    .reveal-delay-2 { animation-delay: 0.2s; }
+    .reveal-delay-3 { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="container">
+      <a href="#" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 120 80" aria-hidden="true">
+            <path class="lens" d="M60 18a24 24 0 0 1 0 44 24 24 0 0 1 0-44z"/>
+            <circle class="ring-a" cx="46" cy="40" r="24" stroke-width="7"/>
+            <circle class="ring-b" cx="74" cy="40" r="24" stroke-width="7"/>
+          </svg>
+        </span>
+        <span class="logo-word">Sa<span class="logo-r">R</span>ecrute</span>
+      </a>
+
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#profils" data-i18n="nav.profiles">Profils</a>
+          <a href="#methode" data-i18n="nav.method">Méthode</a>
+          <a href="#engagements" data-i18n="nav.commit">Engagements</a>
+          <a href="#equipe" data-i18n="nav.team">Équipe</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+
+        <div class="language-switch" role="group" aria-label="Language">
+          <button type="button" class="active" data-lang="fr">FR</button>
+          <button type="button" data-lang="es">ES</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+
+        <a href="#contact" class="nav-cta" data-i18n="nav.cta">Prendre contact</a>
+
+        <button type="button" class="mobile-toggle" aria-label="Menu"><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span data-i18n="hero.kicker">Vétérinaires qui recrutent des vétérinaires</span>
+          </span>
+          <h1 data-i18n-html="hero.title">Des vétérinaires<br>pour recruter <em>vos équipes.</em></h1>
+          <p class="hero-lead" data-i18n-html="hero.lead">
+            <strong>SaRecrute est un cabinet exclusivement composé de vétérinaires ayant exercé en clinique.</strong>
+            Cela change la nature même des échanges avec les candidats et la précision du brief avec votre clinique : nous comprenons vos contraintes terrain, les attentes réelles des candidats et les arguments qui rendent une opportunité crédible.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary" data-i18n-html="hero.primary">Confier un recrutement <span class="btn-arrow">→</span></a>
+            <a href="#methode" class="btn btn-secondary" data-i18n="hero.secondary">Voir notre méthode</a>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal reveal-delay-2" aria-label="Infographie SaRecrute">
+          <div class="map-card">
+            <h3 data-i18n="hero.cardTitle">Une lecture métier + marché</h3>
+            <p data-i18n="hero.cardText">Les informations clés sont intégrées dès le brief pour cibler les bons candidats et présenter la clinique avec justesse.</p>
+            <div class="mini-grid">
+              <div class="mini-item">
+                <strong data-i18n="hero.info1.label">Marchés</strong>
+                <span data-i18n="hero.info1.text">France · Suisse · Espagne · Belgique</span>
+              </div>
+              <div class="mini-item">
+                <strong data-i18n="hero.info2.label">Méthode</strong>
+                <span data-i18n="hero.info2.text">Approche directe + réseau vétérinaire</span>
+              </div>
+              <div class="mini-item">
+                <strong data-i18n="hero.info3.label">Structures</strong>
+                <span data-i18n="hero.info3.text">Cliniques indépendantes, réseaux, groupes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-card">
+            <h3 data-i18n="hero.floatTitle">Profils accompagnés</h3>
+            <div class="profile-line">
+              <strong data-i18n="hero.float1">Vétérinaires généralistes</strong>
+              <span data-i18n="hero.float1b">Junior à senior</span>
+            </div>
+            <div class="profile-line">
+              <strong data-i18n="hero.float2">Tous domaines</strong>
+              <span data-i18n="hero.float2b">Canine, rural, mixte, NAC, équine</span>
+            </div>
+            <div class="profile-line">
+              <strong data-i18n="hero.float3">Spécialistes & référés</strong>
+              <span data-i18n="hero.float3b">Imagerie, cardio, chirurgie, urgences</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-kicker" data-i18n="services.kicker">Services</div>
+          <h2 data-i18n="services.title">Un cabinet spécialisé dans le recrutement vétérinaire.</h2>
+          <p data-i18n="services.lead">SaRecrute apporte une compréhension concrète de la clinique : ses rythmes, ses urgences et ses besoins humains.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Stéthoscope -->
+              <svg viewBox="0 0 24 24"><path d="M5 3v6a4 4 0 0 0 8 0V3"/><path d="M9 13v3a5 5 0 0 0 10 0v-2"/><circle cx="19" cy="11" r="2"/></svg>
+            </div>
+            <h3 data-i18n="services.card1.title">Recruteurs vétérinaires</h3>
+            <p data-i18n="services.card1.text">Les échanges sont conduits par des vétérinaires ayant exercé en clinique. Cela change le brief, la crédibilité et la lecture des enjeux médicaux.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Clipboard / dossier de recrutement -->
+              <svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4v-1h6v1"/><path d="M9 10h6"/><path d="M9 14h6"/><path d="M9 18h4"/></svg>
+            </div>
+            <h3 data-i18n="services.card2.title">Recrutement complet</h3>
+            <p data-i18n="services.card2.text">Cadrage, analyse marché, rédaction d'offre, diffusion, approche directe, préqualification, suivi des entretiens et intégration.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Cible / approche directe -->
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <h3 data-i18n="services.card3.title">Approche directe</h3>
+            <p data-i18n="services.card3.text">Identification proactive des profils qui ne sont pas en recherche active mais qui correspondent au poste et au projet de la clinique.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Étincelle / valorisation -->
+              <svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z"/></svg>
+            </div>
+            <h3 data-i18n="services.card4.title">Valorisation de l'opportunité</h3>
+            <p data-i18n="services.card4.text">Mise en récit du poste pour le rendre lisible et désirable : projet médical, équipe, équipements, perspectives, qualité de vie.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Globe / mobilité internationale -->
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0 -18z"/></svg>
+            </div>
+            <h3 data-i18n="services.card5.title">Mobilité ciblée & expatriation</h3>
+            <p data-i18n="services.card5.text">Accompagnement des candidats sur les questions d'équivalence de diplôme, de logement et d'installation dans un nouveau pays.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <!-- Badge de qualification -->
+              <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 4.5 -3.4 8.4 -8 9c-4.6 -0.6 -8 -4.5 -8 -9V7z"/><path d="M9 12l2 2 4 -4"/></svg>
+            </div>
+            <h3 data-i18n="services.card6.title">Qualification clinique</h3>
+            <p data-i18n="services.card6.text">Évaluation précise du niveau réel : pratiques maîtrisées, autonomie, gestes chirurgicaux, gestion des urgences, posture en équipe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE -->
+    <section class="value-section">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-kicker" data-i18n="value.kicker">Pourquoi SaRecrute</div>
+          <h2 data-i18n="value.title">Du temps gagné, un réseau activé, une parole crédible.</h2>
+          <p data-i18n="value.lead">Confier le recrutement à un cabinet vétérinaire change la nature même de la conversation avec les candidats.</p>
+        </div>
+        <div class="value-grid">
+          <div class="value-card">
+            <h3 data-i18n="value.card1.title">Moins d'heures hors clinique</h3>
+            <p data-i18n="value.card1.text">Tri, échanges et préqualification sont assurés par le cabinet. Vous voyez uniquement les candidats pertinents.</p>
+          </div>
+          <div class="value-card">
+            <h3 data-i18n="value.card2.title">Un réseau bâti dans le temps</h3>
+            <p data-i18n="value.card2.text">Un vivier construit sur la durée, avec des candidats suivis sur plusieurs années dans leur trajectoire.</p>
+          </div>
+          <div class="value-card">
+            <h3 data-i18n="value.card3.title">Des candidats mieux compris</h3>
+            <p data-i18n="value.card3.text">Les questions cliniques sont traitées entre confrères : cela rassure et révèle ce qu'un recruteur généraliste ne voit pas.</p>
+          </div>
+          <div class="value-card">
+            <h3 data-i18n="value.card4.title">Une vraie lecture du poste</h3>
+            <p data-i18n="value.card4.text">Plateau technique, charge d'urgences, gardes, logiciel métier : nous parlons votre langue avant de proposer un candidat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="equipe">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-kicker" data-i18n="team.kicker">Équipe</div>
+          <h2 data-i18n="team.title">Deux vétérinaires recruteuses, quatre marchés prioritaires.</h2>
+          <p data-i18n="team.lead">SaRecrute s'appuie sur des recruteuses qui ont connu la réalité de la clinique. Cette expérience rend les échanges plus précis avec les clients comme avec les candidats.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="avatar" aria-label="Sarah Vanhersel">
+              <img src="images/sarah.jpeg" alt="Sarah Vanhersel" style="object-position: 26% 28%;" onerror="this.style.display='none';this.parentNode.classList.add('avatar-placeholder');this.parentNode.textContent='SV';">
+            </div>
+            <div>
+              <h3>Sarah Vanhersel</h3>
+              <div class="role" data-i18n="team.sarah.role">Vétérinaire recruteuse · France & Suisse</div>
+              <p data-i18n="team.sarah.text">Spécialisée dans l'accompagnement des cliniques et des candidats vétérinaires sur les marchés français et suisse. Son expérience clinique lui permet de comprendre les besoins médicaux, humains et organisationnels des structures.</p>
+              <div class="team-contact">
+                <a href="mailto:sarah.vet@sarecrute.com">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                  sarah.vet@sarecrute.com
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="team-card">
+            <div class="avatar" aria-label="Pamela Rodriguez">
+              <img src="images/pamela.jpeg" alt="Pamela Rodriguez" style="object-position: 50% 22%;" onerror="this.style.display='none';this.parentNode.classList.add('avatar-placeholder');this.parentNode.textContent='PR';">
+            </div>
+            <div>
+              <h3>Pamela Rodriguez</h3>
+              <div class="role" data-i18n="team.pamela.role">Vétérinaire recruteuse · Espagne & Belgique</div>
+              <p data-i18n="team.pamela.text">Spécialisée dans les recrutements vétérinaires sur les marchés espagnol et belge. Sa connaissance du terrain facilite l'analyse des attentes candidats, de la mobilité et des spécificités locales.</p>
+              <div class="team-contact">
+                <a href="mailto:pamela.vet@sarecrute.com">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                  pamela.vet@sarecrute.com
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILES -->
+    <section id="profils">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-kicker" data-i18n="profiles.kicker">Profils</div>
+          <h2 data-i18n="profiles.title">Du premier poste au profil spécialiste.</h2>
+          <p data-i18n="profiles.lead">SaRecrute accompagne tous les niveaux d'expérience, sur tous les types de structure.</p>
+        </div>
+        <div class="profiles-grid">
+          <article class="profile-card">
+            <h3 data-i18n="profiles.junior.title">Vétérinaire junior</h3>
+            <p data-i18n="profiles.junior.text">0–2 ans d'expérience, en recherche d'un cadre formateur.</p>
+          </article>
+          <article class="profile-card">
+            <h3 data-i18n="profiles.mid.title">Vétérinaire intermédiaire</h3>
+            <p data-i18n="profiles.mid.text">2–7 ans, autonome, à la recherche d'un projet clair.</p>
+          </article>
+          <article class="profile-card">
+            <h3 data-i18n="profiles.senior.title">Vétérinaire senior</h3>
+            <p data-i18n="profiles.senior.text">7 ans et plus, expertise médicale et posture managériale.</p>
+          </article>
+          <article class="profile-card">
+            <h3 data-i18n="profiles.specialist.title">Spécialiste</h3>
+            <p data-i18n="profiles.specialist.text">Diplôme européen ou résidence, pratique référée.</p>
+          </article>
+          <article class="profile-card">
+            <h3 data-i18n="profiles.intern.title">Interne & assistant</h3>
+            <p data-i18n="profiles.intern.text">Profils en formation, mobilité possible vers la spécialité.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOMAINS -->
+    <section id="domaines" class="domains">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-kicker" data-i18n="domains.kicker">Domaines</div>
+          <h2 data-i18n="domains.title">Des réseaux dans toutes les pratiques vétérinaires.</h2>
+        </div>
+        <div class="domains-grid">
+          <div class="domain-card">
+            <h3 data-i18n="domains.practice.title">Pratiques du cabinet</h3>
+            <p class="domain-intro" data-i18n="domains.practice.intro">Tous types de structures et d'orientation médicale, de la clinique de proximité aux établissements à plateau technique élargi.</p>
+            <ul class="domain-list">
+              <li data-i18n="domains.tag1">Canine</li>
+              <li data-i18n="domains.tag3">Rurale</li>
+              <li data-i18n="domains.tag4">Mixte</li>
+              <li data-i18n="domains.tag5">NAC</li>
+              <li data-i18n="domains.tag6">Équine</li>
+              <li data-i18n="domains.tag16">Ovins</li>
+              <li data-i18n="domains.tag17">Laitier</li>
+              <li data-i18n="domains.tag18">Porcin</li>
+              <li data-i18n="domains.tag19">Allaitant</li>
+            </ul>
+          </div>
+          <div class="domain-card">
+            <h3 data-i18n="domains.specialty.title">Spécialités & référé</h3>
+            <p class="domain-intro" data-i18n="domains.specialty.intro">Profils référés et expertises pointues, pour les cliniques qui développent un pôle de spécialité ou une activité d'urgence.</p>
+            <ul class="domain-list">
+              <li data-i18n="domains.tag8">Imagerie</li>
+              <li data-i18n="domains.tag9">Cardiologie</li>
+              <li data-i18n="domains.tag10">Chirurgie</li>
+              <li data-i18n="domains.tag11">Médecine interne</li>
+              <li data-i18n="domains.tag12">Dermatologie</li>
+              <li data-i18n="domains.tag13">Ophtalmologie</li>
+              <li data-i18n="domains.tag14">Anesthésie</li>
+              <li data-i18n="domains.tag15">Urgence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHOD -->
+    <section id="methode">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-kicker" data-i18n="method.kicker">Méthode</div>
+          <h2 data-i18n="method.title">Un recrutement mené avec une vraie culture clinique.</h2>
+          <p data-i18n="method.lead">Quatre étapes structurées, du brief jusqu'à l'intégration du candidat.</p>
+        </div>
+        <div class="method-grid">
+          <div class="method-step">
+            <div class="method-num">01</div>
+            <div><h3 data-i18n="method.step1.title">Cadrer le besoin</h3></div>
+            <div><p data-i18n="method.step1.text">Brief médical et humain, lecture du marché local, calibrage du profil cible et des arguments différenciants.</p></div>
+          </div>
+          <div class="method-step">
+            <div class="method-num">02</div>
+            <div><h3 data-i18n="method.step2.title">Valoriser l'opportunité</h3></div>
+            <div><p data-i18n="method.step2.text">Rédaction d'offre, diffusion multi-canaux, mise en récit du projet de la clinique pour parler aux bons candidats.</p></div>
+          </div>
+          <div class="method-step">
+            <div class="method-num">03</div>
+            <div><h3 data-i18n="method.step3.title">Approcher & qualifier</h3></div>
+            <div><p data-i18n="method.step3.text">Approche directe et activation du vivier, puis qualification clinique en profondeur menée entre confrères, de vétérinaire à vétérinaire. Nous ne présentons que les candidats réellement pertinents.</p></div>
+          </div>
+          <div class="method-step">
+            <div class="method-num">04</div>
+            <div><h3 data-i18n="method.step4.title">Suivre jusqu'à l'intégration</h3></div>
+            <div><p data-i18n="method.step4.text">Points réguliers avec la clinique et le candidat pendant la période d'essai : nous restons présents jusqu'à l'intégration effective, pas seulement jusqu'à la signature.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMITMENTS -->
+    <section id="engagements">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-kicker" data-i18n="commit.kicker">Nos engagements</div>
+          <h2 data-i18n="commit.title">Un partenariat fondé sur la confiance.</h2>
+          <p data-i18n="commit.lead">La confiance est la base de tout partenariat durable. Nous nous y engageons concrètement, à chaque étape.</p>
+        </div>
+        <div class="commit-grid">
+          <article class="commit-card">
+            <div class="commit-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3 data-i18n="commit.card1.title">Honoraires au succès</h3>
+            <p data-i18n="commit.card1.text">Nos honoraires ne sont dus qu'en cas de recrutement finalisé, à la prise de poste effective du candidat.</p>
+          </article>
+          <article class="commit-card">
+            <div class="commit-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3 data-i18n="commit.card2.title">Aucun démarchage</h3>
+            <p data-i18n="commit.card2.text">Nous ne démarchons jamais les vétérinaires que nous avons placés dans les cliniques que nous accompagnons.</p>
+          </article>
+          <article class="commit-card">
+            <div class="commit-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3 data-i18n="commit.card3.title">Confidentialité totale</h3>
+            <p data-i18n="commit.card3.text">Toutes les informations échangées, côté clinique comme côté candidat, restent strictement confidentielles.</p>
+          </article>
+          <article class="commit-card">
+            <div class="commit-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3 data-i18n="commit.card4.title">Transparence à chaque étape</h3>
+            <p data-i18n="commit.card4.text">Vous savez toujours où en est votre recrutement : points réguliers et visibilité complète sur l'avancement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA -->
+    <section id="data">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-kicker" data-i18n="data.kicker">Indicateurs</div>
+          <h2 data-i18n="data.title">Des repères concrets pour accélérer vos recrutements.</h2>
+          <p data-i18n="data.lead">Une approche structurée permet de lancer rapidement la recherche, d'activer plusieurs canaux et de sécuriser l'intégration.</p>
+        </div>
+        <div class="data-grid">
+          <article class="data-card">
+            <strong data-i18n="data.card1.value">3 jours</strong>
+            <p data-i18n="data.card1.text">En moyenne pour présenter une première candidature qualifiée après le lancement de la mission.</p>
+          </article>
+          <article class="data-card">
+            <strong data-i18n="data.card2.value">97%</strong>
+            <p data-i18n="data.card2.text">Des candidats recrutés ont passé leur période d'essai.</p>
+          </article>
+          <article class="data-card">
+            <strong data-i18n="data.card3.value">6 semaines</strong>
+            <p data-i18n="data.card3.text">Délai moyen pour la signature de la promesse d'embauche après lancement de la mission.</p>
+          </article>
+          <article class="data-card">
+            <strong data-i18n="data.card4.value">40+</strong>
+            <p data-i18n="data.card4.text">Candidats en moyenne en recherche active ou passive dans notre vivier.</p>
+          </article>
+        </div>
+        <p class="data-note" data-i18n="data.note">Données moyennes observées sur les missions menées en 2025.</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <div class="section-kicker" data-i18n="testimonials.kicker">Ils nous font confiance</div>
+          <h2 data-i18n="testimonials.title">La parole de cliniques et de candidats.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial">
+            <p class="testimonial-text" data-i18n="testimonials.t1.text">« Nous cherchions un vétérinaire senior avec une vraie appétence pour la chirurgie depuis plus de six mois. SaRecrute a compris notre projet médical en un seul brief. Trois candidatures pertinentes en deux semaines, et un recrutement signé dans la foulée. »</p>
+            <div class="testimonial-author">
+              <div class="testimonial-author-mark">DM</div>
+              <div>
+                <strong data-i18n="testimonials.t1.name">Dr. David Marchand</strong>
+                <span data-i18n="testimonials.t1.role">Clinique vétérinaire des Cèdres · Lyon</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial">
+            <p class="testimonial-text" data-i18n="testimonials.t2.text">« J'ai apprécié de discuter avec une consœur qui connaît la réalité du terrain. Les questions sur le plateau technique, les gardes, le rythme : tout était précis. Mon installation en Suisse a été grandement facilitée. »</p>
+            <div class="testimonial-author">
+              <div class="testimonial-author-mark">CL</div>
+              <div>
+                <strong data-i18n="testimonials.t2.name">Dr. Claire Lemoine</strong>
+                <span data-i18n="testimonials.t2.role">Vétérinaire généraliste · recrutée à Genève</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial">
+            <p class="testimonial-text" data-i18n="testimonials.t3.text">« SaRecrute a su présenter notre clinique avec justesse, sans survendre le poste. Les candidats qui sont venus en entretien étaient déjà convaincus du projet. C'est un gain de temps considérable pour l'équipe. »</p>
+            <div class="testimonial-author">
+              <div class="testimonial-author-mark">SB</div>
+              <div>
+                <strong data-i18n="testimonials.t3.name">Dr. Sophie Berthier</strong>
+                <span data-i18n="testimonials.t3.role">Hôpital vétérinaire Atlantique · Bordeaux</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial">
+            <p class="testimonial-text" data-i18n="testimonials.t4.text">« Je n'étais pas en recherche active. L'approche a été directe, claire, sans baratin commercial. La clinique correspondait vraiment à ce que je voulais : équipe stable, projet médical solide. Un an plus tard, je n'ai aucun regret. »</p>
+            <div class="testimonial-author">
+              <div class="testimonial-author-mark">AT</div>
+              <div>
+                <strong data-i18n="testimonials.t4.name">Dr. Antoine Tessier</strong>
+                <span data-i18n="testimonials.t4.role">Spécialiste imagerie · recruté à Bruxelles</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="cta">
+          <div class="section-kicker" style="color: var(--amber); justify-self: center;" data-i18n="contact.kicker">Contact</div>
+          <h2 data-i18n="contact.title">Vous recrutez un vétérinaire ou vous préparez votre prochain mouvement ?</h2>
+          <p data-i18n="contact.lead">Échangeons sur votre besoin : type de profil, pratique recherchée, marché ciblé, niveau d'urgence et arguments à mettre en avant.</p>
+          <a href="mailto:contact@sarecrute.com?subject=Demande%20de%20contact%20SaRecrute&body=Bonjour%2C%0A%0A-%20Structure%20%2F%20nom%20%3A%0A-%20Marché%20ciblé%20(France%2C%20Suisse%2C%20Espagne%2C%20Belgique)%20%3A%0A-%20Profil%20recherché%20%3A%0A-%20Niveau%20d'urgence%20%3A%0A-%20Message%20%3A%0A%0AMerci%20%21" class="btn btn-primary" data-i18n-html="contact.button">Écrire à SaRecrute <span class="btn-arrow">→</span></a>
+          <div class="cta-emails">
+            <span data-i18n="contact.direct">Ou directement :</span>
+            <a href="mailto:sarah.vet@sarecrute.com">sarah.vet@sarecrute.com</a> ·
+            <a href="mailto:pamela.vet@sarecrute.com">pamela.vet@sarecrute.com</a>
+          </div>
+          <div class="cta-emails" style="margin-top: 8px;">
+            <a href="tel:+33675083886">+33 6 75 08 38 86</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-mark">
+              <svg viewBox="0 0 120 80" aria-hidden="true">
+                <path class="lens" d="M60 18a24 24 0 0 1 0 44 24 24 0 0 1 0-44z"/>
+                <circle class="ring-a" cx="46" cy="40" r="24" stroke-width="7"/>
+                <circle class="ring-b" cx="74" cy="40" r="24" stroke-width="7"/>
+              </svg>
+            </span>
+            <span class="logo-word">Sa<span class="logo-r">R</span>ecrute</span>
+          </a>
+          <p data-i18n="footer.tagline">Vétérinaires qui recrutent des vétérinaires. Un cabinet exclusivement composé de praticiens ayant exercé en clinique.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col1">Marchés</h4>
+          <p data-i18n="footer.markets">France · Suisse · Espagne · Belgique</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col2">Informations</h4>
+          <a href="#" data-legal="mentions" data-i18n="footer.mentions">Mentions légales</a>
+          <a href="#" data-legal="privacy" data-i18n="footer.privacy">Politique de confidentialité</a>
+          <a href="mailto:contact@sarecrute.com">contact@sarecrute.com</a>
+          <a href="tel:+33675083886">+33 6 75 08 38 86</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copy">© 2026 SaRecrute. Tous droits réservés.</span>
+        <span data-i18n="footer.gdpr">Données traitées dans le respect du RGPD.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LEGAL MODALS -->
+  <div class="legal-overlay" id="legal-overlay">
+    <div class="legal-modal">
+      <button type="button" class="legal-close" aria-label="Fermer">×</button>
+      <div id="legal-content"></div>
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      fr: {
+        "nav.services": "Services",
+        "nav.profiles": "Profils",
+        "nav.method": "Méthode",
+        "nav.commit": "Engagements",
+        "nav.team": "Équipe",
+        "nav.contact": "Contact",
+        "nav.cta": "Prendre contact",
+
+        "hero.kicker": "Vétérinaires qui recrutent des vétérinaires",
+        "hero.title": "Des vétérinaires<br>pour recruter <em>vos équipes.</em>",
+        "hero.lead": "<strong>SaRecrute est un cabinet exclusivement composé de vétérinaires ayant exercé en clinique.</strong> Cela change la nature même des échanges avec les candidats et la précision du brief avec votre clinique : nous comprenons vos contraintes terrain, les attentes réelles des candidats et les arguments qui rendent une opportunité crédible.",
+        "hero.primary": "Confier un recrutement <span class=\"btn-arrow\">→</span>",
+        "hero.secondary": "Voir notre méthode",
+        "hero.cardTitle": "Une lecture métier + marché",
+        "hero.cardText": "Les informations clés sont intégrées dès le brief pour cibler les bons candidats et présenter la clinique avec justesse.",
+        "hero.info1.label": "Marchés", "hero.info1.text": "France · Suisse · Espagne · Belgique",
+        "hero.info2.label": "Méthode", "hero.info2.text": "Approche directe + réseau vétérinaire",
+        "hero.info3.label": "Structures", "hero.info3.text": "Cliniques indépendantes, réseaux, groupes",
+        "hero.floatTitle": "Profils accompagnés",
+        "hero.float1": "Vétérinaires généralistes", "hero.float1b": "Junior à senior",
+        "hero.float2": "Tous domaines", "hero.float2b": "Canine, rural, mixte, NAC, équine",
+        "hero.float3": "Spécialistes & référés", "hero.float3b": "Imagerie, cardio, chirurgie, urgences",
+
+        "services.kicker": "Services",
+        "services.title": "Un cabinet spécialisé dans le recrutement vétérinaire.",
+        "services.lead": "SaRecrute apporte une compréhension concrète de la clinique : ses rythmes, ses urgences et ses besoins humains.",
+        "services.card1.title": "Recruteurs vétérinaires",
+        "services.card1.text": "Les échanges sont conduits par des vétérinaires ayant exercé en clinique. Cela change le brief, la crédibilité et la lecture des enjeux médicaux.",
+        "services.card2.title": "Recrutement complet",
+        "services.card2.text": "Cadrage, analyse marché, rédaction d'offre, diffusion, approche directe, préqualification, suivi des entretiens et intégration.",
+        "services.card3.title": "Approche directe",
+        "services.card3.text": "Identification proactive des profils qui ne sont pas en recherche active mais qui correspondent au poste et au projet de la clinique.",
+        "services.card4.title": "Valorisation de l'opportunité",
+        "services.card4.text": "Mise en récit du poste pour le rendre lisible et désirable : projet médical, équipe, équipements, perspectives, qualité de vie.",
+        "services.card5.title": "Mobilité ciblée & expatriation",
+        "services.card5.text": "Accompagnement des candidats sur les questions d'équivalence de diplôme, de logement et d'installation dans un nouveau pays.",
+        "services.card6.title": "Qualification clinique",
+        "services.card6.text": "Évaluation précise du niveau réel : pratiques maîtrisées, autonomie, gestes chirurgicaux, gestion des urgences, posture en équipe.",
+
+        "value.kicker": "Pourquoi SaRecrute",
+        "value.title": "Du temps gagné, un réseau activé, une parole crédible.",
+        "value.lead": "Confier le recrutement à un cabinet vétérinaire change la nature même de la conversation avec les candidats.",
+        "value.card1.title": "Moins d'heures hors clinique",
+        "value.card1.text": "Tri, échanges et préqualification sont assurés par le cabinet. Vous voyez uniquement les candidats pertinents.",
+        "value.card2.title": "Un réseau bâti dans le temps",
+        "value.card2.text": "Un vivier construit sur la durée, avec des candidats suivis sur plusieurs années dans leur trajectoire.",
+        "value.card3.title": "Des candidats mieux compris",
+        "value.card3.text": "Les questions cliniques sont traitées entre confrères : cela rassure et révèle ce qu'un recruteur généraliste ne voit pas.",
+        "value.card4.title": "Une vraie lecture du poste",
+        "value.card4.text": "Plateau technique, charge d'urgences, gardes, logiciel métier : nous parlons votre langue avant de proposer un candidat.",
+
+        "profiles.kicker": "Profils",
+        "profiles.title": "Du premier poste au profil spécialiste.",
+        "profiles.lead": "SaRecrute accompagne tous les niveaux d'expérience, sur tous les types de structure.",
+        "profiles.junior.title": "Vétérinaire junior", "profiles.junior.text": "0–2 ans d'expérience, en recherche d'un cadre formateur.",
+        "profiles.mid.title": "Vétérinaire intermédiaire", "profiles.mid.text": "2–7 ans, autonome, à la recherche d'un projet clair.",
+        "profiles.senior.title": "Vétérinaire senior", "profiles.senior.text": "7 ans et plus, expertise médicale et posture managériale.",
+        "profiles.specialist.title": "Spécialiste", "profiles.specialist.text": "Diplôme européen ou résidence, pratique référée.",
+        "profiles.intern.title": "Interne & assistant", "profiles.intern.text": "Profils en formation, mobilité possible vers la spécialité.",
+
+        "domains.kicker": "Domaines",
+        "domains.title": "Des réseaux dans toutes les pratiques vétérinaires.",
+        "domains.practice.title": "Pratiques du cabinet",
+        "domains.practice.intro": "Tous types de structures et d'orientation médicale, de la clinique de proximité aux établissements à plateau technique élargi.",
+        "domains.specialty.title": "Spécialités & référé",
+        "domains.specialty.intro": "Profils référés et expertises pointues, pour les cliniques qui développent un pôle de spécialité ou une activité d'urgence.",
+        "domains.tag1": "Canine", "domains.tag3": "Rurale", "domains.tag4": "Mixte",
+        "domains.tag5": "NAC", "domains.tag6": "Équine",
+        "domains.tag16": "Ovins", "domains.tag17": "Laitier", "domains.tag18": "Porcin", "domains.tag19": "Allaitant",
+        "domains.tag8": "Imagerie", "domains.tag9": "Cardiologie", "domains.tag10": "Chirurgie",
+        "domains.tag11": "Médecine interne", "domains.tag12": "Dermatologie", "domains.tag13": "Ophtalmologie",
+        "domains.tag14": "Anesthésie", "domains.tag15": "Urgence",
+
+        "method.kicker": "Méthode",
+        "method.title": "Un recrutement mené avec une vraie culture clinique.",
+        "method.lead": "Quatre étapes structurées, du brief jusqu'à l'intégration du candidat.",
+        "method.step1.title": "Cadrer le besoin", "method.step1.text": "Brief médical et humain, lecture du marché local, calibrage du profil cible et des arguments différenciants.",
+        "method.step2.title": "Valoriser l'opportunité", "method.step2.text": "Rédaction d'offre, diffusion multi-canaux, mise en récit du projet de la clinique pour parler aux bons candidats.",
+        "method.step3.title": "Approcher & qualifier", "method.step3.text": "Approche directe et activation du vivier, puis qualification clinique en profondeur menée entre confrères, de vétérinaire à vétérinaire. Nous ne présentons que les candidats réellement pertinents.",
+        "method.step4.title": "Suivre jusqu'à l'intégration", "method.step4.text": "Points réguliers avec la clinique et le candidat pendant la période d'essai : nous restons présents jusqu'à l'intégration effective, pas seulement jusqu'à la signature.",
+
+        "commit.kicker": "Nos engagements",
+        "commit.title": "Un partenariat fondé sur la confiance.",
+        "commit.lead": "La confiance est la base de tout partenariat durable. Nous nous y engageons concrètement, à chaque étape.",
+        "commit.card1.title": "Honoraires au succès",
+        "commit.card1.text": "Nos honoraires ne sont dus qu'en cas de recrutement finalisé, à la prise de poste effective du candidat.",
+        "commit.card2.title": "Aucun démarchage",
+        "commit.card2.text": "Nous ne démarchons jamais les vétérinaires que nous avons placés dans les cliniques que nous accompagnons.",
+        "commit.card3.title": "Confidentialité totale",
+        "commit.card3.text": "Toutes les informations échangées, côté clinique comme côté candidat, restent strictement confidentielles.",
+        "commit.card4.title": "Transparence à chaque étape",
+        "commit.card4.text": "Vous savez toujours où en est votre recrutement : points réguliers et visibilité complète sur l'avancement.",
+
+        "data.kicker": "Indicateurs",
+        "data.title": "Des repères concrets pour accélérer vos recrutements.",
+        "data.lead": "Une approche structurée permet de lancer rapidement la recherche, d'activer plusieurs canaux et de sécuriser l'intégration.",
+        "data.card1.value": "3 jours", "data.card1.text": "En moyenne pour présenter une première candidature qualifiée après le lancement de la mission.",
+        "data.card2.value": "97%", "data.card2.text": "Des candidats recrutés ont passé leur période d'essai.",
+        "data.card3.value": "6 semaines", "data.card3.text": "Délai moyen pour la signature de la promesse d'embauche après lancement de la mission.",
+        "data.card4.value": "40+", "data.card4.text": "Candidats en moyenne en recherche active ou passive dans notre vivier.",
+        "data.note": "Données moyennes observées sur les missions menées en 2025.",
+
+        "testimonials.kicker": "Ils nous font confiance",
+        "testimonials.title": "La parole de cliniques et de candidats.",
+        "testimonials.t1.text": "« Nous cherchions un vétérinaire senior avec une vraie appétence pour la chirurgie depuis plus de six mois. SaRecrute a compris notre projet médical en un seul brief. Trois candidatures pertinentes en deux semaines, et un recrutement signé dans la foulée. »",
+        "testimonials.t1.name": "Dr. David Marchand",
+        "testimonials.t1.role": "Clinique vétérinaire des Cèdres · Lyon",
+        "testimonials.t2.text": "« J'ai apprécié de discuter avec une consœur qui connaît la réalité du terrain. Les questions sur le plateau technique, les gardes, le rythme : tout était précis. Mon installation en Suisse a été grandement facilitée. »",
+        "testimonials.t2.name": "Dr. Claire Lemoine",
+        "testimonials.t2.role": "Vétérinaire généraliste · recrutée à Genève",
+        "testimonials.t3.text": "« SaRecrute a su présenter notre clinique avec justesse, sans survendre le poste. Les candidats qui sont venus en entretien étaient déjà convaincus du projet. C'est un gain de temps considérable pour l'équipe. »",
+        "testimonials.t3.name": "Dr. Sophie Berthier",
+        "testimonials.t3.role": "Hôpital vétérinaire Atlantique · Bordeaux",
+        "testimonials.t4.text": "« Je n'étais pas en recherche active. L'approche a été directe, claire, sans baratin commercial. La clinique correspondait vraiment à ce que je voulais : équipe stable, projet médical solide. Un an plus tard, je n'ai aucun regret. »",
+        "testimonials.t4.name": "Dr. Antoine Tessier",
+        "testimonials.t4.role": "Spécialiste imagerie · recruté à Bruxelles",
+
+        "team.kicker": "Équipe",
+        "team.title": "Deux vétérinaires recruteuses, quatre marchés prioritaires.",
+        "team.lead": "SaRecrute s'appuie sur des recruteuses qui ont connu la réalité de la clinique. Cette expérience rend les échanges plus précis avec les clients comme avec les candidats.",
+        "team.sarah.role": "Vétérinaire recruteuse · France & Suisse",
+        "team.sarah.text": "Spécialisée dans l'accompagnement des cliniques et des candidats vétérinaires sur les marchés français et suisse. Son expérience clinique lui permet de comprendre les besoins médicaux, humains et organisationnels des structures.",
+        "team.pamela.role": "Vétérinaire recruteuse · Espagne & Belgique",
+        "team.pamela.text": "Spécialisée dans les recrutements vétérinaires sur les marchés espagnol et belge. Sa connaissance du terrain facilite l'analyse des attentes candidats, de la mobilité et des spécificités locales.",
+
+        "contact.kicker": "Contact",
+        "contact.title": "Vous recrutez un vétérinaire ou vous préparez votre prochain mouvement ?",
+        "contact.lead": "Échangeons sur votre besoin : type de profil, pratique recherchée, marché ciblé, niveau d'urgence et arguments à mettre en avant.",
+        "contact.button": "Écrire à SaRecrute <span class=\"btn-arrow\">→</span>",
+        "contact.direct": "Ou directement :",
+
+        "footer.tagline": "Vétérinaires qui recrutent des vétérinaires. Un cabinet exclusivement composé de praticiens ayant exercé en clinique.",
+        "footer.col1": "Marchés",
+        "footer.markets": "France · Suisse · Espagne · Belgique",
+        "footer.col2": "Informations",
+        "footer.mentions": "Mentions légales",
+        "footer.privacy": "Politique de confidentialité",
+        "footer.copy": "© 2026 SaRecrute. Tous droits réservés.",
+        "footer.gdpr": "Données traitées dans le respect du RGPD.",
+
+        "legal.mentions.title": "Mentions légales",
+        "legal.mentions.body": "<h3>Éditeur du site</h3><p>SaRecrute — Cabinet de recrutement vétérinaire.</p><p>Email : contact@sarecrute.com</p><h3>Hébergement</h3><p>Le site est hébergé par [à compléter avec le nom et l'adresse de l'hébergeur].</p><h3>Propriété intellectuelle</h3><p>L'ensemble des contenus présents sur ce site (textes, visuels, identité graphique) est la propriété de SaRecrute, sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.</p><h3>Responsabilité</h3><p>SaRecrute s'efforce d'assurer l'exactitude des informations diffusées sur ce site mais ne peut garantir l'absence d'erreur. La responsabilité de SaRecrute ne saurait être engagée pour tout dommage résultant de l'utilisation du site.</p>",
+        "legal.privacy.title": "Politique de confidentialité",
+        "legal.privacy.body": "<h3>Données collectées</h3><p>SaRecrute collecte des données personnelles dans le cadre strict de son activité de recrutement vétérinaire : informations de contact, parcours professionnel, attentes en matière de poste, et toute information communiquée volontairement par les candidats et les clients.</p><h3>Finalité</h3><p>Ces données sont utilisées uniquement pour mener les missions de recrutement, mettre en relation candidats et cliniques, et assurer le suivi des prestations.</p><h3>Conservation</h3><p>Les données sont conservées pendant la durée nécessaire à la mission, puis archivées conformément aux obligations légales.</p><h3>Vos droits (RGPD)</h3><p>Conformément au Règlement Général sur la Protection des Données, vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de vos données. Pour exercer ces droits, contactez-nous à : contact@sarecrute.com</p><h3>Cookies</h3><p>Ce site n'utilise pas de cookies de suivi tiers.</p>"
+      },
+      es: {
+        "nav.services": "Servicios",
+        "nav.profiles": "Perfiles",
+        "nav.method": "Método",
+        "nav.commit": "Compromisos",
+        "nav.team": "Equipo",
+        "nav.contact": "Contacto",
+        "nav.cta": "Contactar",
+
+        "hero.kicker": "Veterinarias que reclutan a veterinarios",
+        "hero.title": "Veterinarias<br>que reclutan a <em>vuestros equipos.</em>",
+        "hero.lead": "<strong>SaRecrute es una consultora compuesta exclusivamente por veterinarias con experiencia clínica.</strong> Esto cambia la propia naturaleza de los intercambios con los candidatos y la precisión del briefing con vuestra clínica: comprendemos vuestras limitaciones reales, las expectativas de los candidatos y los argumentos que hacen creíble una oportunidad.",
+        "hero.primary": "Encargar un proceso <span class=\"btn-arrow\">→</span>",
+        "hero.secondary": "Ver nuestro método",
+        "hero.cardTitle": "Una lectura clínica + de mercado",
+        "hero.cardText": "La información clave se integra desde el briefing para identificar a los candidatos adecuados y presentar la clínica con precisión.",
+        "hero.info1.label": "Mercados", "hero.info1.text": "Francia · Suiza · España · Bélgica",
+        "hero.info2.label": "Método", "hero.info2.text": "Búsqueda directa + red veterinaria",
+        "hero.info3.label": "Estructuras", "hero.info3.text": "Clínicas independientes, redes, grupos",
+        "hero.floatTitle": "Perfiles acompañados",
+        "hero.float1": "Veterinarios generalistas", "hero.float1b": "De junior a senior",
+        "hero.float2": "Todos los ámbitos", "hero.float2b": "Canina, rural, mixta, exóticos, equina",
+        "hero.float3": "Especialistas y referidos", "hero.float3b": "Imagen, cardio, cirugía, urgencias",
+
+        "services.kicker": "Servicios",
+        "services.title": "Una consultora especializada en selección veterinaria.",
+        "services.lead": "SaRecrute aporta una comprensión concreta de la clínica: sus ritmos, sus urgencias y sus necesidades humanas.",
+        "services.card1.title": "Reclutadoras veterinarias",
+        "services.card1.text": "Los intercambios los lideran veterinarias con experiencia clínica. Esto cambia el briefing, la credibilidad y la lectura de los retos médicos.",
+        "services.card2.title": "Selección integral",
+        "services.card2.text": "Definición del puesto, análisis de mercado, redacción de la oferta, difusión, búsqueda directa, precalificación, seguimiento de entrevistas e integración.",
+        "services.card3.title": "Búsqueda directa",
+        "services.card3.text": "Identificación proactiva de perfiles que no buscan activamente pero que encajan con el puesto y el proyecto de la clínica.",
+        "services.card4.title": "Valorización de la oportunidad",
+        "services.card4.text": "Narrativa del puesto para hacerlo legible y deseable: proyecto médico, equipo, equipamiento, perspectivas, calidad de vida.",
+        "services.card5.title": "Movilidad y expatriación",
+        "services.card5.text": "Acompañamiento de los candidatos en cuestiones de homologación, vivienda e instalación en un nuevo país.",
+        "services.card6.title": "Calificación clínica",
+        "services.card6.text": "Evaluación precisa del nivel real: prácticas dominadas, autonomía, gestos quirúrgicos, gestión de urgencias, postura en equipo.",
+
+        "value.kicker": "Por qué SaRecrute",
+        "value.title": "Tiempo ganado, red activada, palabra creíble.",
+        "value.lead": "Confiar el reclutamiento a una consultora veterinaria cambia la propia naturaleza de la conversación con los candidatos.",
+        "value.card1.title": "Menos horas fuera de la clínica",
+        "value.card1.text": "Cribado, intercambios y precalificación los asume la consultora. Solo veis a los candidatos relevantes.",
+        "value.card2.title": "Una red construida con el tiempo",
+        "value.card2.text": "Un vivero construido a largo plazo, con candidatos a los que seguimos durante años en su trayectoria.",
+        "value.card3.title": "Candidatos mejor comprendidos",
+        "value.card3.text": "Las cuestiones clínicas se tratan entre colegas: tranquiliza y revela lo que un reclutador generalista no ve.",
+        "value.card4.title": "Una verdadera lectura del puesto",
+        "value.card4.text": "Equipamiento, carga de urgencias, guardias, software clínico: hablamos vuestro idioma antes de proponer a un candidato.",
+
+        "profiles.kicker": "Perfiles",
+        "profiles.title": "Del primer puesto al perfil especialista.",
+        "profiles.lead": "SaRecrute acompaña todos los niveles de experiencia, en todo tipo de estructura.",
+        "profiles.junior.title": "Veterinario junior", "profiles.junior.text": "0–2 años de experiencia, busca un entorno formativo.",
+        "profiles.mid.title": "Veterinario intermedio", "profiles.mid.text": "2–7 años, autónomo, busca un proyecto claro.",
+        "profiles.senior.title": "Veterinario senior", "profiles.senior.text": "7 años o más, experiencia médica y rol de gestión.",
+        "profiles.specialist.title": "Especialista", "profiles.specialist.text": "Diploma europeo o residencia, práctica referida.",
+        "profiles.intern.title": "Interno y asistente", "profiles.intern.text": "Perfiles en formación, posible movilidad hacia la especialidad.",
+
+        "domains.kicker": "Ámbitos",
+        "domains.title": "Redes en todas las prácticas veterinarias.",
+        "domains.practice.title": "Prácticas del gabinete",
+        "domains.practice.intro": "Todo tipo de estructuras y de orientación médica, desde la clínica de proximidad hasta centros con plataforma técnica amplia.",
+        "domains.specialty.title": "Especialidades y referidos",
+        "domains.specialty.intro": "Perfiles referidos y experiencias punteras, para clínicas que desarrollan un polo de especialidad o una actividad de urgencias.",
+        "domains.tag1": "Canina", "domains.tag3": "Rural", "domains.tag4": "Mixta",
+        "domains.tag5": "Exóticos", "domains.tag6": "Equina",
+        "domains.tag16": "Ovino", "domains.tag17": "Lechero", "domains.tag18": "Porcino", "domains.tag19": "Vacuno de carne",
+        "domains.tag8": "Imagen", "domains.tag9": "Cardiología", "domains.tag10": "Cirugía",
+        "domains.tag11": "Medicina interna", "domains.tag12": "Dermatología", "domains.tag13": "Oftalmología",
+        "domains.tag14": "Anestesia", "domains.tag15": "Urgencias",
+
+        "method.kicker": "Método",
+        "method.title": "Un proceso llevado con verdadera cultura clínica.",
+        "method.lead": "Cuatro etapas estructuradas, del briefing a la integración del candidato.",
+        "method.step1.title": "Definir la necesidad", "method.step1.text": "Briefing médico y humano, lectura del mercado local, calibración del perfil objetivo y de los argumentos diferenciadores.",
+        "method.step2.title": "Valorizar la oportunidad", "method.step2.text": "Redacción de la oferta, difusión multicanal, narrativa del proyecto de la clínica para hablar a los candidatos adecuados.",
+        "method.step3.title": "Buscar y calificar", "method.step3.text": "Búsqueda directa y activación del vivero, y después calificación clínica en profundidad realizada entre colegas, de veterinario a veterinario. Solo presentamos a los candidatos realmente relevantes.",
+        "method.step4.title": "Acompañar hasta la integración", "method.step4.text": "Seguimientos regulares con la clínica y el candidato durante el periodo de prueba: seguimos presentes hasta la integración efectiva, no solo hasta la firma.",
+
+        "commit.kicker": "Nuestros compromisos",
+        "commit.title": "Una colaboración basada en la confianza.",
+        "commit.lead": "La confianza es la base de toda colaboración duradera. Nos comprometemos de forma concreta, en cada etapa.",
+        "commit.card1.title": "Honorarios al éxito",
+        "commit.card1.text": "Nuestros honorarios solo se deben en caso de contratación finalizada, con la incorporación efectiva del candidato.",
+        "commit.card2.title": "Sin captación",
+        "commit.card2.text": "Nunca captamos a los veterinarios que hemos colocado en las clínicas que acompañamos.",
+        "commit.card3.title": "Confidencialidad total",
+        "commit.card3.text": "Toda la información intercambiada, tanto del lado de la clínica como del candidato, permanece estrictamente confidencial.",
+        "commit.card4.title": "Transparencia en cada etapa",
+        "commit.card4.text": "Siempre sabéis en qué punto está vuestro proceso: seguimientos regulares y visibilidad completa del avance.",
+
+        "data.kicker": "Indicadores",
+        "data.title": "Referencias concretas para acelerar vuestros procesos.",
+        "data.lead": "Un enfoque estructurado permite lanzar la búsqueda rápidamente, activar varios canales y asegurar la integración.",
+        "data.card1.value": "3 días", "data.card1.text": "De media para presentar una primera candidatura cualificada tras el lanzamiento de la misión.",
+        "data.card2.value": "97%", "data.card2.text": "De los candidatos contratados superan el periodo de prueba.",
+        "data.card3.value": "6 semanas", "data.card3.text": "Plazo medio para la firma de la oferta de empleo tras el lanzamiento de la misión.",
+        "data.card4.value": "40+", "data.card4.text": "Candidatos de media en búsqueda activa o pasiva en nuestro vivero.",
+        "data.note": "Datos medios observados en las misiones realizadas en 2025.",
+
+        "testimonials.kicker": "Confían en nosotras",
+        "testimonials.title": "La voz de clínicas y candidatos.",
+        "testimonials.t1.text": "«Llevábamos más de seis meses buscando un veterinario senior con verdadera vocación quirúrgica. SaRecrute entendió nuestro proyecto médico con un solo briefing. Tres candidaturas relevantes en dos semanas y una contratación firmada poco después.»",
+        "testimonials.t1.name": "Dr. David Marchand",
+        "testimonials.t1.role": "Clínica veterinaria des Cèdres · Lyon",
+        "testimonials.t2.text": "«Aprecié hablar con una colega que conoce la realidad del terreno. Las preguntas sobre el equipamiento, las guardias, el ritmo: todo era preciso. Mi instalación en Suiza fue mucho más fácil.»",
+        "testimonials.t2.name": "Dra. Claire Lemoine",
+        "testimonials.t2.role": "Veterinaria generalista · contratada en Ginebra",
+        "testimonials.t3.text": "«SaRecrute supo presentar nuestra clínica con precisión, sin exagerar el puesto. Los candidatos llegaban a la entrevista ya convencidos del proyecto. Un ahorro de tiempo enorme para el equipo.»",
+        "testimonials.t3.name": "Dra. Sophie Berthier",
+        "testimonials.t3.role": "Hospital veterinario Atlántico · Burdeos",
+        "testimonials.t4.text": "«No buscaba activamente. El contacto fue directo, claro, sin discurso comercial. La clínica encajaba con lo que quería: equipo estable, proyecto médico sólido. Un año después, no tengo ningún arrepentimiento.»",
+        "testimonials.t4.name": "Dr. Antoine Tessier",
+        "testimonials.t4.role": "Especialista en imagen · contratado en Bruselas",
+
+        "team.kicker": "Equipo",
+        "team.title": "Dos veterinarias reclutadoras, cuatro mercados prioritarios.",
+        "team.lead": "SaRecrute se apoya en reclutadoras que han vivido la realidad clínica. Esta experiencia hace que los intercambios sean más precisos con clientes y candidatos.",
+        "team.sarah.role": "Veterinaria reclutadora · Francia y Suiza",
+        "team.sarah.text": "Especializada en el acompañamiento de clínicas y candidatos veterinarios en los mercados francés y suizo. Su experiencia clínica le permite comprender las necesidades médicas, humanas y organizativas de las estructuras.",
+        "team.pamela.role": "Veterinaria reclutadora · España y Bélgica",
+        "team.pamela.text": "Especializada en la selección veterinaria en los mercados español y belga. Su conocimiento del terreno facilita el análisis de las expectativas de los candidatos, de la movilidad y de las particularidades locales.",
+
+        "contact.kicker": "Contacto",
+        "contact.title": "¿Buscáis un veterinario o estáis preparando vuestro próximo paso?",
+        "contact.lead": "Hablemos de vuestra necesidad: tipo de perfil, práctica buscada, mercado objetivo, nivel de urgencia y argumentos a destacar.",
+        "contact.button": "Escribir a SaRecrute <span class=\"btn-arrow\">→</span>",
+        "contact.direct": "O directamente:",
+
+        "footer.tagline": "Veterinarias que reclutan a veterinarios. Una consultora compuesta exclusivamente por profesionales con experiencia clínica.",
+        "footer.col1": "Mercados",
+        "footer.markets": "Francia · Suiza · España · Bélgica",
+        "footer.col2": "Información",
+        "footer.mentions": "Aviso legal",
+        "footer.privacy": "Política de privacidad",
+        "footer.copy": "© 2026 SaRecrute. Todos los derechos reservados.",
+        "footer.gdpr": "Datos tratados conforme al RGPD.",
+
+        "legal.mentions.title": "Aviso legal",
+        "legal.mentions.body": "<h3>Editor del sitio</h3><p>SaRecrute — Consultora de selección veterinaria.</p><p>Email: contact@sarecrute.com</p><h3>Alojamiento</h3><p>El sitio está alojado por [completar con el nombre y la dirección del proveedor].</p><h3>Propiedad intelectual</h3><p>Todos los contenidos del sitio (textos, imágenes, identidad gráfica) son propiedad de SaRecrute, salvo indicación contraria. Cualquier reproducción sin autorización previa está prohibida.</p><h3>Responsabilidad</h3><p>SaRecrute se esfuerza por garantizar la exactitud de la información publicada, pero no puede garantizar la ausencia de errores. La responsabilidad de SaRecrute no podrá comprometerse por daños derivados del uso del sitio.</p>",
+        "legal.privacy.title": "Política de privacidad",
+        "legal.privacy.body": "<h3>Datos recogidos</h3><p>SaRecrute recoge datos personales en el marco estricto de su actividad de selección veterinaria: información de contacto, trayectoria profesional, expectativas profesionales y cualquier información comunicada voluntariamente por candidatos y clientes.</p><h3>Finalidad</h3><p>Estos datos se utilizan únicamente para llevar a cabo las misiones de selección, poner en contacto a candidatos y clínicas, y garantizar el seguimiento de los servicios.</p><h3>Conservación</h3><p>Los datos se conservan durante el tiempo necesario para la misión y luego se archivan conforme a las obligaciones legales.</p><h3>Vuestros derechos (RGPD)</h3><p>Conforme al Reglamento General de Protección de Datos, dispone de un derecho de acceso, rectificación, supresión, portabilidad y oposición al tratamiento de sus datos. Para ejercerlos, escríbanos a: contact@sarecrute.com</p><h3>Cookies</h3><p>Este sitio no utiliza cookies de seguimiento de terceros.</p>"
+      },
+      en: {
+        "nav.services": "Services",
+        "nav.profiles": "Profiles",
+        "nav.method": "Method",
+        "nav.commit": "Commitments",
+        "nav.team": "Team",
+        "nav.contact": "Contact",
+        "nav.cta": "Get in touch",
+
+        "hero.kicker": "Vets who recruit vets",
+        "hero.title": "Veterinarians<br>recruiting <em>your teams.</em>",
+        "hero.lead": "<strong>SaRecrute is a recruitment firm made up exclusively of veterinarians with clinical experience.</strong> It changes the very nature of the conversation with candidates and the precision of the brief with your practice: we understand the realities of practice, what candidates actually look for, and what makes an opportunity credible.",
+        "hero.primary": "Start a search <span class=\"btn-arrow\">→</span>",
+        "hero.secondary": "See our method",
+        "hero.cardTitle": "Clinical and market intelligence",
+        "hero.cardText": "Key information is built into the brief from the start, so we target the right candidates and present the practice accurately.",
+        "hero.info1.label": "Markets", "hero.info1.text": "France · Switzerland · Spain · Belgium",
+        "hero.info2.label": "Method", "hero.info2.text": "Direct approach + veterinary network",
+        "hero.info3.label": "Structures", "hero.info3.text": "Independent practices, networks, groups",
+        "hero.floatTitle": "Profiles we work with",
+        "hero.float1": "General practitioners", "hero.float1b": "Junior to senior",
+        "hero.float2": "All practice areas", "hero.float2b": "Small animal, farm, mixed, exotic, equine",
+        "hero.float3": "Specialists & referral", "hero.float3b": "Imaging, cardio, surgery, ER",
+
+        "services.kicker": "Services",
+        "services.title": "A firm specialised in veterinary recruitment.",
+        "services.lead": "SaRecrute brings concrete understanding of practice life: its rhythms, its emergencies, and its human needs.",
+        "services.card1.title": "Vet-to-vet recruiters",
+        "services.card1.text": "Conversations are led by veterinarians with clinical experience. That changes the brief, the credibility, and how medical issues are read.",
+        "services.card2.title": "End-to-end search",
+        "services.card2.text": "Brief, market analysis, job spec, posting, direct sourcing, pre-qualification, interview support, and onboarding.",
+        "services.card3.title": "Direct sourcing",
+        "services.card3.text": "Proactive identification of profiles who aren't actively searching but match the role and the practice's project.",
+        "services.card4.title": "Opportunity positioning",
+        "services.card4.text": "Storytelling that makes the role legible and desirable: medical project, team, equipment, growth, quality of life.",
+        "services.card5.title": "Targeted mobility & relocation",
+        "services.card5.text": "Support for candidates around diploma equivalence, housing, and settling into a new country.",
+        "services.card6.title": "Clinical screening",
+        "services.card6.text": "Accurate evaluation of real-world level: confident procedures, autonomy, surgical skills, ER handling, team posture.",
+
+        "value.kicker": "Why SaRecrute",
+        "value.title": "Time saved, network activated, credible voice.",
+        "value.lead": "Trusting recruitment to a vet-led firm changes the very nature of the conversation with candidates.",
+        "value.card1.title": "Fewer hours away from clinic",
+        "value.card1.text": "Sourcing, conversations, and pre-screening are handled by us. You only meet relevant candidates.",
+        "value.card2.title": "A network built over time",
+        "value.card2.text": "A talent pool built over years, with candidates we've followed across their careers.",
+        "value.card3.title": "Candidates better understood",
+        "value.card3.text": "Clinical questions are handled between peers: it reassures candidates and surfaces what a generalist recruiter misses.",
+        "value.card4.title": "A real read of the role",
+        "value.card4.text": "Equipment, ER load, on-call rotation, practice software: we speak your language before suggesting a candidate.",
+
+        "profiles.kicker": "Profiles",
+        "profiles.title": "From first job to specialist.",
+        "profiles.lead": "SaRecrute supports every experience level, across every type of structure.",
+        "profiles.junior.title": "Junior vet", "profiles.junior.text": "0–2 years' experience, looking for a supportive setting.",
+        "profiles.mid.title": "Mid-level vet", "profiles.mid.text": "2–7 years, autonomous, looking for a clear project.",
+        "profiles.senior.title": "Senior vet", "profiles.senior.text": "7+ years, medical depth and leadership posture.",
+        "profiles.specialist.title": "Specialist", "profiles.specialist.text": "European diploma or residency, referral practice.",
+        "profiles.intern.title": "Intern & assistant", "profiles.intern.text": "Profiles in training, possible move into specialty.",
+
+        "domains.kicker": "Areas",
+        "domains.title": "Networks across every veterinary practice.",
+        "domains.practice.title": "Practice areas",
+        "domains.practice.intro": "Every type of structure and clinical focus, from neighbourhood practices to centres with extensive technical platforms.",
+        "domains.specialty.title": "Specialties & referral",
+        "domains.specialty.intro": "Referral profiles and advanced expertise, for practices building a specialty pole or developing an emergency service.",
+        "domains.tag1": "Small animal", "domains.tag3": "Farm", "domains.tag4": "Mixed",
+        "domains.tag5": "Exotic", "domains.tag6": "Equine",
+        "domains.tag16": "Sheep", "domains.tag17": "Dairy", "domains.tag18": "Pig", "domains.tag19": "Beef cattle",
+        "domains.tag8": "Imaging", "domains.tag9": "Cardiology", "domains.tag10": "Surgery",
+        "domains.tag11": "Internal medicine", "domains.tag12": "Dermatology", "domains.tag13": "Ophthalmology",
+        "domains.tag14": "Anaesthesia", "domains.tag15": "Emergency",
+
+        "method.kicker": "Method",
+        "method.title": "A search led with genuine clinical culture.",
+        "method.lead": "Four structured steps, from brief to onboarding.",
+        "method.step1.title": "Frame the need", "method.step1.text": "Medical and human brief, local market read, calibration of target profile and differentiating arguments.",
+        "method.step2.title": "Position the opportunity", "method.step2.text": "Job spec, multi-channel posting, storytelling around the practice's project to reach the right candidates.",
+        "method.step3.title": "Approach & qualify", "method.step3.text": "Direct sourcing and talent pool activation, then in-depth clinical screening conducted between peers, vet to vet. We only present genuinely relevant candidates.",
+        "method.step4.title": "Support through onboarding", "method.step4.text": "Regular check-ins with practice and candidate during the trial period: we stay involved through to effective onboarding, not just to signature.",
+
+        "commit.kicker": "Our commitments",
+        "commit.title": "A partnership built on trust.",
+        "commit.lead": "Trust is the foundation of any lasting partnership. We commit to it concretely, at every step.",
+        "commit.card1.title": "Success-based fees",
+        "commit.card1.text": "Our fees are only due when a hire is finalised, once the candidate has effectively started.",
+        "commit.card2.title": "No poaching",
+        "commit.card2.text": "We never approach the veterinarians we have placed in the practices we work with.",
+        "commit.card3.title": "Full confidentiality",
+        "commit.card3.text": "All information exchanged, on the practice and candidate side alike, remains strictly confidential.",
+        "commit.card4.title": "Transparency at every step",
+        "commit.card4.text": "You always know where your search stands: regular updates and full visibility on progress.",
+
+        "data.kicker": "Indicators",
+        "data.title": "Concrete benchmarks to speed up your search.",
+        "data.lead": "A structured approach lets us launch quickly, activate multiple channels, and secure onboarding.",
+        "data.card1.value": "3 days", "data.card1.text": "On average to present a first qualified candidate after the search starts.",
+        "data.card2.value": "97%", "data.card2.text": "Of placed candidates pass their probation period.",
+        "data.card3.value": "6 weeks", "data.card3.text": "Average time to signed offer after the search starts.",
+        "data.card4.value": "40+", "data.card4.text": "Candidates on average actively or passively engaged in our talent pool.",
+        "data.note": "Average figures observed across assignments delivered in 2025.",
+
+        "testimonials.kicker": "They trust us",
+        "testimonials.title": "Voices from practices and candidates.",
+        "testimonials.t1.text": "“We had been looking for a senior vet with real surgical appetite for over six months. SaRecrute understood our medical project in a single brief. Three relevant candidates within two weeks, and a signed hire shortly after.”",
+        "testimonials.t1.name": "Dr. David Marchand",
+        "testimonials.t1.role": "Clinique vétérinaire des Cèdres · Lyon",
+        "testimonials.t2.text": "“I appreciated speaking with a colleague who knows the reality on the ground. Questions about the equipment, on-call rotation, daily rhythm — everything was sharp. My move to Switzerland was made far easier.”",
+        "testimonials.t2.name": "Dr. Claire Lemoine",
+        "testimonials.t2.role": "General practitioner · hired in Geneva",
+        "testimonials.t3.text": "“SaRecrute presented our practice accurately, without overselling the role. Candidates who came to interview were already convinced by the project. It saves the team a huge amount of time.”",
+        "testimonials.t3.name": "Dr. Sophie Berthier",
+        "testimonials.t3.role": "Hôpital vétérinaire Atlantique · Bordeaux",
+        "testimonials.t4.text": "“I wasn't actively looking. The approach was direct, clear, with no sales pitch. The practice matched what I really wanted: stable team, solid medical project. A year on, no regrets.”",
+        "testimonials.t4.name": "Dr. Antoine Tessier",
+        "testimonials.t4.role": "Imaging specialist · hired in Brussels",
+
+        "team.kicker": "Team",
+        "team.title": "Two veterinarian recruiters, four priority markets.",
+        "team.lead": "SaRecrute relies on recruiters who've lived the reality of practice. That experience makes every conversation sharper, with clients and candidates alike.",
+        "team.sarah.role": "Vet recruiter · France & Switzerland",
+        "team.sarah.text": "Focused on supporting practices and veterinary candidates across the French and Swiss markets. Her clinical background lets her understand the medical, human, and organisational needs of each structure.",
+        "team.pamela.role": "Vet recruiter · Spain & Belgium",
+        "team.pamela.text": "Focused on veterinary recruitment across the Spanish and Belgian markets. Her field knowledge sharpens the read on candidate expectations, mobility, and local specifics.",
+
+        "contact.kicker": "Contact",
+        "contact.title": "Hiring a veterinarian, or planning your next move?",
+        "contact.lead": "Let's talk: profile type, practice area, target market, urgency, and the arguments that matter for the role.",
+        "contact.button": "Email SaRecrute <span class=\"btn-arrow\">→</span>",
+        "contact.direct": "Or directly:",
+
+        "footer.tagline": "Vets who recruit vets. A firm made up exclusively of practitioners with clinical experience.",
+        "footer.col1": "Markets",
+        "footer.markets": "France · Switzerland · Spain · Belgium",
+        "footer.col2": "Information",
+        "footer.mentions": "Legal notice",
+        "footer.privacy": "Privacy policy",
+        "footer.copy": "© 2026 SaRecrute. All rights reserved.",
+        "footer.gdpr": "Data processed in accordance with GDPR.",
+
+        "legal.mentions.title": "Legal notice",
+        "legal.mentions.body": "<h3>Site publisher</h3><p>SaRecrute — Veterinary recruitment firm.</p><p>Email: contact@sarecrute.com</p><h3>Hosting</h3><p>The site is hosted by [to be completed with host name and address].</p><h3>Intellectual property</h3><p>All content on this site (text, images, graphic identity) is the property of SaRecrute unless stated otherwise. Reproduction without prior authorisation is prohibited.</p><h3>Liability</h3><p>SaRecrute makes every effort to ensure the accuracy of the information published, but cannot guarantee the absence of errors. SaRecrute cannot be held liable for any damage resulting from the use of the site.</p>",
+        "legal.privacy.title": "Privacy policy",
+        "legal.privacy.body": "<h3>Data collected</h3><p>SaRecrute collects personal data strictly in the context of its veterinary recruitment activity: contact information, professional background, role expectations, and any information voluntarily shared by candidates and clients.</p><h3>Purpose</h3><p>This data is used solely to carry out recruitment assignments, connect candidates and practices, and ensure follow-up.</p><h3>Retention</h3><p>Data is kept for the duration of the assignment, then archived in line with legal obligations.</p><h3>Your rights (GDPR)</h3><p>Under the General Data Protection Regulation, you have the right to access, rectify, erase, transfer, and object to the processing of your data. To exercise these rights, contact us at: contact@sarecrute.com</p><h3>Cookies</h3><p>This site does not use third-party tracking cookies.</p>"
+      }
+    };
+
+    const buttons = document.querySelectorAll("[data-lang]");
+    const textNodes = document.querySelectorAll("[data-i18n]");
+    const htmlNodes = document.querySelectorAll("[data-i18n-html]");
+
+    const titles = {
+      fr: "SaRecrute — Recrutement vétérinaire France, Suisse, Espagne, Belgique",
+      es: "SaRecrute — Selección veterinaria Francia, Suiza, España, Bélgica",
+      en: "SaRecrute — Veterinary recruitment France, Switzerland, Spain, Belgium"
+    };
+
+    let currentLang = "fr";
+
+    function setLanguage(lang) {
+      if (!translations[lang]) return;
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.title = titles[lang];
+
+      textNodes.forEach((node) => {
+        const key = node.getAttribute("data-i18n");
+        if (translations[lang][key]) node.textContent = translations[lang][key];
+      });
+      htmlNodes.forEach((node) => {
+        const key = node.getAttribute("data-i18n-html");
+        if (translations[lang][key]) node.innerHTML = translations[lang][key];
+      });
+      buttons.forEach((b) => b.classList.toggle("active", b.getAttribute("data-lang") === lang));
+
+      try { localStorage.setItem("sarecrute-lang", lang); } catch (e) {}
+    }
+
+    buttons.forEach((b) => b.addEventListener("click", () => setLanguage(b.getAttribute("data-lang"))));
+
+    let saved = null;
+    try { saved = localStorage.getItem("sarecrute-lang"); } catch (e) {}
+    const browserLang = (navigator.language || "fr").toLowerCase();
+    let initial = "fr";
+    if (browserLang.startsWith("es")) initial = "es";
+    else if (browserLang.startsWith("en")) initial = "en";
+    setLanguage(saved || initial);
+
+    // Legal modals
+    const overlay = document.getElementById("legal-overlay");
+    const legalContent = document.getElementById("legal-content");
+    const legalLinks = document.querySelectorAll("[data-legal]");
+    const legalClose = document.querySelector(".legal-close");
+
+    legalLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const type = link.getAttribute("data-legal");
+        const titleKey = `legal.${type}.title`;
+        const bodyKey = `legal.${type}.body`;
+        const t = translations[currentLang];
+        legalContent.innerHTML = `<h2>${t[titleKey]}</h2>${t[bodyKey]}`;
+        overlay.classList.add("open");
+      });
+    });
+
+    legalClose.addEventListener("click", () => overlay.classList.remove("open"));
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) overlay.classList.remove("open");
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") overlay.classList.remove("open");
+    });
+
+    // Mobile menu (simple anchor jump for now)
+    const mobileToggle = document.querySelector(".mobile-toggle");
+    if (mobileToggle) {
+      mobileToggle.addEventListener("click", () => {
+        const navLinks = document.querySelector(".nav-links");
+        if (navLinks.style.display === "flex") {
+          navLinks.style.display = "";
+        } else {
+          navLinks.style.display = "flex";
+          navLinks.style.position = "absolute";
+          navLinks.style.top = "76px";
+          navLinks.style.left = "0";
+          navLinks.style.right = "0";
+          navLinks.style.flexDirection = "column";
+          navLinks.style.background = "var(--cream)";
+          navLinks.style.padding = "20px";
+          navLinks.style.borderBottom = "1px solid var(--line)";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
