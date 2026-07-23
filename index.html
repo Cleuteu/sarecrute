@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SaRecrute — Recrutement vétérinaire France, Suisse, Espagne, Belgique</title>
-  <meta name="description" content="Cabinet de recrutement vétérinaire exclusivement composé de vétérinaires ayant exercé en clinique. France, Suisse, Espagne, Belgique." />
+  <title>SaRecrute · Recrutement vétérinaire France, Suisse, Espagne, Belgique</title>
+  <meta name="description" content="Cabinet de recrutement vétérinaire exclusivement composé de vétérinaires exerçant ou ayant exercé en clinique. France, Suisse, Espagne, Belgique." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='20%2014%2080%2052'%3E%3Ccircle%20cx='46'%20cy='40'%20r='24'%20fill='none'%20stroke='%236E9278'%20stroke-width='9'/%3E%3Ccircle%20cx='74'%20cy='40'%20r='24'%20fill='none'%20stroke='%23C87355'%20stroke-width='9'/%3E%3C/svg%3E" />
 
   <link rel="canonical" href="https://sarecrute.com/" />
@@ -15,8 +15,8 @@
   <!-- Open Graph (partage réseaux sociaux) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="SaRecrute" />
-  <meta property="og:title" content="SaRecrute — Recrutement vétérinaire (France, Suisse, Espagne, Belgique)" />
-  <meta property="og:description" content="Des vétérinaires pour recruter des vétérinaires. Cabinet de recrutement composé exclusivement de vétérinaires ayant exercé en clinique." />
+  <meta property="og:title" content="SaRecrute · Recrutement vétérinaire (France, Suisse, Espagne, Belgique)" />
+  <meta property="og:description" content="Des vétérinaires pour recruter des vétérinaires. Cabinet de recrutement composé exclusivement de vétérinaires exerçant ou ayant exercé en clinique." />
   <meta property="og:url" content="https://sarecrute.com/" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:locale:alternate" content="es_ES" />
@@ -24,11 +24,11 @@
   <meta property="og:image" content="https://sarecrute.com/images/sarecrute-share-1200x630.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="SaRecrute — Des vétérinaires pour recruter des vétérinaires" />
+  <meta property="og:image:alt" content="SaRecrute · Des vétérinaires pour recruter des vétérinaires" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SaRecrute — Recrutement vétérinaire" />
+  <meta name="twitter:title" content="SaRecrute · Recrutement vétérinaire" />
   <meta name="twitter:description" content="Des vétérinaires pour recruter des vétérinaires. France, Suisse, Espagne, Belgique." />
   <meta name="twitter:image" content="https://sarecrute.com/images/sarecrute-share-1200x630.png" />
 
@@ -38,7 +38,7 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "SaRecrute",
-    "description": "Cabinet de recrutement vétérinaire composé exclusivement de vétérinaires ayant exercé en clinique.",
+    "description": "Cabinet de recrutement vétérinaire composé exclusivement de vétérinaires exerçant ou ayant exercé en clinique.",
     "slogan": "Des vétérinaires pour recruter des vétérinaires",
     "url": "https://sarecrute.com/",
     "email": "contact@sarecrute.com",
@@ -990,6 +990,53 @@
       font-size: 0.94rem;
     }
 
+    .parcours-link {
+      color: var(--sage-dark);
+      font-weight: 600;
+      font-family: inherit;
+      font-size: 0.88rem;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .parcours-link:hover {
+      color: var(--terracotta-dark);
+      border-bottom-color: var(--terracotta-dark);
+    }
+    .team-socials {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-left: auto;
+    }
+    .team-socials a {
+      color: var(--sage-dark);
+      display: inline-flex;
+      border-bottom: none;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .team-socials a:hover {
+      color: var(--terracotta-dark);
+      border-bottom: none;
+      transform: translateY(-1px);
+    }
+    .team-socials svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      stroke: none;
+    }
+    @media (max-width: 640px) {
+      .team-contact { justify-content: center; }
+      .team-socials { margin-left: 0; }
+    }
+
     /* ============ CONTACT ============ */
     .contact-section {
       padding: 100px 0;
@@ -1274,8 +1321,8 @@
           </span>
           <h1 data-i18n-html="hero.title">Des vétérinaires<br>pour recruter <em>vos équipes.</em></h1>
           <p class="hero-lead" data-i18n-html="hero.lead">
-            <strong>SaRecrute est un cabinet exclusivement composé de vétérinaires ayant exercé en clinique.</strong>
-            Cela change la nature même des échanges avec les candidats et la précision du brief avec votre clinique : nous comprenons vos contraintes terrain, les attentes réelles des candidats et les arguments qui rendent une opportunité crédible.
+            <strong>SaRecrute est un cabinet exclusivement composé de vétérinaires exerçant ou ayant exercé en clinique.</strong>
+            Concrètement, nous parlons le même langage que vos candidats, nous cadrons le poste avec vous sans jargon, et nous savons ce qui décide un vétérinaire à rejoindre une clinique.
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary" data-i18n-html="hero.primary">Confier un recrutement <span class="btn-arrow">→</span></a>
@@ -1285,8 +1332,8 @@
 
         <div class="hero-panel reveal reveal-delay-2" aria-label="Infographie SaRecrute">
           <div class="map-card">
-            <h3 data-i18n="hero.cardTitle">Une lecture métier + marché</h3>
-            <p data-i18n="hero.cardText">Les informations clés sont intégrées dès le brief pour cibler les bons candidats et présenter la clinique avec justesse.</p>
+            <h3 data-i18n="hero.cardTitle">Nos champs d'action</h3>
+            <p data-i18n="hero.cardText">Recrutement de vétérinaires · Accompagnement à la cession de clinique.</p>
             <div class="mini-grid">
               <div class="mini-item">
                 <strong data-i18n="hero.info1.label">Marchés</strong>
@@ -1328,7 +1375,7 @@
         <div class="section-title">
           <div class="section-kicker" data-i18n="services.kicker">Services</div>
           <h2 data-i18n="services.title">Un cabinet spécialisé dans le recrutement vétérinaire.</h2>
-          <p data-i18n="services.lead">SaRecrute apporte une compréhension concrète de la clinique : ses rythmes, ses urgences et ses besoins humains.</p>
+          <p data-i18n="services.lead">SaRecrute prend connaissance des atouts et des difficultés de la structure, et l'accompagne dans l'optimisation de ses besoins humains.</p>
         </div>
 
         <div class="services-grid">
@@ -1338,7 +1385,7 @@
               <svg viewBox="0 0 24 24"><path d="M5 3v6a4 4 0 0 0 8 0V3"/><path d="M9 13v3a5 5 0 0 0 10 0v-2"/><circle cx="19" cy="11" r="2"/></svg>
             </div>
             <h3 data-i18n="services.card1.title">Recruteurs vétérinaires</h3>
-            <p data-i18n="services.card1.text">Les échanges sont conduits par des vétérinaires ayant exercé en clinique. Cela change le brief, la crédibilité et la lecture des enjeux médicaux.</p>
+            <p data-i18n="services.card1.text">Les échanges sont conduits par des vétérinaires exerçant ou ayant exercé en clinique. Cela change le brief, la crédibilité et la lecture des enjeux médicaux.</p>
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">
@@ -1361,8 +1408,8 @@
               <!-- Étincelle / valorisation -->
               <svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z"/></svg>
             </div>
-            <h3 data-i18n="services.card4.title">Valorisation de l'opportunité</h3>
-            <p data-i18n="services.card4.text">Mise en récit du poste pour le rendre lisible et désirable : projet médical, équipe, équipements, perspectives, qualité de vie.</p>
+            <h3 data-i18n="services.card4.title">Présenter le poste tel qu'il est</h3>
+            <p data-i18n="services.card4.text">Nous présentons le poste clairement, sans le survendre : projet médical, équipe, matériel, perspectives et conditions de travail.</p>
           </article>
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">
@@ -1389,8 +1436,8 @@
       <div class="container">
         <div class="section-title">
           <div class="section-kicker" data-i18n="value.kicker">Pourquoi SaRecrute</div>
-          <h2 data-i18n="value.title">Du temps gagné, un réseau activé, une parole crédible.</h2>
-          <p data-i18n="value.lead">Confier le recrutement à un cabinet vétérinaire change la nature même de la conversation avec les candidats.</p>
+          <h2 data-i18n="value.title">Du temps gagné, un vrai réseau vétérinaire, des échanges entre confrères.</h2>
+          <p data-i18n="value.lead">Confier votre recrutement à des vétérinaires change concrètement la façon dont on parle à vos candidats.</p>
         </div>
         <div class="value-grid">
           <div class="value-card">
@@ -1419,7 +1466,7 @@
         <div class="section-title">
           <div class="section-kicker" data-i18n="team.kicker">Équipe</div>
           <h2 data-i18n="team.title">Deux vétérinaires recruteuses, quatre marchés prioritaires.</h2>
-          <p data-i18n="team.lead">SaRecrute s'appuie sur des recruteuses qui ont connu la réalité de la clinique. Cette expérience rend les échanges plus précis avec les clients comme avec les candidats.</p>
+          <p data-i18n="team.lead">SaRecrute s'appuie sur des recruteuses qui connaissent la réalité de la clinique. Cette expérience rend les échanges plus précis avec les clients comme avec les candidats.</p>
         </div>
         <div class="team-grid">
           <article class="team-card">
@@ -1435,22 +1482,40 @@
                   <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
                   sarah.vet@sarecrute.com
                 </a>
+                <button type="button" class="parcours-link" data-legal="parcoursSarah" data-i18n="team.parcours">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
+                  Voir le parcours
+                </button>
+                <span class="team-socials">
+                  <a href="https://www.linkedin.com/in/sarah-vanhersel/" target="_blank" rel="noopener" aria-label="LinkedIn de Sarah Vanhersel"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+                  <a href="https://www.facebook.com/sarah.vanhersel/" target="_blank" rel="noopener" aria-label="Facebook de Sarah Vanhersel"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+                  <a href="https://www.instagram.com/vetosarah.sarecrute/" target="_blank" rel="noopener" aria-label="Instagram de Sarah Vanhersel"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5.01-4.74.07-.9.04-1.38.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.33-.28.81-.32 1.71C3.21 8.5 3.2 8.85 3.2 12s.01 3.5.07 4.74c.04.9.19 1.38.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.13.81.28 1.71.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.38-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.33.28-.81.32-1.71.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.33-.13-.81-.28-1.71-.32C15.5 4.01 15.15 4 12 4zm0 3.05A4.95 4.95 0 1 1 12 17a4.95 4.95 0 0 1 0-9.9zm0 1.8a3.15 3.15 0 1 0 0 6.3 3.15 3.15 0 0 0 0-6.3zM17.15 6.6a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg></a>
+                </span>
               </div>
             </div>
           </article>
           <article class="team-card">
-            <div class="avatar" aria-label="Pamela Rodriguez">
-              <img src="images/pamela.jpeg" alt="Pamela Rodriguez" style="object-position: 50% 22%;" onerror="this.style.display='none';this.parentNode.classList.add('avatar-placeholder');this.parentNode.textContent='PR';">
+            <div class="avatar" aria-label="Pamela Martinez">
+              <img src="images/pamela.jpeg" alt="Pamela Martinez" style="object-position: 50% 22%;" onerror="this.style.display='none';this.parentNode.classList.add('avatar-placeholder');this.parentNode.textContent='PM';">
             </div>
             <div>
-              <h3>Pamela Rodriguez</h3>
-              <div class="role" data-i18n="team.pamela.role">Vétérinaire recruteuse · Espagne & Belgique</div>
-              <p data-i18n="team.pamela.text">Spécialisée dans les recrutements vétérinaires sur les marchés espagnol et belge. Sa connaissance du terrain facilite l'analyse des attentes candidats, de la mobilité et des spécificités locales.</p>
+              <h3>Pamela Martinez</h3>
+              <div class="role" data-i18n="team.pamela.role">Vétérinaire recruteuse · France, Belgique & Espagne</div>
+              <p data-i18n="team.pamela.text">Spécialisée dans les recrutements vétérinaires sur les marchés français, belge et espagnol. Sa connaissance du terrain facilite l'analyse des attentes candidats, de la mobilité et des spécificités locales.</p>
               <div class="team-contact">
                 <a href="mailto:pamela.vet@sarecrute.com">
                   <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
                   pamela.vet@sarecrute.com
                 </a>
+                <button type="button" class="parcours-link" data-legal="parcoursPamela" data-i18n="team.parcours">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
+                  Voir le parcours
+                </button>
+                <span class="team-socials">
+                  <a href="https://www.linkedin.com/in/pamela-martinez-martinez-b763b9188/" target="_blank" rel="noopener" aria-label="LinkedIn de Pamela Martinez"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+                  <a href="https://www.facebook.com/pamesax" target="_blank" rel="noopener" aria-label="Facebook de Pamela Martinez"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+                  <a href="https://www.instagram.com/vetpam.sarecrute/" target="_blank" rel="noopener" aria-label="Instagram de Pamela Martinez"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5.01-4.74.07-.9.04-1.38.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.33-.28.81-.32 1.71C3.21 8.5 3.2 8.85 3.2 12s.01 3.5.07 4.74c.04.9.19 1.38.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.13.81.28 1.71.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.38-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.33.28-.81.32-1.71.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.33-.13-.81-.28-1.71-.32C15.5 4.01 15.15 4 12 4zm0 3.05A4.95 4.95 0 1 1 12 17a4.95 4.95 0 0 1 0-9.9zm0 1.8a3.15 3.15 0 1 0 0 6.3 3.15 3.15 0 0 0 0-6.3zM17.15 6.6a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg></a>
+                </span>
               </div>
             </div>
           </article>
@@ -1469,11 +1534,11 @@
         <div class="profiles-grid">
           <article class="profile-card">
             <h3 data-i18n="profiles.junior.title">Vétérinaire junior</h3>
-            <p data-i18n="profiles.junior.text">0–2 ans d'expérience, en recherche d'un cadre formateur.</p>
+            <p data-i18n="profiles.junior.text">0-2 ans d'expérience, en recherche d'un cadre formateur.</p>
           </article>
           <article class="profile-card">
             <h3 data-i18n="profiles.mid.title">Vétérinaire intermédiaire</h3>
-            <p data-i18n="profiles.mid.text">2–7 ans, autonome, à la recherche d'un projet clair.</p>
+            <p data-i18n="profiles.mid.text">2-7 ans, autonome, à la recherche d'un projet clair.</p>
           </article>
           <article class="profile-card">
             <h3 data-i18n="profiles.senior.title">Vétérinaire senior</h3>
@@ -1509,9 +1574,7 @@
               <li data-i18n="domains.tag5">NAC</li>
               <li data-i18n="domains.tag6">Équine</li>
               <li data-i18n="domains.tag16">Ovins</li>
-              <li data-i18n="domains.tag17">Laitier</li>
               <li data-i18n="domains.tag18">Porcin</li>
-              <li data-i18n="domains.tag19">Allaitant</li>
             </ul>
           </div>
           <div class="domain-card">
@@ -1537,19 +1600,19 @@
       <div class="container">
         <div class="section-title">
           <div class="section-kicker" data-i18n="method.kicker">Méthode</div>
-          <h2 data-i18n="method.title">Un recrutement mené avec une vraie culture clinique.</h2>
+          <h2 data-i18n="method.title">Un recrutement mené avec une démarche clinique.</h2>
           <p data-i18n="method.lead">Quatre étapes structurées, du brief jusqu'à l'intégration du candidat.</p>
         </div>
         <div class="method-grid">
           <div class="method-step">
             <div class="method-num">01</div>
             <div><h3 data-i18n="method.step1.title">Cadrer le besoin</h3></div>
-            <div><p data-i18n="method.step1.text">Brief médical et humain, lecture du marché local, calibrage du profil cible et des arguments différenciants.</p></div>
+            <div><p data-i18n="method.step1.text">Connaissance des équipes, des pratiques et des compétences, de la structure, du matériel et de l'organisation, pour calibrer le profil recherché en conséquence.</p></div>
           </div>
           <div class="method-step">
             <div class="method-num">02</div>
             <div><h3 data-i18n="method.step2.title">Valoriser l'opportunité</h3></div>
-            <div><p data-i18n="method.step2.text">Rédaction d'offre, diffusion multi-canaux, mise en récit du projet de la clinique pour parler aux bons candidats.</p></div>
+            <div><p data-i18n="method.step2.text">Rédaction d'offre, diffusion multi-canaux, présentation claire du projet de la clinique pour attirer les bons candidats.</p></div>
           </div>
           <div class="method-step">
             <div class="method-num">03</div>
@@ -1571,7 +1634,7 @@
         <div class="section-title">
           <div class="section-kicker" data-i18n="commit.kicker">Nos engagements</div>
           <h2 data-i18n="commit.title">Un partenariat fondé sur la confiance.</h2>
-          <p data-i18n="commit.lead">La confiance est la base de tout partenariat durable. Nous nous y engageons concrètement, à chaque étape.</p>
+          <p data-i18n="commit.lead">Un recrutement engage la clinique comme le candidat sur la durée. Voici ce sur quoi nous nous engageons, concrètement.</p>
         </div>
         <div class="commit-grid">
           <article class="commit-card">
@@ -1620,8 +1683,8 @@
             <p data-i18n="data.card3.text">Délai moyen pour la signature de la promesse d'embauche après lancement de la mission.</p>
           </article>
           <article class="data-card">
-            <strong data-i18n="data.card4.value">40+</strong>
-            <p data-i18n="data.card4.text">Candidats en moyenne en recherche active ou passive dans notre vivier.</p>
+            <strong data-i18n="data.card4.value">300+</strong>
+            <p data-i18n="data.card4.text">Candidats en recherche active ou passive dans notre vivier.</p>
           </article>
         </div>
         <p class="data-note" data-i18n="data.note">Données moyennes observées sur les missions menées en 2025.</p>
@@ -1633,16 +1696,19 @@
       <div class="container">
         <div class="cta">
           <div class="section-kicker" style="color: var(--amber); justify-self: center;" data-i18n="contact.kicker">Contact</div>
-          <h2 data-i18n="contact.title">Vous recrutez un vétérinaire ou vous préparez votre prochain mouvement ?</h2>
+          <h2 data-i18n="contact.title">Vous recrutez un vétérinaire ou vous préparez votre prochaine étape ?</h2>
           <p data-i18n="contact.lead">Échangeons sur votre besoin : type de profil, pratique recherchée, marché ciblé, niveau d'urgence et arguments à mettre en avant.</p>
           <a href="mailto:contact@sarecrute.com?subject=Demande%20de%20contact%20SaRecrute&body=Bonjour%2C%0A%0A-%20Structure%20%2F%20nom%20%3A%0A-%20Marché%20ciblé%20(France%2C%20Suisse%2C%20Espagne%2C%20Belgique)%20%3A%0A-%20Profil%20recherché%20%3A%0A-%20Niveau%20d'urgence%20%3A%0A-%20Message%20%3A%0A%0AMerci%20%21" class="btn btn-primary" data-i18n-html="contact.button">Écrire à SaRecrute <span class="btn-arrow">→</span></a>
           <div class="cta-emails">
             <span data-i18n="contact.direct">Ou directement :</span>
-            <a href="mailto:sarah.vet@sarecrute.com">sarah.vet@sarecrute.com</a> ·
-            <a href="mailto:pamela.vet@sarecrute.com">pamela.vet@sarecrute.com</a>
           </div>
           <div class="cta-emails" style="margin-top: 8px;">
-            <a href="tel:+33675083886">+33 6 75 08 38 86</a>
+            <span data-i18n="contact.zoneSarah">France &amp; Suisse :</span>
+            <a href="mailto:sarah.vet@sarecrute.com">Sarah · sarah.vet@sarecrute.com</a>
+          </div>
+          <div class="cta-emails" style="margin-top: 4px;">
+            <span data-i18n="contact.zonePamela">France, Belgique &amp; Espagne :</span>
+            <a href="mailto:pamela.vet@sarecrute.com">Pamela · pamela.vet@sarecrute.com</a>
           </div>
         </div>
       </div>
@@ -1663,7 +1729,7 @@
             </span>
             <span class="logo-word">Sa<span class="logo-r">R</span>ecrute</span>
           </a>
-          <p data-i18n="footer.tagline">Des vétérinaires pour recruter des vétérinaires. Un cabinet exclusivement composé de praticiens ayant exercé en clinique.</p>
+          <p data-i18n="footer.tagline">Des vétérinaires pour recruter des vétérinaires. Un cabinet exclusivement composé de praticiens exerçant ou ayant exercé en clinique.</p>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.col1">Marchés</h4>
@@ -1673,8 +1739,8 @@
           <h4 data-i18n="footer.col2">Informations</h4>
           <a href="#" data-legal="mentions" data-i18n="footer.mentions">Mentions légales</a>
           <a href="#" data-legal="privacy" data-i18n="footer.privacy">Politique de confidentialité</a>
+          <a href="https://www.linkedin.com/company/sarecrute" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:contact@sarecrute.com">contact@sarecrute.com</a>
-          <a href="tel:+33675083886">+33 6 75 08 38 86</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -1705,11 +1771,11 @@
 
         "hero.kicker": "Des vétérinaires pour recruter des vétérinaires",
         "hero.title": "Des vétérinaires<br>pour recruter <em>vos équipes.</em>",
-        "hero.lead": "<strong>SaRecrute est un cabinet exclusivement composé de vétérinaires ayant exercé en clinique.</strong> Cela change la nature même des échanges avec les candidats et la précision du brief avec votre clinique : nous comprenons vos contraintes terrain, les attentes réelles des candidats et les arguments qui rendent une opportunité crédible.",
+        "hero.lead": "<strong>SaRecrute est un cabinet exclusivement composé de vétérinaires exerçant ou ayant exercé en clinique.</strong> Concrètement, nous parlons le même langage que vos candidats, nous cadrons le poste avec vous sans jargon, et nous savons ce qui décide un vétérinaire à rejoindre une clinique.",
         "hero.primary": "Confier un recrutement <span class=\"btn-arrow\">→</span>",
         "hero.secondary": "Voir notre méthode",
-        "hero.cardTitle": "Une lecture métier + marché",
-        "hero.cardText": "Les informations clés sont intégrées dès le brief pour cibler les bons candidats et présenter la clinique avec justesse.",
+        "hero.cardTitle": "Nos champs d'action",
+        "hero.cardText": "Recrutement de vétérinaires · Accompagnement à la cession de clinique.",
         "hero.info1.label": "Marchés", "hero.info1.text": "France · Suisse · Espagne · Belgique",
         "hero.info2.label": "Méthode", "hero.info2.text": "Approche directe + réseau vétérinaire",
         "hero.info3.label": "Structures", "hero.info3.text": "Cliniques indépendantes, réseaux, groupes",
@@ -1720,23 +1786,23 @@
 
         "services.kicker": "Services",
         "services.title": "Un cabinet spécialisé dans le recrutement vétérinaire.",
-        "services.lead": "SaRecrute apporte une compréhension concrète de la clinique : ses rythmes, ses urgences et ses besoins humains.",
+        "services.lead": "SaRecrute prend connaissance des atouts et des difficultés de la structure, et l'accompagne dans l'optimisation de ses besoins humains.",
         "services.card1.title": "Recruteurs vétérinaires",
-        "services.card1.text": "Les échanges sont conduits par des vétérinaires ayant exercé en clinique. Cela change le brief, la crédibilité et la lecture des enjeux médicaux.",
+        "services.card1.text": "Les échanges sont conduits par des vétérinaires exerçant ou ayant exercé en clinique. Cela change le brief, la crédibilité et la lecture des enjeux médicaux.",
         "services.card2.title": "Recrutement complet",
         "services.card2.text": "Cadrage, analyse marché, rédaction d'offre, diffusion, approche directe, préqualification, suivi des entretiens et intégration.",
         "services.card3.title": "Approche directe",
         "services.card3.text": "Identification proactive des profils qui ne sont pas en recherche active mais qui correspondent au poste et au projet de la clinique.",
-        "services.card4.title": "Valorisation de l'opportunité",
-        "services.card4.text": "Mise en récit du poste pour le rendre lisible et désirable : projet médical, équipe, équipements, perspectives, qualité de vie.",
+        "services.card4.title": "Présenter le poste tel qu'il est",
+        "services.card4.text": "Nous présentons le poste clairement, sans le survendre : projet médical, équipe, matériel, perspectives et conditions de travail.",
         "services.card5.title": "Mobilité ciblée & expatriation",
         "services.card5.text": "Accompagnement des candidats sur les questions d'équivalence de diplôme, de logement et d'installation dans un nouveau pays.",
         "services.card6.title": "Qualification clinique",
         "services.card6.text": "Évaluation précise du niveau réel : pratiques maîtrisées, autonomie, gestes chirurgicaux, gestion des urgences, posture en équipe.",
 
         "value.kicker": "Pourquoi SaRecrute",
-        "value.title": "Du temps gagné, un réseau activé, une parole crédible.",
-        "value.lead": "Confier le recrutement à un cabinet vétérinaire change la nature même de la conversation avec les candidats.",
+        "value.title": "Du temps gagné, un vrai réseau vétérinaire, des échanges entre confrères.",
+        "value.lead": "Confier votre recrutement à des vétérinaires change concrètement la façon dont on parle à vos candidats.",
         "value.card1.title": "Moins d'heures hors clinique",
         "value.card1.text": "Tri, échanges et préqualification sont assurés par le cabinet. Vous voyez uniquement les candidats pertinents.",
         "value.card2.title": "Un réseau bâti dans le temps",
@@ -1749,8 +1815,8 @@
         "profiles.kicker": "Profils",
         "profiles.title": "Du premier poste au profil spécialiste.",
         "profiles.lead": "SaRecrute accompagne tous les niveaux d'expérience, sur tous les types de structure.",
-        "profiles.junior.title": "Vétérinaire junior", "profiles.junior.text": "0–2 ans d'expérience, en recherche d'un cadre formateur.",
-        "profiles.mid.title": "Vétérinaire intermédiaire", "profiles.mid.text": "2–7 ans, autonome, à la recherche d'un projet clair.",
+        "profiles.junior.title": "Vétérinaire junior", "profiles.junior.text": "0-2 ans d'expérience, en recherche d'un cadre formateur.",
+        "profiles.mid.title": "Vétérinaire intermédiaire", "profiles.mid.text": "2-7 ans, autonome, à la recherche d'un projet clair.",
         "profiles.senior.title": "Vétérinaire senior", "profiles.senior.text": "7 ans et plus, expertise médicale et posture managériale.",
         "profiles.specialist.title": "Spécialiste", "profiles.specialist.text": "Diplôme européen ou résidence, pratique référée.",
         "profiles.intern.title": "Interne & assistant", "profiles.intern.text": "Profils en formation, mobilité possible vers la spécialité.",
@@ -1769,16 +1835,16 @@
         "domains.tag14": "Anesthésie", "domains.tag15": "Urgence",
 
         "method.kicker": "Méthode",
-        "method.title": "Un recrutement mené avec une vraie culture clinique.",
+        "method.title": "Un recrutement mené avec une démarche clinique.",
         "method.lead": "Quatre étapes structurées, du brief jusqu'à l'intégration du candidat.",
-        "method.step1.title": "Cadrer le besoin", "method.step1.text": "Brief médical et humain, lecture du marché local, calibrage du profil cible et des arguments différenciants.",
-        "method.step2.title": "Valoriser l'opportunité", "method.step2.text": "Rédaction d'offre, diffusion multi-canaux, mise en récit du projet de la clinique pour parler aux bons candidats.",
+        "method.step1.title": "Cadrer le besoin", "method.step1.text": "Connaissance des équipes, des pratiques et des compétences, de la structure, du matériel et de l'organisation, pour calibrer le profil recherché en conséquence.",
+        "method.step2.title": "Valoriser l'opportunité", "method.step2.text": "Rédaction d'offre, diffusion multi-canaux, présentation claire du projet de la clinique pour attirer les bons candidats.",
         "method.step3.title": "Approcher & qualifier", "method.step3.text": "Approche directe et activation du vivier, puis qualification clinique en profondeur menée entre confrères, de vétérinaire à vétérinaire. Nous ne présentons que les candidats réellement pertinents.",
         "method.step4.title": "Suivre jusqu'à l'intégration", "method.step4.text": "Points réguliers avec la clinique et le candidat pendant la période d'essai : nous restons présents jusqu'à l'intégration effective, pas seulement jusqu'à la signature.",
 
         "commit.kicker": "Nos engagements",
         "commit.title": "Un partenariat fondé sur la confiance.",
-        "commit.lead": "La confiance est la base de tout partenariat durable. Nous nous y engageons concrètement, à chaque étape.",
+        "commit.lead": "Un recrutement engage la clinique comme le candidat sur la durée. Voici ce sur quoi nous nous engageons, concrètement.",
         "commit.card1.title": "Honoraires au succès",
         "commit.card1.text": "Nos honoraires ne sont dus qu'en cas de recrutement finalisé, à la prise de poste effective du candidat.",
         "commit.card2.title": "Aucun démarchage",
@@ -1794,7 +1860,7 @@
         "data.card1.value": "3 jours", "data.card1.text": "En moyenne pour présenter une première candidature qualifiée après le lancement de la mission.",
         "data.card2.value": "97%", "data.card2.text": "Des candidats recrutés ont passé leur période d'essai.",
         "data.card3.value": "6 semaines", "data.card3.text": "Délai moyen pour la signature de la promesse d'embauche après lancement de la mission.",
-        "data.card4.value": "40+", "data.card4.text": "Candidats en moyenne en recherche active ou passive dans notre vivier.",
+        "data.card4.value": "300+", "data.card4.text": "Candidats en recherche active ou passive dans notre vivier.",
         "data.note": "Données moyennes observées sur les missions menées en 2025.",
 
         "testimonials.kicker": "Ils nous font confiance",
@@ -1814,19 +1880,21 @@
 
         "team.kicker": "Équipe",
         "team.title": "Deux vétérinaires recruteuses, quatre marchés prioritaires.",
-        "team.lead": "SaRecrute s'appuie sur des recruteuses qui ont connu la réalité de la clinique. Cette expérience rend les échanges plus précis avec les clients comme avec les candidats.",
+        "team.lead": "SaRecrute s'appuie sur des recruteuses qui connaissent la réalité de la clinique. Cette expérience rend les échanges plus précis avec les clients comme avec les candidats.",
         "team.sarah.role": "Vétérinaire recruteuse · France & Suisse",
         "team.sarah.text": "Spécialisée dans l'accompagnement des cliniques et des candidats vétérinaires sur les marchés français et suisse. Son expérience clinique lui permet de comprendre les besoins médicaux, humains et organisationnels des structures.",
-        "team.pamela.role": "Vétérinaire recruteuse · Espagne & Belgique",
-        "team.pamela.text": "Spécialisée dans les recrutements vétérinaires sur les marchés espagnol et belge. Sa connaissance du terrain facilite l'analyse des attentes candidats, de la mobilité et des spécificités locales.",
+        "team.pamela.role": "Vétérinaire recruteuse · France, Belgique & Espagne",
+        "team.pamela.text": "Spécialisée dans les recrutements vétérinaires sur les marchés français, belge et espagnol. Sa connaissance du terrain facilite l'analyse des attentes candidats, de la mobilité et des spécificités locales.",
+        "team.parcours": "Voir le parcours",
 
         "contact.kicker": "Contact",
-        "contact.title": "Vous recrutez un vétérinaire ou vous préparez votre prochain mouvement ?",
+        "contact.title": "Vous recrutez un vétérinaire ou vous préparez votre prochaine étape ?",
         "contact.lead": "Échangeons sur votre besoin : type de profil, pratique recherchée, marché ciblé, niveau d'urgence et arguments à mettre en avant.",
         "contact.button": "Écrire à SaRecrute <span class=\"btn-arrow\">→</span>",
         "contact.direct": "Ou directement :",
+        "contact.zoneSarah": "France & Suisse :", "contact.zonePamela": "France, Belgique & Espagne :",
 
-        "footer.tagline": "Des vétérinaires pour recruter des vétérinaires. Un cabinet exclusivement composé de praticiens ayant exercé en clinique.",
+        "footer.tagline": "Des vétérinaires pour recruter des vétérinaires. Un cabinet exclusivement composé de praticiens exerçant ou ayant exercé en clinique.",
         "footer.col1": "Marchés",
         "footer.markets": "France · Suisse · Espagne · Belgique",
         "footer.col2": "Informations",
@@ -1835,8 +1903,12 @@
         "footer.copy": "© 2026 SaRecrute. Tous droits réservés.",
         "footer.gdpr": "Données traitées dans le respect du RGPD.",
 
+        "legal.parcoursSarah.title": "Sarah Vanhersel · Parcours",
+        "legal.parcoursSarah.body": "<h3>Diplôme</h3><p>Docteur vétérinaire, diplômée de l'École Nationale Vétérinaire d'Alfort (ENVA) en 2019.</p><h3>Expérience en clinique</h3><p>Environ 5 ans en clinique, en Île-de-France puis à La Réunion : Mon Véto (2019-2023), Citiveto et Clinique Vétérinaire du Vieux Moulin. Fondatrice de SaRecrute en 2025.</p><h3>Compétences</h3><p>Urgences vétérinaires et astreintes, hospitalisation, échocardiographie.</p>",
+        "legal.parcoursPamela.title": "Pamela Martinez · Parcours",
+        "legal.parcoursPamela.body": "<h3>Diplôme</h3><p>Docteur vétérinaire (Universidad de Caldas, Colombie, 2013), équivalence française obtenue en 2025 (Oniris Nantes). Master 2 en surveillance épidémiologique à l'École Nationale Vétérinaire d'Alfort (ENVA) et Master en santé publique (Université Paris Descartes).</p><h3>Expérience en clinique</h3><p>Plusieurs années en clinique des animaux de compagnie, en Colombie (Dog Sano, Sabuesos) puis à La Réunion. Expérience complémentaire en épidémiologie (CIRAD).</p><h3>Compétences</h3><p>Médecine et chirurgie des animaux de compagnie, épidémiologie, santé publique.</p>",
         "legal.mentions.title": "Mentions légales",
-        "legal.mentions.body": "<h3>Éditeur du site</h3><p>SaRecrute — Cabinet de recrutement vétérinaire.</p><p>Email : contact@sarecrute.com</p><h3>Hébergement</h3><p>Le site est hébergé par [à compléter avec le nom et l'adresse de l'hébergeur].</p><h3>Propriété intellectuelle</h3><p>L'ensemble des contenus présents sur ce site (textes, visuels, identité graphique) est la propriété de SaRecrute, sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.</p><h3>Responsabilité</h3><p>SaRecrute s'efforce d'assurer l'exactitude des informations diffusées sur ce site mais ne peut garantir l'absence d'erreur. La responsabilité de SaRecrute ne saurait être engagée pour tout dommage résultant de l'utilisation du site.</p>",
+        "legal.mentions.body": "<h3>Éditeur du site</h3><p>SaRecrute, cabinet de recrutement vétérinaire.</p><p>Email : contact@sarecrute.com</p><h3>Hébergement</h3><p>Le site est hébergé par [à compléter avec le nom et l'adresse de l'hébergeur].</p><h3>Propriété intellectuelle</h3><p>L'ensemble des contenus présents sur ce site (textes, visuels, identité graphique) est la propriété de SaRecrute, sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.</p><h3>Responsabilité</h3><p>SaRecrute s'efforce d'assurer l'exactitude des informations diffusées sur ce site mais ne peut garantir l'absence d'erreur. La responsabilité de SaRecrute ne saurait être engagée pour tout dommage résultant de l'utilisation du site.</p>",
         "legal.privacy.title": "Politique de confidentialité",
         "legal.privacy.body": "<h3>Données collectées</h3><p>SaRecrute collecte des données personnelles dans le cadre strict de son activité de recrutement vétérinaire : informations de contact, parcours professionnel, attentes en matière de poste, et toute information communiquée volontairement par les candidats et les clients.</p><h3>Finalité</h3><p>Ces données sont utilisées uniquement pour mener les missions de recrutement, mettre en relation candidats et cliniques, et assurer le suivi des prestations.</p><h3>Conservation</h3><p>Les données sont conservées pendant la durée nécessaire à la mission, puis archivées conformément aux obligations légales.</p><h3>Vos droits (RGPD)</h3><p>Conformément au Règlement Général sur la Protection des Données, vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de vos données. Pour exercer ces droits, contactez-nous à : contact@sarecrute.com</p><h3>Cookies</h3><p>Ce site n'utilise pas de cookies de suivi tiers.</p>"
       },
@@ -1851,11 +1923,11 @@
 
         "hero.kicker": "Veterinarias que reclutan a veterinarios",
         "hero.title": "Veterinarias<br>que reclutan a <em>vuestros equipos.</em>",
-        "hero.lead": "<strong>SaRecrute es una consultora compuesta exclusivamente por veterinarias con experiencia clínica.</strong> Esto cambia la propia naturaleza de los intercambios con los candidatos y la precisión del briefing con vuestra clínica: comprendemos vuestras limitaciones reales, las expectativas de los candidatos y los argumentos que hacen creíble una oportunidad.",
+        "hero.lead": "<strong>SaRecrute es una consultora compuesta exclusivamente por veterinarias con experiencia clínica.</strong> En concreto: hablamos el mismo idioma que vuestros candidatos, definimos el puesto con vosotros sin jerga, y sabemos qué hace que un veterinario acepte una clínica.",
         "hero.primary": "Encargar un proceso <span class=\"btn-arrow\">→</span>",
         "hero.secondary": "Ver nuestro método",
-        "hero.cardTitle": "Una lectura clínica + de mercado",
-        "hero.cardText": "La información clave se integra desde el briefing para identificar a los candidatos adecuados y presentar la clínica con precisión.",
+        "hero.cardTitle": "Nuestros ámbitos de actuación",
+        "hero.cardText": "Selección de veterinarios · Acompañamiento en la cesión de clínicas.",
         "hero.info1.label": "Mercados", "hero.info1.text": "Francia · Suiza · España · Bélgica",
         "hero.info2.label": "Método", "hero.info2.text": "Búsqueda directa + red veterinaria",
         "hero.info3.label": "Estructuras", "hero.info3.text": "Clínicas independientes, redes, grupos",
@@ -1866,23 +1938,23 @@
 
         "services.kicker": "Servicios",
         "services.title": "Una consultora especializada en selección veterinaria.",
-        "services.lead": "SaRecrute aporta una comprensión concreta de la clínica: sus ritmos, sus urgencias y sus necesidades humanas.",
+        "services.lead": "SaRecrute conoce los puntos fuertes y las dificultades de la estructura, y la acompaña en la optimización de sus necesidades humanas.",
         "services.card1.title": "Reclutadoras veterinarias",
         "services.card1.text": "Los intercambios los lideran veterinarias con experiencia clínica. Esto cambia el briefing, la credibilidad y la lectura de los retos médicos.",
         "services.card2.title": "Selección integral",
         "services.card2.text": "Definición del puesto, análisis de mercado, redacción de la oferta, difusión, búsqueda directa, precalificación, seguimiento de entrevistas e integración.",
         "services.card3.title": "Búsqueda directa",
         "services.card3.text": "Identificación proactiva de perfiles que no buscan activamente pero que encajan con el puesto y el proyecto de la clínica.",
-        "services.card4.title": "Valorización de la oportunidad",
-        "services.card4.text": "Narrativa del puesto para hacerlo legible y deseable: proyecto médico, equipo, equipamiento, perspectivas, calidad de vida.",
+        "services.card4.title": "Presentar el puesto tal como es",
+        "services.card4.text": "Presentamos el puesto con claridad, sin exagerarlo: proyecto médico, equipo, material, perspectivas y condiciones de trabajo.",
         "services.card5.title": "Movilidad y expatriación",
         "services.card5.text": "Acompañamiento de los candidatos en cuestiones de homologación, vivienda e instalación en un nuevo país.",
         "services.card6.title": "Calificación clínica",
         "services.card6.text": "Evaluación precisa del nivel real: prácticas dominadas, autonomía, gestos quirúrgicos, gestión de urgencias, postura en equipo.",
 
         "value.kicker": "Por qué SaRecrute",
-        "value.title": "Tiempo ganado, red activada, palabra creíble.",
-        "value.lead": "Confiar el reclutamiento a una consultora veterinaria cambia la propia naturaleza de la conversación con los candidatos.",
+        "value.title": "Tiempo ganado, una verdadera red veterinaria, intercambios entre colegas.",
+        "value.lead": "Confiar vuestro reclutamiento a veterinarias cambia, en concreto, la forma de hablar con vuestros candidatos.",
         "value.card1.title": "Menos horas fuera de la clínica",
         "value.card1.text": "Cribado, intercambios y precalificación los asume la consultora. Solo veis a los candidatos relevantes.",
         "value.card2.title": "Una red construida con el tiempo",
@@ -1895,8 +1967,8 @@
         "profiles.kicker": "Perfiles",
         "profiles.title": "Del primer puesto al perfil especialista.",
         "profiles.lead": "SaRecrute acompaña todos los niveles de experiencia, en todo tipo de estructura.",
-        "profiles.junior.title": "Veterinario junior", "profiles.junior.text": "0–2 años de experiencia, busca un entorno formativo.",
-        "profiles.mid.title": "Veterinario intermedio", "profiles.mid.text": "2–7 años, autónomo, busca un proyecto claro.",
+        "profiles.junior.title": "Veterinario junior", "profiles.junior.text": "0-2 años de experiencia, busca un entorno formativo.",
+        "profiles.mid.title": "Veterinario intermedio", "profiles.mid.text": "2-7 años, autónomo, busca un proyecto claro.",
         "profiles.senior.title": "Veterinario senior", "profiles.senior.text": "7 años o más, experiencia médica y rol de gestión.",
         "profiles.specialist.title": "Especialista", "profiles.specialist.text": "Diploma europeo o residencia, práctica referida.",
         "profiles.intern.title": "Interno y asistente", "profiles.intern.text": "Perfiles en formación, posible movilidad hacia la especialidad.",
@@ -1915,16 +1987,16 @@
         "domains.tag14": "Anestesia", "domains.tag15": "Urgencias",
 
         "method.kicker": "Método",
-        "method.title": "Un proceso llevado con verdadera cultura clínica.",
+        "method.title": "Un proceso llevado con enfoque clínico.",
         "method.lead": "Cuatro etapas estructuradas, del briefing a la integración del candidato.",
-        "method.step1.title": "Definir la necesidad", "method.step1.text": "Briefing médico y humano, lectura del mercado local, calibración del perfil objetivo y de los argumentos diferenciadores.",
-        "method.step2.title": "Valorizar la oportunidad", "method.step2.text": "Redacción de la oferta, difusión multicanal, narrativa del proyecto de la clínica para hablar a los candidatos adecuados.",
+        "method.step1.title": "Definir la necesidad", "method.step1.text": "Conocimiento de los equipos, de las prácticas y competencias, de la estructura, del material y la organización, para calibrar el perfil buscado en consecuencia.",
+        "method.step2.title": "Valorizar la oportunidad", "method.step2.text": "Redacción de la oferta, difusión multicanal, presentación clara del proyecto de la clínica para atraer a los candidatos adecuados.",
         "method.step3.title": "Buscar y calificar", "method.step3.text": "Búsqueda directa y activación del vivero, y después calificación clínica en profundidad realizada entre colegas, de veterinario a veterinario. Solo presentamos a los candidatos realmente relevantes.",
         "method.step4.title": "Acompañar hasta la integración", "method.step4.text": "Seguimientos regulares con la clínica y el candidato durante el periodo de prueba: seguimos presentes hasta la integración efectiva, no solo hasta la firma.",
 
         "commit.kicker": "Nuestros compromisos",
         "commit.title": "Una colaboración basada en la confianza.",
-        "commit.lead": "La confianza es la base de toda colaboración duradera. Nos comprometemos de forma concreta, en cada etapa.",
+        "commit.lead": "Un reclutamiento compromete a la clínica y al candidato a largo plazo. Esto es lo que garantizamos, en concreto.",
         "commit.card1.title": "Honorarios al éxito",
         "commit.card1.text": "Nuestros honorarios solo se deben en caso de contratación finalizada, con la incorporación efectiva del candidato.",
         "commit.card2.title": "Sin captación",
@@ -1940,7 +2012,7 @@
         "data.card1.value": "3 días", "data.card1.text": "De media para presentar una primera candidatura cualificada tras el lanzamiento de la misión.",
         "data.card2.value": "97%", "data.card2.text": "De los candidatos contratados superan el periodo de prueba.",
         "data.card3.value": "6 semanas", "data.card3.text": "Plazo medio para la firma de la oferta de empleo tras el lanzamiento de la misión.",
-        "data.card4.value": "40+", "data.card4.text": "Candidatos de media en búsqueda activa o pasiva en nuestro vivero.",
+        "data.card4.value": "300+", "data.card4.text": "Candidatos en búsqueda activa o pasiva en nuestro vivero.",
         "data.note": "Datos medios observados en las misiones realizadas en 2025.",
 
         "testimonials.kicker": "Confían en nosotras",
@@ -1960,17 +2032,19 @@
 
         "team.kicker": "Equipo",
         "team.title": "Dos veterinarias reclutadoras, cuatro mercados prioritarios.",
-        "team.lead": "SaRecrute se apoya en reclutadoras que han vivido la realidad clínica. Esta experiencia hace que los intercambios sean más precisos con clientes y candidatos.",
+        "team.lead": "SaRecrute se apoya en reclutadoras que conocen la realidad clínica. Esta experiencia hace que los intercambios sean más precisos con clientes y candidatos.",
         "team.sarah.role": "Veterinaria reclutadora · Francia y Suiza",
         "team.sarah.text": "Especializada en el acompañamiento de clínicas y candidatos veterinarios en los mercados francés y suizo. Su experiencia clínica le permite comprender las necesidades médicas, humanas y organizativas de las estructuras.",
-        "team.pamela.role": "Veterinaria reclutadora · España y Bélgica",
-        "team.pamela.text": "Especializada en la selección veterinaria en los mercados español y belga. Su conocimiento del terreno facilita el análisis de las expectativas de los candidatos, de la movilidad y de las particularidades locales.",
+        "team.pamela.role": "Veterinaria reclutadora · Francia, Bélgica y España",
+        "team.pamela.text": "Especializada en la selección veterinaria en los mercados francés, belga y español. Su conocimiento del terreno facilita el análisis de las expectativas de los candidatos, de la movilidad y de las particularidades locales.",
+        "team.parcours": "Ver la trayectoria",
 
         "contact.kicker": "Contacto",
         "contact.title": "¿Buscáis un veterinario o estáis preparando vuestro próximo paso?",
         "contact.lead": "Hablemos de vuestra necesidad: tipo de perfil, práctica buscada, mercado objetivo, nivel de urgencia y argumentos a destacar.",
         "contact.button": "Escribir a SaRecrute <span class=\"btn-arrow\">→</span>",
         "contact.direct": "O directamente:",
+        "contact.zoneSarah": "Francia y Suiza:", "contact.zonePamela": "Francia, Bélgica y España:",
 
         "footer.tagline": "Veterinarias que reclutan a veterinarios. Una consultora compuesta exclusivamente por profesionales con experiencia clínica.",
         "footer.col1": "Mercados",
@@ -1981,8 +2055,12 @@
         "footer.copy": "© 2026 SaRecrute. Todos los derechos reservados.",
         "footer.gdpr": "Datos tratados conforme al RGPD.",
 
+        "legal.parcoursSarah.title": "Sarah Vanhersel · Trayectoria",
+        "legal.parcoursSarah.body": "<h3>Diploma</h3><p>Doctora veterinaria, titulada por la École Nationale Vétérinaire d'Alfort (ENVA) en 2019.</p><h3>Experiencia clínica</h3><p>Cerca de 5 años en clínica, en Isla de Francia y luego en La Reunión: Mon Véto (2019-2023), Citiveto y Clinique Vétérinaire du Vieux Moulin. Fundadora de SaRecrute en 2025.</p><h3>Competencias</h3><p>Urgencias veterinarias y guardias, hospitalización, ecocardiografía.</p>",
+        "legal.parcoursPamela.title": "Pamela Martinez · Trayectoria",
+        "legal.parcoursPamela.body": "<h3>Diploma</h3><p>Doctora veterinaria (Universidad de Caldas, Colombia, 2013), con homologación en Francia obtenida en 2025 (Oniris Nantes). Máster 2 en vigilancia epidemiológica en la École Nationale Vétérinaire d'Alfort (ENVA) y Máster en salud pública (Université Paris Descartes).</p><h3>Experiencia clínica</h3><p>Varios años en clínica de animales de compañía, en Colombia (Dog Sano, Sabuesos) y luego en La Reunión. Experiencia complementaria en epidemiología (CIRAD).</p><h3>Competencias</h3><p>Medicina y cirugía de animales de compañía, epidemiología, salud pública.</p>",
         "legal.mentions.title": "Aviso legal",
-        "legal.mentions.body": "<h3>Editor del sitio</h3><p>SaRecrute — Consultora de selección veterinaria.</p><p>Email: contact@sarecrute.com</p><h3>Alojamiento</h3><p>El sitio está alojado por [completar con el nombre y la dirección del proveedor].</p><h3>Propiedad intelectual</h3><p>Todos los contenidos del sitio (textos, imágenes, identidad gráfica) son propiedad de SaRecrute, salvo indicación contraria. Cualquier reproducción sin autorización previa está prohibida.</p><h3>Responsabilidad</h3><p>SaRecrute se esfuerza por garantizar la exactitud de la información publicada, pero no puede garantizar la ausencia de errores. La responsabilidad de SaRecrute no podrá comprometerse por daños derivados del uso del sitio.</p>",
+        "legal.mentions.body": "<h3>Editor del sitio</h3><p>SaRecrute, consultora de selección veterinaria.</p><p>Email: contact@sarecrute.com</p><h3>Alojamiento</h3><p>El sitio está alojado por [completar con el nombre y la dirección del proveedor].</p><h3>Propiedad intelectual</h3><p>Todos los contenidos del sitio (textos, imágenes, identidad gráfica) son propiedad de SaRecrute, salvo indicación contraria. Cualquier reproducción sin autorización previa está prohibida.</p><h3>Responsabilidad</h3><p>SaRecrute se esfuerza por garantizar la exactitud de la información publicada, pero no puede garantizar la ausencia de errores. La responsabilidad de SaRecrute no podrá comprometerse por daños derivados del uso del sitio.</p>",
         "legal.privacy.title": "Política de privacidad",
         "legal.privacy.body": "<h3>Datos recogidos</h3><p>SaRecrute recoge datos personales en el marco estricto de su actividad de selección veterinaria: información de contacto, trayectoria profesional, expectativas profesionales y cualquier información comunicada voluntariamente por candidatos y clientes.</p><h3>Finalidad</h3><p>Estos datos se utilizan únicamente para llevar a cabo las misiones de selección, poner en contacto a candidatos y clínicas, y garantizar el seguimiento de los servicios.</p><h3>Conservación</h3><p>Los datos se conservan durante el tiempo necesario para la misión y luego se archivan conforme a las obligaciones legales.</p><h3>Vuestros derechos (RGPD)</h3><p>Conforme al Reglamento General de Protección de Datos, dispone de un derecho de acceso, rectificación, supresión, portabilidad y oposición al tratamiento de sus datos. Para ejercerlos, escríbanos a: contact@sarecrute.com</p><h3>Cookies</h3><p>Este sitio no utiliza cookies de seguimiento de terceros.</p>"
       },
@@ -1997,11 +2075,11 @@
 
         "hero.kicker": "Vets who recruit vets",
         "hero.title": "Veterinarians<br>recruiting <em>your teams.</em>",
-        "hero.lead": "<strong>SaRecrute is a recruitment firm made up exclusively of veterinarians with clinical experience.</strong> It changes the very nature of the conversation with candidates and the precision of the brief with your practice: we understand the realities of practice, what candidates actually look for, and what makes an opportunity credible.",
+        "hero.lead": "<strong>SaRecrute is a recruitment firm made up exclusively of veterinarians with clinical experience.</strong> In concrete terms: we speak the same language as your candidates, we scope the role with you without HR jargon, and we know what makes a vet join a practice.",
         "hero.primary": "Start a search <span class=\"btn-arrow\">→</span>",
         "hero.secondary": "See our method",
-        "hero.cardTitle": "Clinical and market intelligence",
-        "hero.cardText": "Key information is built into the brief from the start, so we target the right candidates and present the practice accurately.",
+        "hero.cardTitle": "What we do",
+        "hero.cardText": "Veterinary recruitment · Practice-sale support.",
         "hero.info1.label": "Markets", "hero.info1.text": "France · Switzerland · Spain · Belgium",
         "hero.info2.label": "Method", "hero.info2.text": "Direct approach + veterinary network",
         "hero.info3.label": "Structures", "hero.info3.text": "Independent practices, networks, groups",
@@ -2012,23 +2090,23 @@
 
         "services.kicker": "Services",
         "services.title": "A firm specialised in veterinary recruitment.",
-        "services.lead": "SaRecrute brings concrete understanding of practice life: its rhythms, its emergencies, and its human needs.",
+        "services.lead": "SaRecrute gets to know a practice's strengths and challenges, and supports it in meeting its staffing needs.",
         "services.card1.title": "Vet-to-vet recruiters",
         "services.card1.text": "Conversations are led by veterinarians with clinical experience. That changes the brief, the credibility, and how medical issues are read.",
         "services.card2.title": "End-to-end search",
         "services.card2.text": "Brief, market analysis, job spec, posting, direct sourcing, pre-qualification, interview support, and onboarding.",
         "services.card3.title": "Direct sourcing",
         "services.card3.text": "Proactive identification of profiles who aren't actively searching but match the role and the practice's project.",
-        "services.card4.title": "Opportunity positioning",
-        "services.card4.text": "Storytelling that makes the role legible and desirable: medical project, team, equipment, growth, quality of life.",
+        "services.card4.title": "Presenting the role as it is",
+        "services.card4.text": "We present the role clearly, without overselling it: medical project, team, equipment, prospects and working conditions.",
         "services.card5.title": "Targeted mobility & relocation",
         "services.card5.text": "Support for candidates around diploma equivalence, housing, and settling into a new country.",
         "services.card6.title": "Clinical screening",
         "services.card6.text": "Accurate evaluation of real-world level: confident procedures, autonomy, surgical skills, ER handling, team posture.",
 
         "value.kicker": "Why SaRecrute",
-        "value.title": "Time saved, network activated, credible voice.",
-        "value.lead": "Trusting recruitment to a vet-led firm changes the very nature of the conversation with candidates.",
+        "value.title": "Time saved, a real veterinary network, conversations between peers.",
+        "value.lead": "Trusting your recruitment to vets concretely changes the way we talk to your candidates.",
         "value.card1.title": "Fewer hours away from clinic",
         "value.card1.text": "Sourcing, conversations, and pre-screening are handled by us. You only meet relevant candidates.",
         "value.card2.title": "A network built over time",
@@ -2041,8 +2119,8 @@
         "profiles.kicker": "Profiles",
         "profiles.title": "From first job to specialist.",
         "profiles.lead": "SaRecrute supports every experience level, across every type of structure.",
-        "profiles.junior.title": "Junior vet", "profiles.junior.text": "0–2 years' experience, looking for a supportive setting.",
-        "profiles.mid.title": "Mid-level vet", "profiles.mid.text": "2–7 years, autonomous, looking for a clear project.",
+        "profiles.junior.title": "Junior vet", "profiles.junior.text": "0-2 years' experience, looking for a supportive setting.",
+        "profiles.mid.title": "Mid-level vet", "profiles.mid.text": "2-7 years, autonomous, looking for a clear project.",
         "profiles.senior.title": "Senior vet", "profiles.senior.text": "7+ years, medical depth and leadership posture.",
         "profiles.specialist.title": "Specialist", "profiles.specialist.text": "European diploma or residency, referral practice.",
         "profiles.intern.title": "Intern & assistant", "profiles.intern.text": "Profiles in training, possible move into specialty.",
@@ -2061,16 +2139,16 @@
         "domains.tag14": "Anaesthesia", "domains.tag15": "Emergency",
 
         "method.kicker": "Method",
-        "method.title": "A search led with genuine clinical culture.",
+        "method.title": "A search led with a clinical approach.",
         "method.lead": "Four structured steps, from brief to onboarding.",
-        "method.step1.title": "Frame the need", "method.step1.text": "Medical and human brief, local market read, calibration of target profile and differentiating arguments.",
-        "method.step2.title": "Position the opportunity", "method.step2.text": "Job spec, multi-channel posting, storytelling around the practice's project to reach the right candidates.",
+        "method.step1.title": "Frame the need", "method.step1.text": "Understanding the teams, the clinical work and skills, the structure, the equipment and the organisation, to calibrate the target profile accordingly.",
+        "method.step2.title": "Position the opportunity", "method.step2.text": "Job spec, multi-channel posting, a clear presentation of the practice's project to attract the right candidates.",
         "method.step3.title": "Approach & qualify", "method.step3.text": "Direct sourcing and talent pool activation, then in-depth clinical screening conducted between peers, vet to vet. We only present genuinely relevant candidates.",
         "method.step4.title": "Support through onboarding", "method.step4.text": "Regular check-ins with practice and candidate during the trial period: we stay involved through to effective onboarding, not just to signature.",
 
         "commit.kicker": "Our commitments",
         "commit.title": "A partnership built on trust.",
-        "commit.lead": "Trust is the foundation of any lasting partnership. We commit to it concretely, at every step.",
+        "commit.lead": "A recruitment commits both the practice and the candidate for the long term. Here is what we commit to, concretely.",
         "commit.card1.title": "Success-based fees",
         "commit.card1.text": "Our fees are only due when a hire is finalised, once the candidate has effectively started.",
         "commit.card2.title": "No poaching",
@@ -2086,7 +2164,7 @@
         "data.card1.value": "3 days", "data.card1.text": "On average to present a first qualified candidate after the search starts.",
         "data.card2.value": "97%", "data.card2.text": "Of placed candidates pass their probation period.",
         "data.card3.value": "6 weeks", "data.card3.text": "Average time to signed offer after the search starts.",
-        "data.card4.value": "40+", "data.card4.text": "Candidates on average actively or passively engaged in our talent pool.",
+        "data.card4.value": "300+", "data.card4.text": "Candidates actively or passively engaged in our talent pool.",
         "data.note": "Average figures observed across assignments delivered in 2025.",
 
         "testimonials.kicker": "They trust us",
@@ -2094,7 +2172,7 @@
         "testimonials.t1.text": "“We had been looking for a senior vet with real surgical appetite for over six months. SaRecrute understood our medical project in a single brief. Three relevant candidates within two weeks, and a signed hire shortly after.”",
         "testimonials.t1.name": "Dr. David Marchand",
         "testimonials.t1.role": "Clinique vétérinaire des Cèdres · Lyon",
-        "testimonials.t2.text": "“I appreciated speaking with a colleague who knows the reality on the ground. Questions about the equipment, on-call rotation, daily rhythm — everything was sharp. My move to Switzerland was made far easier.”",
+        "testimonials.t2.text": "“I appreciated speaking with a colleague who knows the reality on the ground. Questions about the equipment, on-call rotation, daily rhythm: everything was sharp. My move to Switzerland was made far easier.”",
         "testimonials.t2.name": "Dr. Claire Lemoine",
         "testimonials.t2.role": "General practitioner · hired in Geneva",
         "testimonials.t3.text": "“SaRecrute presented our practice accurately, without overselling the role. Candidates who came to interview were already convinced by the project. It saves the team a huge amount of time.”",
@@ -2106,17 +2184,19 @@
 
         "team.kicker": "Team",
         "team.title": "Two veterinarian recruiters, four priority markets.",
-        "team.lead": "SaRecrute relies on recruiters who've lived the reality of practice. That experience makes every conversation sharper, with clients and candidates alike.",
+        "team.lead": "SaRecrute relies on recruiters who know the reality of practice first-hand. That experience makes every conversation sharper, with clients and candidates alike.",
         "team.sarah.role": "Vet recruiter · France & Switzerland",
         "team.sarah.text": "Focused on supporting practices and veterinary candidates across the French and Swiss markets. Her clinical background lets her understand the medical, human, and organisational needs of each structure.",
-        "team.pamela.role": "Vet recruiter · Spain & Belgium",
-        "team.pamela.text": "Focused on veterinary recruitment across the Spanish and Belgian markets. Her field knowledge sharpens the read on candidate expectations, mobility, and local specifics.",
+        "team.pamela.role": "Vet recruiter · France, Belgium & Spain",
+        "team.pamela.text": "Focused on veterinary recruitment across the French, Belgian and Spanish markets. Her field knowledge sharpens the read on candidate expectations, mobility, and local specifics.",
+        "team.parcours": "View background",
 
         "contact.kicker": "Contact",
         "contact.title": "Hiring a veterinarian, or planning your next move?",
         "contact.lead": "Let's talk: profile type, practice area, target market, urgency, and the arguments that matter for the role.",
         "contact.button": "Email SaRecrute <span class=\"btn-arrow\">→</span>",
         "contact.direct": "Or directly:",
+        "contact.zoneSarah": "France & Switzerland:", "contact.zonePamela": "France, Belgium & Spain:",
 
         "footer.tagline": "Vets who recruit vets. A firm made up exclusively of practitioners with clinical experience.",
         "footer.col1": "Markets",
@@ -2127,8 +2207,12 @@
         "footer.copy": "© 2026 SaRecrute. All rights reserved.",
         "footer.gdpr": "Data processed in accordance with GDPR.",
 
+        "legal.parcoursSarah.title": "Sarah Vanhersel · Background",
+        "legal.parcoursSarah.body": "<h3>Degree</h3><p>Doctor of Veterinary Medicine, graduate of the École Nationale Vétérinaire d'Alfort (ENVA), class of 2019.</p><h3>Clinical experience</h3><p>Around 5 years in practice, in the Paris region then on Réunion Island: Mon Véto (2019-2023), Citiveto and Clinique Vétérinaire du Vieux Moulin. Founder of SaRecrute in 2025.</p><h3>Skills</h3><p>Veterinary emergencies and on-call, hospitalisation, echocardiography.</p>",
+        "legal.parcoursPamela.title": "Pamela Martinez · Background",
+        "legal.parcoursPamela.body": "<h3>Degree</h3><p>Doctor of Veterinary Medicine (Universidad de Caldas, Colombia, 2013), with French equivalence obtained in 2025 (Oniris Nantes). MSc in epidemiological surveillance at the École Nationale Vétérinaire d'Alfort (ENVA) and a Master's in public health (Université Paris Descartes).</p><h3>Clinical experience</h3><p>Several years in companion-animal practice, in Colombia (Dog Sano, Sabuesos) then on Réunion Island. Additional experience in epidemiology (CIRAD).</p><h3>Skills</h3><p>Companion-animal medicine and surgery, epidemiology, public health.</p>",
         "legal.mentions.title": "Legal notice",
-        "legal.mentions.body": "<h3>Site publisher</h3><p>SaRecrute — Veterinary recruitment firm.</p><p>Email: contact@sarecrute.com</p><h3>Hosting</h3><p>The site is hosted by [to be completed with host name and address].</p><h3>Intellectual property</h3><p>All content on this site (text, images, graphic identity) is the property of SaRecrute unless stated otherwise. Reproduction without prior authorisation is prohibited.</p><h3>Liability</h3><p>SaRecrute makes every effort to ensure the accuracy of the information published, but cannot guarantee the absence of errors. SaRecrute cannot be held liable for any damage resulting from the use of the site.</p>",
+        "legal.mentions.body": "<h3>Site publisher</h3><p>SaRecrute, veterinary recruitment firm.</p><p>Email: contact@sarecrute.com</p><h3>Hosting</h3><p>The site is hosted by [to be completed with host name and address].</p><h3>Intellectual property</h3><p>All content on this site (text, images, graphic identity) is the property of SaRecrute unless stated otherwise. Reproduction without prior authorisation is prohibited.</p><h3>Liability</h3><p>SaRecrute makes every effort to ensure the accuracy of the information published, but cannot guarantee the absence of errors. SaRecrute cannot be held liable for any damage resulting from the use of the site.</p>",
         "legal.privacy.title": "Privacy policy",
         "legal.privacy.body": "<h3>Data collected</h3><p>SaRecrute collects personal data strictly in the context of its veterinary recruitment activity: contact information, professional background, role expectations, and any information voluntarily shared by candidates and clients.</p><h3>Purpose</h3><p>This data is used solely to carry out recruitment assignments, connect candidates and practices, and ensure follow-up.</p><h3>Retention</h3><p>Data is kept for the duration of the assignment, then archived in line with legal obligations.</p><h3>Your rights (GDPR)</h3><p>Under the General Data Protection Regulation, you have the right to access, rectify, erase, transfer, and object to the processing of your data. To exercise these rights, contact us at: contact@sarecrute.com</p><h3>Cookies</h3><p>This site does not use third-party tracking cookies.</p>"
       }
@@ -2139,9 +2223,9 @@
     const htmlNodes = document.querySelectorAll("[data-i18n-html]");
 
     const titles = {
-      fr: "SaRecrute — Recrutement vétérinaire France, Suisse, Espagne, Belgique",
-      es: "SaRecrute — Selección veterinaria Francia, Suiza, España, Bélgica",
-      en: "SaRecrute — Veterinary recruitment France, Switzerland, Spain, Belgium"
+      fr: "SaRecrute · Recrutement vétérinaire France, Suisse, Espagne, Belgique",
+      es: "SaRecrute · Selección veterinaria Francia, Suiza, España, Bélgica",
+      en: "SaRecrute · Veterinary recruitment France, Switzerland, Spain, Belgium"
     };
 
     let currentLang = "fr";
