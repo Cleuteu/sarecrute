@@ -1307,6 +1307,12 @@
       transition: transform 0.15s ease, background 0.15s ease;
     }
     .offre-marker:hover { transform: scale(1.12); }
+    .offre-marker.is-hover {
+      transform: scale(1.25);
+      background: var(--sage-dark);
+      box-shadow: 0 6px 18px rgba(32, 56, 50, 0.45);
+      z-index: 1000;
+    }
     .offre-marker.is-active {
       background: var(--terracotta);
     }
@@ -1655,7 +1661,7 @@
       ].join("");
 
       return `
-        <article class="offre-card">
+        <article class="offre-card" data-dept="${o.departement}">
           ${o.experience ? `<span class="offre-badge-corner">${o.experience}</span>` : ""}
           <span class="offre-loc">${o.departement}</span>
           <h3>${o.titre}</h3>
@@ -1703,6 +1709,22 @@
         btn.addEventListener("click", () => {
           const offre = OFFRES.find((o) => o.ref === btn.getAttribute("data-offre-ref"));
           if (offre) openApplyModal(offre);
+        });
+      });
+
+      grid.querySelectorAll(".offre-card").forEach((card) => {
+        const cardDept = card.getAttribute("data-dept");
+        const marker = deptMarkers[cardDept];
+        if (!marker) return;
+        card.addEventListener("mouseenter", () => {
+          const el = marker.getElement();
+          const inner = el && el.querySelector(".offre-marker");
+          if (inner) inner.classList.add("is-hover");
+        });
+        card.addEventListener("mouseleave", () => {
+          const el = marker.getElement();
+          const inner = el && el.querySelector(".offre-marker");
+          if (inner) inner.classList.remove("is-hover");
         });
       });
 
