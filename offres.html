@@ -1228,6 +1228,11 @@
       text-decoration: none;
       margin-bottom: 32px;
     }
+    .offres-h1 {
+      display: block;
+      font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+      margin-bottom: 18px;
+    }
     .offres-breadcrumb:hover { text-decoration: underline; }
     .offres-toolbar {
       display: flex;
@@ -1361,10 +1366,14 @@
       box-shadow: var(--shadow-soft);
       border-color: var(--line-strong);
     }
+    .offre-card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
     .offre-badge-corner {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+      flex-shrink: 0;
       background: var(--amber);
       color: var(--deep);
       font-size: 0.72rem;
@@ -1372,6 +1381,7 @@
       letter-spacing: 0.02em;
       padding: 5px 12px;
       border-radius: 999px;
+      white-space: nowrap;
     }
     .offre-loc {
       display: inline-flex;
@@ -1551,6 +1561,7 @@
     <section id="offres" class="offres-page">
       <div class="container">
         <a href="index.html" class="offres-breadcrumb">← Retour à l'accueil</a>
+        <h1 class="offres-h1">Nos offres</h1>
         <div class="section-title offres-intro">
           <p>Des postes dans des cliniques indépendantes ou de petits groupes qui nous ont confié leur recrutement. Pour préserver leur confidentialité, la localisation est indiquée au département près, sans nom de clinique. Le détail du poste et les coordonnées complètes vous sont communiqués après votre candidature.</p>
         </div>
@@ -1650,20 +1661,24 @@
     }
 
     const PRATIQUE_LABELS = { Canine: "Canin", Bovins: "Rural" };
+    const EXPERIENCE_LABELS = { "1 à 2 ans": "Semi-autonome" };
+    const experienceLabel = (e) => (e && EXPERIENCE_LABELS[e]) || e;
 
     function renderOffreCard(o) {
       const contratBadges = o.contrat.map((c) => `<span class="offre-badge">${c}</span>`).join("");
       const fields = [
         offreField("Temps de travail", o.temps.join(", ")),
         offreField("Gardes", o.gardes, o.gardes === "Oui" ? "is-gardes" : ""),
-        offreField("Expérience", o.experience),
+        offreField("Expérience", experienceLabel(o.experience)),
         offreField("Disponibilité", o.disponibilite),
       ].join("");
 
       return `
         <article class="offre-card" data-dept="${o.departement}">
-          ${o.experience ? `<span class="offre-badge-corner">${o.experience}</span>` : ""}
-          <span class="offre-loc">${o.departement}</span>
+          <div class="offre-card-head">
+            <span class="offre-loc">${o.departement}</span>
+            ${o.experience ? `<span class="offre-badge-corner">${experienceLabel(o.experience)}</span>` : ""}
+          </div>
           <h3>${o.titre}</h3>
           ${contratBadges ? `<div class="offre-badges">${contratBadges}</div>` : ""}
           ${fields ? `<div class="offre-fields">${fields}</div>` : ""}
@@ -1685,7 +1700,7 @@
       fill(document.getElementById("offre-filtre-dept"), depts, "Tous les départements");
       fill(document.getElementById("offre-filtre-pratique"), pratiques, "Toutes les pratiques", PRATIQUE_LABELS);
       fill(document.getElementById("offre-filtre-contrat"), contrats, "Tous les contrats");
-      fill(document.getElementById("offre-filtre-experience"), experiences, "Toute expérience");
+      fill(document.getElementById("offre-filtre-experience"), experiences, "Toute expérience", EXPERIENCE_LABELS);
     }
 
     function renderOffres() {

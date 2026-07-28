@@ -1240,7 +1240,7 @@
     .offres-carousel::-webkit-scrollbar { display: none; }
     .offre-teaser-card {
       scroll-snap-align: start;
-      flex: 0 0 260px;
+      flex: 0 0 290px;
       background: var(--warm-white);
       border-radius: var(--radius);
       padding: 24px 22px;
@@ -1248,6 +1248,12 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
+    }
+    .offre-teaser-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
     }
     .offre-teaser-card .offre-loc {
       display: inline-flex;
@@ -1267,6 +1273,33 @@
       padding: 4px 11px;
       border-radius: 999px;
     }
+    .offre-teaser-badge-corner {
+      flex-shrink: 0;
+      background: var(--amber);
+      color: var(--deep);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 4px 11px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .offre-teaser-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }
+    .offre-teaser-field {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.82rem;
+    }
+    .offre-teaser-field span { color: var(--muted); }
+    .offre-teaser-field strong { color: var(--deep); font-weight: 500; text-align: right; }
+    .offre-teaser-field.is-gardes strong { color: var(--terracotta-dark); font-weight: 600; }
     .offres-carousel-nav {
       flex-shrink: 0;
       width: 40px;
@@ -1451,57 +1484,96 @@
         <div class="section-title">
           <div class="section-kicker">Offres</div>
           <h2>Des postes ouverts, dès maintenant.</h2>
-          <p>Des cliniques qui nous ont confié leur recrutement, partout en France, en Suisse et en Belgique. Localisation indiquée au département près, jamais de nom de clinique.</p>
+          <p>Des dizaines d'offres, dans des pratiques et des régions très variées, partout en France, en Suisse et en Belgique.</p>
         </div>
 
         <div class="offres-carousel-wrap">
           <button type="button" class="offres-carousel-nav" id="offres-carousel-prev" aria-label="Offres précédentes">‹</button>
           <div class="offres-carousel" id="offres-carousel">
             <article class="offre-teaser-card">
-              <span class="offre-loc">Allier (03)</span>
+              <div class="offre-teaser-head">
+                <span class="offre-loc">Allier (03)</span>
+                <span class="offre-teaser-badge-corner">Semi-autonome</span>
+              </div>
               <h3>Vétérinaire rural</h3>
               <div class="offre-teaser-badges">
                 <span class="offre-teaser-badge">CDI</span>
                 <span class="offre-teaser-badge">Association</span>
               </div>
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Temps de travail</span><strong>Plein, partiel</strong></div>
+                <div class="offre-teaser-field is-gardes"><span>Gardes</span><strong>Oui</strong></div>
+              </div>
             </article>
             <article class="offre-teaser-card">
-              <span class="offre-loc">Alpes-Maritimes (06)</span>
+              <div class="offre-teaser-head">
+                <span class="offre-loc">Alpes-Maritimes (06)</span>
+                <span class="offre-teaser-badge-corner">Débutant</span>
+              </div>
               <h3>Vétérinaire canin</h3>
               <div class="offre-teaser-badges">
                 <span class="offre-teaser-badge">Collaboration libérale</span>
                 <span class="offre-teaser-badge">CDI</span>
               </div>
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Temps de travail</span><strong>Plein, partiel</strong></div>
+              </div>
             </article>
             <article class="offre-teaser-card">
-              <span class="offre-loc">Aube (10)</span>
+              <div class="offre-teaser-head">
+                <span class="offre-loc">Aube (10)</span>
+                <span class="offre-teaser-badge-corner">Débutant</span>
+              </div>
               <h3>Vétérinaire canin</h3>
               <div class="offre-teaser-badges">
                 <span class="offre-teaser-badge">CDD</span>
                 <span class="offre-teaser-badge">CDI</span>
               </div>
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Temps de travail</span><strong>Plein, partiel</strong></div>
+                <div class="offre-teaser-field"><span>Disponibilité</span><strong>Dès que possible</strong></div>
+              </div>
             </article>
             <article class="offre-teaser-card">
-              <span class="offre-loc">Belgique</span>
+              <div class="offre-teaser-head">
+                <span class="offre-loc">Belgique</span>
+                <span class="offre-teaser-badge-corner">Débutant</span>
+              </div>
               <h3>Vétérinaire canin</h3>
               <div class="offre-teaser-badges">
                 <span class="offre-teaser-badge">Collaboration libérale</span>
               </div>
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Temps de travail</span><strong>Plein, partiel</strong></div>
+                <div class="offre-teaser-field is-gardes"><span>Gardes</span><strong>Oui</strong></div>
+              </div>
             </article>
             <article class="offre-teaser-card">
-              <span class="offre-loc">Cher (18)</span>
+              <div class="offre-teaser-head">
+                <span class="offre-loc">Cher (18)</span>
+                <span class="offre-teaser-badge-corner">Semi-autonome</span>
+              </div>
               <h3>Vétérinaire canin</h3>
               <div class="offre-teaser-badges">
                 <span class="offre-teaser-badge">CDI</span>
                 <span class="offre-teaser-badge">Association</span>
               </div>
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Temps de travail</span><strong>Plein, partiel</strong></div>
+              </div>
             </article>
             <article class="offre-teaser-card">
-              <span class="offre-loc">Corse (20)</span>
+              <div class="offre-teaser-head">
+                <span class="offre-loc">Corse (20)</span>
+                <span class="offre-teaser-badge-corner">Autonome</span>
+              </div>
               <h3>Vétérinaire canin</h3>
               <div class="offre-teaser-badges">
                 <span class="offre-teaser-badge">CDI</span>
                 <span class="offre-teaser-badge">Salarié</span>
+              </div>
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Temps de travail</span><strong>Temps plein</strong></div>
               </div>
             </article>
           </div>
@@ -1509,7 +1581,7 @@
         </div>
 
         <div class="offres-teaser-cta">
-          <a href="offres.html" class="btn btn-primary">Voir plus <span class="btn-arrow">→</span></a>
+          <a href="offres.html" class="btn btn-primary">Voir toutes nos offres <span class="btn-arrow">→</span></a>
         </div>
       </div>
     </section>
