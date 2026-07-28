@@ -1216,11 +1216,26 @@
       color: var(--deep);
     }
 
+    /* ============ OFFRES (teaser) ============ */
+    .offres-teaser {
+      background: var(--cream);
+      border-radius: 40px;
+      margin: 0 4%;
+    }
+    .offres-teaser-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .offres-teaser .btn { flex-shrink: 0; }
+
     /* ============ RESPONSIVE ============ */
     @media (max-width: 960px) {
       .hero { padding: 60px 0 70px; }
       .hero-grid { grid-template-columns: 1fr; gap: 50px; }
       .services-grid { grid-template-columns: 1fr 1fr; }
+      .offres-teaser-inner { flex-direction: column; align-items: flex-start; text-align: left; }
       .value-grid { grid-template-columns: 1fr 1fr; }
       .commit-grid { grid-template-columns: 1fr 1fr; }
       .profiles-grid { grid-template-columns: 1fr 1fr; }
@@ -1292,6 +1307,7 @@
 
       <div class="nav-right">
         <div class="nav-links">
+          <a href="offres.html">Offres</a>
           <a href="#services" data-i18n="nav.services">Services</a>
           <a href="#profils" data-i18n="nav.profiles">Profils</a>
           <a href="#methode" data-i18n="nav.method">Méthode</a>
@@ -1369,6 +1385,18 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- OFFRES (teaser) -->
+    <section id="offres" class="offres-teaser">
+      <div class="container offres-teaser-inner">
+        <div class="section-title" style="margin-bottom: 0;">
+          <div class="section-kicker">Offres</div>
+          <h2>Des postes ouverts, dès maintenant.</h2>
+          <p>Des cliniques qui nous ont confié leur recrutement, partout en France, en Suisse et en Belgique. Localisation indiquée au département près, jamais de nom de clinique.</p>
+        </div>
+        <a href="offres.html" class="btn btn-primary">Voir toutes nos offres <span class="btn-arrow">→</span></a>
       </div>
     </section>
 
@@ -1909,7 +1937,7 @@
         "legal.parcoursSarah.title": "Sarah Vanhersel · Parcours",
         "legal.parcoursSarah.body": "<h3>Diplôme</h3><p>Docteur vétérinaire, diplômée de l'École Nationale Vétérinaire d'Alfort (ENVA) en 2019.</p><h3>Expérience en clinique</h3><p>Environ 5 ans en clinique, en Île-de-France puis à La Réunion : Mon Véto (2019-2023), Citiveto et Clinique Vétérinaire du Vieux Moulin. Fondatrice de SaRecrute en 2025.</p><h3>Compétences</h3><p>Urgences vétérinaires et astreintes, hospitalisation, échocardiographie.</p>",
         "legal.parcoursPamela.title": "Pamela Martinez · Parcours",
-        "legal.parcoursPamela.body": "<h3>Diplôme</h3><p>Docteur vétérinaire (Universidad de Caldas, Colombie, 2013), équivalence française obtenue en 2025 (Oniris Nantes). Master 2 en surveillance épidémiologique à l'École Nationale Vétérinaire d'Alfort (ENVA) et Master en santé publique (Université Paris Descartes).</p><h3>Expérience en clinique</h3><p>Plusieurs années en clinique des animaux de compagnie, en Colombie (Dog Sano, Sabuesos) puis à La Réunion. Expérience complémentaire en épidémiologie (CIRAD).</p><h3>Compétences</h3><p>Médecine et chirurgie des animaux de compagnie, épidémiologie, santé publique.</p>",
+        "legal.parcoursPamela.body": "<h3>Diplôme</h3><p>Docteur vétérinaire (Universidad de Caldas, Colombie, 2013), équivalence française obtenue en 2025 (Oniris Nantes). Master 2 en surveillance épidémiologique à l'École Nationale Vétérinaire d'Alfort (ENVA).</p><h3>Expérience en clinique</h3><p>Plusieurs années en clinique des animaux de compagnie, en Colombie (Dog Sano, Sabuesos) puis à La Réunion. Expérience complémentaire en épidémiologie (CIRAD).</p><h3>Compétences</h3><p>Médecine et chirurgie des animaux de compagnie, épidémiologie, santé publique.</p>",
         "legal.mentions.title": "Mentions légales",
         "legal.mentions.body": "<h3>Éditeur du site</h3><p>SaRecrute, cabinet de recrutement vétérinaire.</p><p>Email : contact@sarecrute.com</p><h3>Hébergement</h3><p>Le site est hébergé par [à compléter avec le nom et l'adresse de l'hébergeur].</p><h3>Propriété intellectuelle</h3><p>L'ensemble des contenus présents sur ce site (textes, visuels, identité graphique) est la propriété de SaRecrute, sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.</p><h3>Responsabilité</h3><p>SaRecrute s'efforce d'assurer l'exactitude des informations diffusées sur ce site mais ne peut garantir l'absence d'erreur. La responsabilité de SaRecrute ne saurait être engagée pour tout dommage résultant de l'utilisation du site.</p>",
         "legal.privacy.title": "Politique de confidentialité",
@@ -2061,7 +2089,7 @@
         "legal.parcoursSarah.title": "Sarah Vanhersel · Trayectoria",
         "legal.parcoursSarah.body": "<h3>Diploma</h3><p>Doctora veterinaria, titulada por la École Nationale Vétérinaire d'Alfort (ENVA) en 2019.</p><h3>Experiencia clínica</h3><p>Cerca de 5 años en clínica, en Isla de Francia y luego en La Reunión: Mon Véto (2019-2023), Citiveto y Clinique Vétérinaire du Vieux Moulin. Fundadora de SaRecrute en 2025.</p><h3>Competencias</h3><p>Urgencias veterinarias y guardias, hospitalización, ecocardiografía.</p>",
         "legal.parcoursPamela.title": "Pamela Martinez · Trayectoria",
-        "legal.parcoursPamela.body": "<h3>Diploma</h3><p>Doctora veterinaria (Universidad de Caldas, Colombia, 2013), con homologación en Francia obtenida en 2025 (Oniris Nantes). Máster 2 en vigilancia epidemiológica en la École Nationale Vétérinaire d'Alfort (ENVA) y Máster en salud pública (Université Paris Descartes).</p><h3>Experiencia clínica</h3><p>Varios años en clínica de animales de compañía, en Colombia (Dog Sano, Sabuesos) y luego en La Reunión. Experiencia complementaria en epidemiología (CIRAD).</p><h3>Competencias</h3><p>Medicina y cirugía de animales de compañía, epidemiología, salud pública.</p>",
+        "legal.parcoursPamela.body": "<h3>Diploma</h3><p>Doctora veterinaria (Universidad de Caldas, Colombia, 2013), con homologación en Francia obtenida en 2025 (Oniris Nantes). Máster 2 en vigilancia epidemiológica en la École Nationale Vétérinaire d'Alfort (ENVA).</p><h3>Experiencia clínica</h3><p>Varios años en clínica de animales de compañía, en Colombia (Dog Sano, Sabuesos) y luego en La Reunión. Experiencia complementaria en epidemiología (CIRAD).</p><h3>Competencias</h3><p>Medicina y cirugía de animales de compañía, epidemiología, salud pública.</p>",
         "legal.mentions.title": "Aviso legal",
         "legal.mentions.body": "<h3>Editor del sitio</h3><p>SaRecrute, consultora de selección veterinaria.</p><p>Email: contact@sarecrute.com</p><h3>Alojamiento</h3><p>El sitio está alojado por [completar con el nombre y la dirección del proveedor].</p><h3>Propiedad intelectual</h3><p>Todos los contenidos del sitio (textos, imágenes, identidad gráfica) son propiedad de SaRecrute, salvo indicación contraria. Cualquier reproducción sin autorización previa está prohibida.</p><h3>Responsabilidad</h3><p>SaRecrute se esfuerza por garantizar la exactitud de la información publicada, pero no puede garantizar la ausencia de errores. La responsabilidad de SaRecrute no podrá comprometerse por daños derivados del uso del sitio.</p>",
         "legal.privacy.title": "Política de privacidad",
@@ -2213,7 +2241,7 @@
         "legal.parcoursSarah.title": "Sarah Vanhersel · Background",
         "legal.parcoursSarah.body": "<h3>Degree</h3><p>Doctor of Veterinary Medicine, graduate of the École Nationale Vétérinaire d'Alfort (ENVA), class of 2019.</p><h3>Clinical experience</h3><p>Around 5 years in practice, in the Paris region then on Réunion Island: Mon Véto (2019-2023), Citiveto and Clinique Vétérinaire du Vieux Moulin. Founder of SaRecrute in 2025.</p><h3>Skills</h3><p>Veterinary emergencies and on-call, hospitalisation, echocardiography.</p>",
         "legal.parcoursPamela.title": "Pamela Martinez · Background",
-        "legal.parcoursPamela.body": "<h3>Degree</h3><p>Doctor of Veterinary Medicine (Universidad de Caldas, Colombia, 2013), with French equivalence obtained in 2025 (Oniris Nantes). MSc in epidemiological surveillance at the École Nationale Vétérinaire d'Alfort (ENVA) and a Master's in public health (Université Paris Descartes).</p><h3>Clinical experience</h3><p>Several years in companion-animal practice, in Colombia (Dog Sano, Sabuesos) then on Réunion Island. Additional experience in epidemiology (CIRAD).</p><h3>Skills</h3><p>Companion-animal medicine and surgery, epidemiology, public health.</p>",
+        "legal.parcoursPamela.body": "<h3>Degree</h3><p>Doctor of Veterinary Medicine (Universidad de Caldas, Colombia, 2013), with French equivalence obtained in 2025 (Oniris Nantes). MSc in epidemiological surveillance at the École Nationale Vétérinaire d'Alfort (ENVA).</p><h3>Clinical experience</h3><p>Several years in companion-animal practice, in Colombia (Dog Sano, Sabuesos) then on Réunion Island. Additional experience in epidemiology (CIRAD).</p><h3>Skills</h3><p>Companion-animal medicine and surgery, epidemiology, public health.</p>",
         "legal.mentions.title": "Legal notice",
         "legal.mentions.body": "<h3>Site publisher</h3><p>SaRecrute, veterinary recruitment firm.</p><p>Email: contact@sarecrute.com</p><h3>Hosting</h3><p>The site is hosted by [to be completed with host name and address].</p><h3>Intellectual property</h3><p>All content on this site (text, images, graphic identity) is the property of SaRecrute unless stated otherwise. Reproduction without prior authorisation is prohibited.</p><h3>Liability</h3><p>SaRecrute makes every effort to ensure the accuracy of the information published, but cannot guarantee the absence of errors. SaRecrute cannot be held liable for any damage resulting from the use of the site.</p>",
         "legal.privacy.title": "Privacy policy",
