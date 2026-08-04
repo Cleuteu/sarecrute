@@ -1394,6 +1394,25 @@
       .logo-mark { width: 46px; height: 31px; }
     }
 
+    /* Écrans desktop peu hauts (Windows à 125/150 % de mise à l'échelle, portables 1366x768,
+       fenêtre non maximisée) : on compacte le hero pour que les deux boutons d'action
+       restent visibles sans scroller. */
+    @media (min-width: 961px) and (max-height: 830px) {
+      .hero { padding: 52px 0 72px; }
+      .hero-grid { align-items: start; gap: 56px; }
+      .hero .eyebrow { margin-bottom: 20px; }
+      .hero h1 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); margin-bottom: 18px; }
+      .hero-lead { margin-bottom: 26px; }
+    }
+
+    @media (min-width: 961px) and (max-height: 680px) {
+      .hero { padding: 36px 0 56px; }
+      .hero-grid { gap: 44px; }
+      .hero .eyebrow { margin-bottom: 16px; }
+      .hero h1 { font-size: clamp(2rem, 4vw, 2.9rem); margin-bottom: 14px; }
+      .hero-lead { font-size: 1rem; margin-bottom: 22px; }
+    }
+
     /* Reveal animation */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -1427,7 +1446,7 @@
 
       <div class="nav-right">
         <div class="nav-links">
-          <a href="offres.html">Offres</a>
+          <a href="offres">Offres</a>
           <a href="#services" data-i18n="nav.services">Services</a>
           <a href="#profils" data-i18n="nav.profiles">Profils</a>
           <a href="#methode" data-i18n="nav.method">Méthode</a>
@@ -1465,7 +1484,7 @@
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary" data-i18n-html="hero.primary">Confier un recrutement <span class="btn-arrow">→</span></a>
-            <a href="offres.html" class="btn btn-secondary" data-i18n="hero.secondary">Consulter nos offres d'emploi</a>
+            <a href="offres" class="btn btn-secondary" data-i18n="hero.secondary">Consulter nos offres d'emploi</a>
           </div>
         </div>
 
@@ -1631,7 +1650,7 @@
         </div>
 
         <div class="offres-teaser-cta">
-          <a href="offres.html" class="btn btn-primary">Voir toutes nos offres <span class="btn-arrow">→</span></a>
+          <a href="offres" class="btn btn-primary">Voir toutes nos offres <span class="btn-arrow">→</span></a>
         </div>
       </div>
     </section>
