@@ -1747,6 +1747,70 @@
       fill(document.getElementById("offre-filtre-experience"), experiences, "Expérience", EXPERIENCE_LABELS);
     }
 
+    // ============ FILTRES PARTAGEABLES PAR L'URL ============
+    // offres?pratique=rural  ·  offres?dept=29  ·  offres?pratique=rural&contrat=cdi
+    // Les paramètres acceptent la valeur brute, le libellé affiché ou le numéro de
+    // département, sans tenir compte des accents, de la casse ni de la ponctuation.
+    const FILTER_PARAMS = [
+      { id: "offre-filtre-dept", param: "dept" },
+      { id: "offre-filtre-pratique", param: "pratique" },
+      { id: "offre-filtre-contrat", param: "contrat" },
+      { id: "offre-filtre-experience", param: "experience" },
+    ];
+
+    const deaccent = (s) => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const slugKey = (s) => deaccent(s).replace(/[^a-z0-9]/g, "");                       // comparaison
+    const slugUrl = (s) => deaccent(s).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); // écriture
+    const deptNum = (v) => {
+      const m = String(v).match(/\((\d+)\)/);
+      return m ? m[1].replace(/^0+(?=\d)/, "") : null;
+    };
+    const deptName = (v) => String(v).replace(/\s*\(\d+\)\s*$/, "");   // "Finistère (29)" -> "Finistère"
+
+    function findOptionValue(select, raw) {
+      const wanted = slugKey(raw);
+      if (!wanted) return "";
+      const opts = [...select.options].filter((o) => o.value);
+      const num = /^\d+$/.test(wanted) ? wanted.replace(/^0+(?=\d)/, "") : null;
+      const match =
+        opts.find((o) => slugKey(o.value) === wanted) ||
+        opts.find((o) => slugKey(o.textContent) === wanted) ||
+        opts.find((o) => slugKey(deptName(o.value)) === wanted) ||   // département sans son numéro
+        (num ? opts.find((o) => deptNum(o.value) === num) : null);
+      return match ? match.value : "";
+    }
+
+    // Écrit la forme lisible : numéro pour un département, libellé sinon.
+    function paramValue(select) {
+      const opt = select.selectedOptions[0];
+      if (!opt || !opt.value) return "";
+      return deptNum(opt.value) || slugUrl(opt.textContent) || slugUrl(opt.value);
+    }
+
+    function applyFiltersFromUrl() {
+      const params = new URLSearchParams(location.search);
+      FILTER_PARAMS.forEach(({ id, param }) => {
+        const raw = params.get(param);
+        if (!raw) return;
+        const select = document.getElementById(id);
+        const value = findOptionValue(select, raw);
+        if (value) select.value = value;   // valeur inconnue : paramètre ignoré
+      });
+    }
+
+    // L'adresse reflète les filtres actifs, pour qu'elle soit copiable telle quelle.
+    // replaceState : pas d'entrée d'historique à chaque changement de filtre.
+    function syncUrlWithFilters() {
+      const params = new URLSearchParams(location.search);
+      FILTER_PARAMS.forEach(({ id, param }) => {
+        const v = paramValue(document.getElementById(id));
+        if (v) params.set(param, v);
+        else params.delete(param);
+      });
+      const qs = params.toString();
+      history.replaceState(null, "", qs ? `${location.pathname}?${qs}` : location.pathname);
+    }
+
     function renderOffres() {
       const dept = document.getElementById("offre-filtre-dept").value;
       const pratique = document.getElementById("offre-filtre-pratique").value;
@@ -1789,6 +1853,7 @@
       });
 
       updateMapMarkers(filtered);
+      syncUrlWithFilters();
     }
 
     // ============ CARTE ============
@@ -1798,6 +1863,8 @@
     const markerCounts = {};     // département -> nb d'offres actuellement filtrées
     const renderedCounts = {};   // dernier compteur effectivement dessiné, pour éviter un setIcon inutile
     let visibleDeptsKey = null;  // empreinte des départements visibles, pour ne recadrer qu'au changement
+    let lastZoom = null;         // zoom précédent, pour détecter un dézoom
+    let lastAutoFit = 0;         // horodatage du dernier recadrage automatique
 
     function deptIcon(count) {
       return L.divIcon({
@@ -1841,6 +1908,23 @@
           renderOffres();
         });
         deptMarkers[dept] = marker;
+      });
+
+      // Dézoomer à la main, alors qu'un département est sélectionné, revient à dire
+      // « montre-moi plus large » : on retire le filtre département et la carte se
+      // recadre sur toutes les offres. Le garde-temps distingue le geste de
+      // l'utilisateur de nos propres recadrages (fitBounds déclenche aussi zoomend).
+      lastZoom = offresMap.getZoom();
+      offresMap.on("zoomend", () => {
+        const zoom = offresMap.getZoom();
+        const previous = lastZoom;
+        lastZoom = zoom;
+        if (Date.now() - lastAutoFit < 800) return;   // recadrage automatique en cours
+        if (previous === null || zoom >= previous) return;
+        const select = document.getElementById("offre-filtre-dept");
+        if (!select.value) return;
+        select.value = "";
+        renderOffres();
       });
 
       requestAnimationFrame(() => {
@@ -1889,6 +1973,7 @@
       // pour ne pas rejouer une animation à chaque re-rendu.
       const key = Object.keys(markerCounts).sort().join("|");
       if (visible.length && ((opts && opts.fit) || key !== visibleDeptsKey)) {
+        lastAutoFit = Date.now();
         offresMap.fitBounds(visible, {
           padding: [30, 30],
           maxZoom: visible.length === 1 ? 9 : 8,
@@ -1908,6 +1993,7 @@
 
     initOffresMap();
     populateOffreFilters();
+    applyFiltersFromUrl();   // après le remplissage des listes : les options doivent exister
     renderOffres();
     ["offre-filtre-dept", "offre-filtre-pratique", "offre-filtre-contrat", "offre-filtre-experience"].forEach((id) => {
       document.getElementById(id).addEventListener("change", renderOffres);
