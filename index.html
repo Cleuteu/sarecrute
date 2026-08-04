@@ -1324,6 +1324,8 @@
       transition: background 0.2s ease;
     }
     .offres-carousel-nav:hover { background: var(--cream); }
+    /* Pastilles de position du carousel : masquées sur desktop, où les flèches suffisent. */
+    .offres-carousel-dots { display: none; }
     .offres-teaser-cta {
       margin-top: 32px;
       text-align: center;
@@ -1392,6 +1394,61 @@
       .language-switch button { padding: 5px 9px; font-size: 0.74rem; }
       .logo { font-size: 1.2rem; }
       .logo-mark { width: 46px; height: 31px; }
+
+      /* --- Hero mobile : les deux boutons d'action doivent tenir dans le premier écran.
+             Le badge tient sur une seule ligne (au lieu de trois) grâce à une taille fluide
+             qui garantit qu'il ne dépasse jamais la largeur disponible. --- */
+      .hero { padding: 36px 0 56px; }
+      .hero-grid { gap: 36px; }
+      .hero .eyebrow {
+        white-space: nowrap;
+        font-size: clamp(0.55rem, 2.55vw, 0.66rem);
+        letter-spacing: 0.035em;
+        padding: 5px 10px;
+        margin-bottom: 14px;
+        /* Garde-fou : si une police de substitution s'avérait plus large que Inter,
+           le badge se rogne au lieu de créer un débordement horizontal de la page. */
+        max-width: 100%;
+        overflow: hidden;
+      }
+      .hero h1 { margin-bottom: 16px; }
+      .hero-lead { margin-bottom: 22px; }
+
+      /* --- Carousel mobile : la carte ne prend plus toute la largeur, celle qui suit
+             dépasse donc du bord — le geste de balayage devient visible. --- */
+      .offre-teaser-card { flex: 0 0 80%; }
+      .offres-carousel { scroll-padding-left: 0; }
+      .offres-carousel-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        margin-top: 18px;
+      }
+      .offres-carousel-dot {
+        width: 7px;
+        height: 7px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        background: var(--line-strong);
+        opacity: 0.55;
+        cursor: pointer;
+        transition: opacity 0.2s ease, background 0.2s ease, width 0.2s ease;
+      }
+      .offres-carousel-dot.is-active {
+        background: var(--sage-dark);
+        opacity: 1;
+        width: 20px;
+        border-radius: 999px;
+      }
+    }
+
+    /* Très petits écrans (≤ 340 px) : tenir sur une seule ligne exigerait un corps de texte
+       illisible, on laisse donc le badge repasser sur deux lignes. Les gains d'espace
+       vertical du bloc mobile, eux, restent acquis. */
+    @media (max-width: 340px) {
+      .hero .eyebrow { white-space: normal; font-size: 0.62rem; }
     }
 
     /* Écrans desktop peu hauts (Windows à 125/150 % de mise à l'échelle, portables 1366x768,
@@ -1668,6 +1725,10 @@
           </div>
           <button type="button" class="offres-carousel-nav" id="offres-carousel-next" aria-label="Offres suivantes">›</button>
         </div>
+
+        <!-- Pastilles de position : affichées uniquement sur mobile, où les flèches
+             ‹ › sont masquées. Elles signalent qu'il y a d'autres offres à faire défiler. -->
+        <div class="offres-carousel-dots" id="offres-carousel-dots"></div>
 
         <div class="offres-teaser-cta">
           <a href="offres" class="btn btn-primary">Voir toutes nos offres <span class="btn-arrow">→</span></a>
@@ -2609,6 +2670,44 @@
       document.getElementById("offres-carousel-next").addEventListener("click", () => {
         offresCarousel.scrollBy({ left: scrollStep(), behavior: "smooth" });
       });
+
+      // Pastilles de position (mobile) : une par offre, la pastille active suit le défilement
+      // et un appui fait glisser jusqu'à l'offre correspondante.
+      const dotsBox = document.getElementById("offres-carousel-dots");
+      const cards = [...offresCarousel.querySelectorAll(".offre-teaser-card")];
+      if (dotsBox && cards.length > 1) {
+        cards.forEach((card, i) => {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "offres-carousel-dot";
+          dot.setAttribute("aria-label", `Offre ${i + 1} sur ${cards.length}`);
+          dot.addEventListener("click", () => {
+            offresCarousel.scrollTo({ left: card.offsetLeft - offresCarousel.offsetLeft, behavior: "smooth" });
+          });
+          dotsBox.appendChild(dot);
+        });
+
+        const dots = [...dotsBox.children];
+        const syncDots = () => {
+          // L'offre active est celle dont le bord gauche est le plus proche du bord du carousel.
+          const x = offresCarousel.scrollLeft;
+          let best = 0;
+          let bestDist = Infinity;
+          cards.forEach((card, i) => {
+            const dist = Math.abs(card.offsetLeft - offresCarousel.offsetLeft - x);
+            if (dist < bestDist) { bestDist = dist; best = i; }
+          });
+          dots.forEach((d, i) => d.classList.toggle("is-active", i === best));
+        };
+
+        let scrollRaf = null;
+        offresCarousel.addEventListener("scroll", () => {
+          if (scrollRaf) return;
+          scrollRaf = requestAnimationFrame(() => { scrollRaf = null; syncDots(); });
+        }, { passive: true });
+        window.addEventListener("resize", syncDots);
+        syncDots();
+      }
     }
 
     // Candidature (teaser cards)
