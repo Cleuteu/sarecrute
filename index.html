@@ -21,6 +21,7 @@
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:locale:alternate" content="es_ES" />
   <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:image" content="https://sarecrute.com/images/sarecrute-share-1200x630.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -44,7 +45,7 @@
     "email": "contact@sarecrute.com",
     "telephone": "+33675083886",
     "areaServed": ["France", "Suisse", "Espagne", "Belgique"],
-    "knowsLanguage": ["fr", "es", "en"]
+    "knowsLanguage": ["fr", "es", "en", "de"]
   }
   </script>
 
@@ -167,10 +168,15 @@
     }
     .nav-links a:hover { color: var(--deep); }
 
+    /* Le fond blanc de la pilule est ce qui détache le sélecteur des liens de nav : sans
+       lui, « FR · ES · EN · DE » se lit comme la suite des rubriques. La marge à gauche
+       creuse l'écart avec « Contact » ; comme la nav est en space-between, elle repousse
+       du même coup les liens vers la gauche au lieu d'élargir la nav. */
     .language-switch {
       display: inline-flex;
       align-items: center;
       gap: 2px;
+      margin-left: 16px;
       padding: 3px;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.55);
@@ -180,9 +186,9 @@
     .language-switch button {
       border: none;
       background: transparent;
-      padding: 5px 11px;
+      padding: 5px 10px;
       border-radius: 999px;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       color: var(--muted);
@@ -190,6 +196,7 @@
       transition: all 0.18s ease;
       font-family: var(--body);
     }
+    .language-switch button:hover { color: var(--deep); }
     .language-switch button.active {
       background: var(--deep);
       color: var(--warm-white);
@@ -1353,6 +1360,18 @@
     }
 
     /* ============ RESPONSIVE ============ */
+    /* La nav complète (logo + 7 liens + pilule des langues + CTA) mesure jusqu'à 1122px
+       de contenu, en français qui est la langue la plus large. Le container faisant 92%
+       de la fenêtre, elle ne tient qu'à partir de 1220px : en dessous, le CTA sortait de
+       l'écran. On bascule donc sur le burger dès 1240px — un peu au-dessus du seuil
+       théorique, pour absorber les variations de rendu des polices — et non à 960px comme
+       le reste de la mise en page mobile, sinon la bande 961-1220px affiche une nav cassée. */
+    @media (max-width: 1240px) {
+      .nav-links { display: none; }
+      .mobile-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+    }
+
     @media (max-width: 960px) {
       .hero { padding: 60px 0 70px; }
       .hero-grid { grid-template-columns: 1fr; gap: 50px; }
@@ -1373,9 +1392,6 @@
       section { padding: 70px 0; }
       .value-section, .domains { margin: 0 3%; padding: 70px 0; }
       .cta { padding: 60px 30px; }
-      .nav-links { display: none; }
-      .mobile-toggle { display: inline-flex; }
-      .nav-cta { display: none; }
     }
 
     @media (max-width: 600px) {
@@ -1391,7 +1407,10 @@
       /* Compacter la nav pour éviter tout débordement horizontal sur petits écrans */
       nav { gap: 12px; }
       .nav-right { gap: 10px; }
-      .language-switch button { padding: 5px 9px; font-size: 0.74rem; }
+      /* Sur mobile les liens de nav sont masqués : plus rien à séparer, on récupère la
+         marge et on resserre la pilule pour que le burger reste dans l'écran. */
+      .language-switch { margin-left: 0; gap: 1px; padding: 2px; }
+      .language-switch button { padding: 5px 6px; font-size: 0.7rem; letter-spacing: 0.02em; }
       .logo { font-size: 1.2rem; }
       .logo-mark { width: 46px; height: 31px; }
 
@@ -1525,10 +1544,10 @@
         <div class="nav-links">
           <a href="offres">Offres</a>
           <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#equipe" data-i18n="nav.team">Équipe</a>
           <a href="#profils" data-i18n="nav.profiles">Profils</a>
           <a href="#methode" data-i18n="nav.method">Méthode</a>
           <a href="#engagements" data-i18n="nav.commit">Engagements</a>
-          <a href="#equipe" data-i18n="nav.team">Équipe</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
         </div>
 
@@ -1536,6 +1555,7 @@
           <button type="button" class="active" data-lang="fr">FR</button>
           <button type="button" data-lang="es">ES</button>
           <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="de">DE</button>
         </div>
 
         <a href="#contact" class="nav-cta" data-i18n="nav.cta">Prendre contact</a>
@@ -2605,6 +2625,158 @@
         "legal.mentions.body": "<h3>Site publisher</h3><p>SaRecrute, veterinary recruitment firm.</p><p>Email: contact@sarecrute.com</p><h3>Hosting</h3><p>The site is hosted by [to be completed with host name and address].</p><h3>Intellectual property</h3><p>All content on this site (text, images, graphic identity) is the property of SaRecrute unless stated otherwise. Reproduction without prior authorisation is prohibited.</p><h3>Liability</h3><p>SaRecrute makes every effort to ensure the accuracy of the information published, but cannot guarantee the absence of errors. SaRecrute cannot be held liable for any damage resulting from the use of the site.</p>",
         "legal.privacy.title": "Privacy policy",
         "legal.privacy.body": "<h3>Data collected</h3><p>SaRecrute collects personal data strictly in the context of its veterinary recruitment activity: contact information, professional background, role expectations, and any information voluntarily shared by candidates and clients.</p><h3>Purpose</h3><p>This data is used solely to carry out recruitment assignments, connect candidates and practices, and ensure follow-up.</p><h3>Retention</h3><p>Data is kept for the duration of the assignment, then archived in line with legal obligations.</p><h3>Your rights (GDPR)</h3><p>Under the General Data Protection Regulation, you have the right to access, rectify, erase, transfer, and object to the processing of your data. To exercise these rights, contact us at: contact@sarecrute.com</p><h3>Cookies and audience measurement</h3><p>This site does not use third-party tracking cookies. We use Cloudflare Web Analytics, an anonymous, privacy-friendly audience measurement tool: it sets no cookies and collects no personally identifiable data.</p>"
+      },
+      de: {
+        "nav.services": "Leistungen",
+        "nav.profiles": "Profile",
+        "nav.method": "Vorgehen",
+        "nav.commit": "Zusagen",
+        "nav.team": "Team",
+        "nav.contact": "Kontakt",
+        "nav.cta": "Kontakt aufnehmen",
+
+        "hero.kicker": "Tierärztinnen, die Tierärzte vermitteln",
+        "hero.title": "Tierärztinnen,<br>die <em>Ihre Teams</em> finden.",
+        "hero.lead": "<strong>SaRecrute ist eine Personalberatung, die ausschließlich aus Tierärztinnen mit Praxiserfahrung besteht.</strong> Wir kennen das Feld: die Tierärzte, ihre Kompetenzen, die Praxen und ihre Rahmenbedingungen.",
+        "hero.primary": "Suche beauftragen <span class=\"btn-arrow\">→</span>",
+        "hero.secondary": "Unsere Stellenangebote ansehen",
+        "hero.cardTitle": "Unsere Tätigkeitsfelder",
+        "hero.cardText": "Vermittlung von Tierärzten · Begleitung bei der Praxisübergabe.",
+        "hero.info1.label": "Märkte", "hero.info1.text": "Frankreich · Schweiz · Spanien · Belgien",
+        "hero.info2.label": "Vorgehen", "hero.info2.text": "Direktansprache + tierärztliches Netzwerk",
+        "hero.info3.label": "Strukturen", "hero.info3.text": "Unabhängige Praxen, Verbünde, Klinikgruppen",
+        "hero.floatTitle": "Profile, die wir begleiten",
+        "hero.float1": "Allgemeinpraktiker", "hero.float1b": "Junior bis Senior",
+        "hero.float2": "Alle Fachrichtungen", "hero.float2b": "Kleintier, Nutztier, gemischt, Exoten, Pferd",
+        "hero.float3": "Fachtierärzte & Referenzmedizin", "hero.float3b": "Bildgebung, Kardio, Chirurgie, Notdienst",
+
+        "services.kicker": "Leistungen",
+        "services.title": "Eine Personalberatung, die ausschließlich Tierärzte vermittelt.",
+        "services.lead": "SaRecrute verschafft sich ein genaues Bild von den Stärken und den Schwierigkeiten der Praxis und begleitet sie dabei, ihren Personalbedarf zu decken.",
+        "services.card1.title": "Tierärzte als Recruiter",
+        "services.card1.text": "Die Gespräche führen Tierärztinnen, die in der Praxis arbeiten oder gearbeitet haben. Das verändert das Briefing, die Glaubwürdigkeit und den Blick auf die medizinischen Fragen.",
+        "services.card2.title": "Vermittlung von A bis Z",
+        "services.card2.text": "Bedarfsanalyse, Marktanalyse, Stellenausschreibung, Veröffentlichung, Direktansprache, Vorauswahl, Begleitung der Gespräche und Einarbeitung.",
+        "services.card3.title": "Direktansprache",
+        "services.card3.text": "Proaktives Ansprechen von Profilen, die nicht aktiv suchen, aber zur Stelle und zum Projekt der Praxis passen.",
+        "services.card4.title": "Die Stelle so zeigen, wie sie ist",
+        "services.card4.text": "Wir stellen die Stelle klar dar, ohne sie schönzureden: medizinisches Projekt, Team, Ausstattung, Perspektiven und Arbeitsbedingungen.",
+        "services.card5.title": "Gezielte Mobilität & Auslandswechsel",
+        "services.card5.text": "Begleitung der Kandidaten bei Fragen zur Anerkennung des Abschlusses, zur Wohnungssuche und zum Ankommen in einem neuen Land.",
+        "services.card6.title": "Fachliche Einschätzung",
+        "services.card6.text": "Genaue Einschätzung des tatsächlichen Niveaus: beherrschte Verfahren, Selbstständigkeit, chirurgische Eingriffe, Umgang mit Notfällen, Rolle im Team.",
+
+        "value.kicker": "Warum SaRecrute",
+        "value.title": "Gewonnene Zeit, ein echtes tierärztliches Netzwerk, Gespräche unter Kollegen.",
+        "value.lead": "Wenn Tierärzte Ihre Suche übernehmen, ändert sich konkret, wie mit Ihren Kandidaten gesprochen wird.",
+        "value.card1.title": "Weniger Stunden außerhalb der Praxis",
+        "value.card1.text": "Sichtung, Gespräche und Vorauswahl übernehmen wir. Sie sehen nur die Kandidaten, die passen.",
+        "value.card2.title": "Ein über Jahre gewachsenes Netzwerk",
+        "value.card2.text": "Ein Kandidatenpool, der über die Zeit gewachsen ist, mit Kandidaten, die wir über mehrere Jahre in ihrem Weg begleiten.",
+        "value.card3.title": "Kandidaten, die besser verstanden werden",
+        "value.card3.text": "Fachliche Fragen werden unter Kollegen geklärt: das schafft Vertrauen und bringt zutage, was ein fachfremder Recruiter nicht sieht.",
+        "value.card4.title": "Ein echtes Verständnis der Stelle",
+        "value.card4.text": "Geräteausstattung, Notdienstaufkommen, Bereitschaftsdienste, Praxissoftware: wir sprechen Ihre Sprache, bevor wir einen Kandidaten vorschlagen.",
+
+        "profiles.kicker": "Profile",
+        "profiles.title": "Von der ersten Stelle bis zum Fachtierarzt.",
+        "profiles.lead": "SaRecrute begleitet alle Erfahrungsstufen, in allen Arten von Strukturen.",
+        "profiles.junior.title": "Junior-Tierarzt", "profiles.junior.text": "0-2 Jahre Erfahrung, auf der Suche nach einem Umfeld, das ausbildet.",
+        "profiles.mid.title": "Tierarzt mit Erfahrung", "profiles.mid.text": "2-7 Jahre, selbstständig, auf der Suche nach einem klaren Projekt.",
+        "profiles.senior.title": "Senior-Tierarzt", "profiles.senior.text": "7 Jahre und mehr, medizinische Expertise und Führungsrolle.",
+        "profiles.specialist.title": "Fachtierarzt", "profiles.specialist.text": "Europäisches Diplom oder Residency, Referenzmedizin.",
+        "profiles.intern.title": "Internship & Assistenz", "profiles.intern.text": "Profile in Weiterbildung, Wechsel in eine Spezialisierung möglich.",
+
+        "domains.kicker": "Bereiche",
+        "domains.title": "Netzwerke in allen tierärztlichen Bereichen.",
+        "domains.practice.title": "Praxisbereiche",
+        "domains.practice.intro": "Alle Arten von Strukturen und medizinischen Ausrichtungen, von der Praxis um die Ecke bis zur Klinik mit umfangreicher technischer Ausstattung.",
+        "domains.specialty.title": "Spezialisierungen & Referenzmedizin",
+        "domains.specialty.intro": "Referenzprofile und ausgewiesene Expertise, für Praxen, die einen Schwerpunkt aufbauen oder einen Notdienst entwickeln.",
+        "domains.tag1": "Kleintier", "domains.tag3": "Nutztier", "domains.tag4": "Gemischt",
+        "domains.tag5": "Exoten", "domains.tag6": "Pferd",
+        "domains.tag16": "Schafe", "domains.tag17": "Milchvieh", "domains.tag18": "Schweine", "domains.tag19": "Mutterkühe",
+        "domains.tag8": "Bildgebung", "domains.tag9": "Kardiologie", "domains.tag10": "Chirurgie",
+        "domains.tag11": "Innere Medizin", "domains.tag12": "Dermatologie", "domains.tag13": "Ophthalmologie",
+        "domains.tag14": "Anästhesie", "domains.tag15": "Notfallmedizin",
+
+        "method.kicker": "Vorgehen",
+        "method.title": "Eine Vermittlung mit klinischem Vorgehen.",
+        "method.lead": "Vier strukturierte Schritte, vom Briefing bis zur Einarbeitung des Kandidaten.",
+        "method.step1.title": "Den Bedarf klären", "method.step1.text": "Kenntnis der Teams, der Arbeitsweise und der Kompetenzen, der Struktur, der Ausstattung und der Organisation, um das gesuchte Profil entsprechend zuzuschneiden.",
+        "method.step2.title": "Die Stelle sichtbar machen", "method.step2.text": "Stellenausschreibung, Veröffentlichung über mehrere Kanäle, klare Darstellung des Projekts der Praxis, um die richtigen Kandidaten anzusprechen.",
+        "method.step3.title": "Ansprechen & einschätzen", "method.step3.text": "Direktansprache und Aktivierung des Kandidatenpools, dann eine fachliche Einschätzung in der Tiefe, unter Kollegen, von Tierarzt zu Tierarzt. Wir stellen nur Kandidaten vor, die wirklich passen.",
+        "method.step4.title": "Bis zur Einarbeitung begleiten", "method.step4.text": "Regelmäßige Gespräche mit Praxis und Kandidat während der Probezeit: wir bleiben dabei, bis die Einarbeitung tatsächlich gelungen ist, nicht nur bis zur Unterschrift.",
+
+        "commit.kicker": "Unsere Zusagen",
+        "commit.title": "Eine Zusammenarbeit, die auf Vertrauen beruht.",
+        "commit.lead": "Eine Einstellung bindet die Praxis wie den Kandidaten auf Dauer. Darauf können Sie sich bei uns konkret verlassen.",
+        "commit.card1.title": "Honorar nur bei Erfolg",
+        "commit.card1.text": "Unser Honorar wird nur fällig, wenn die Einstellung zustande kommt, mit dem tatsächlichen Arbeitsbeginn des Kandidaten.",
+        "commit.card2.title": "Keine Abwerbung",
+        "commit.card2.text": "Die Tierärzte, die wir in den von uns begleiteten Praxen vermittelt haben, sprechen wir nie wieder an.",
+        "commit.card3.title": "Vollständige Vertraulichkeit",
+        "commit.card3.text": "Alle ausgetauschten Informationen bleiben streng vertraulich, auf Seite der Praxis wie auf Seite des Kandidaten.",
+        "commit.card4.title": "Transparenz in jedem Schritt",
+        "commit.card4.text": "Sie wissen jederzeit, wo Ihre Suche steht: regelmäßige Rückmeldungen und vollständige Sicht auf den Fortschritt.",
+
+        "data.kicker": "Kennzahlen",
+        "data.title": "Konkrete Anhaltspunkte, um Ihre Suche zu beschleunigen.",
+        "data.lead": "Ein strukturiertes Vorgehen erlaubt es, die Suche schnell zu starten, mehrere Kanäle zu nutzen und die Einarbeitung abzusichern.",
+        "data.card1.value": "3 Tage", "data.card1.text": "Im Schnitt, um nach Start des Auftrags eine erste geprüfte Bewerbung vorzustellen.",
+        "data.card2.value": "97%", "data.card2.text": "Der vermittelten Kandidaten haben ihre Probezeit bestanden.",
+        "data.card3.value": "6 Wochen", "data.card3.text": "Durchschnittliche Zeit bis zur Unterzeichnung der Einstellungszusage nach Start des Auftrags.",
+        "data.card4.value": "300+", "data.card4.text": "Kandidaten in unserem Pool, aktiv oder passiv auf der Suche.",
+        "data.note": "Durchschnittswerte aus den 2025 durchgeführten Aufträgen.",
+
+        "testimonials.kicker": "Sie vertrauen uns",
+        "testimonials.title": "Stimmen von Praxen und Kandidaten.",
+        "testimonials.t1.text": "„Wir suchten seit über sechs Monaten einen erfahrenen Tierarzt mit echter Lust auf Chirurgie. SaRecrute hat unser medizinisches Projekt in einem einzigen Briefing verstanden. Drei passende Bewerbungen in zwei Wochen, und kurz darauf eine unterschriebene Einstellung.“",
+        "testimonials.t1.name": "Dr. David Marchand",
+        "testimonials.t1.role": "Clinique vétérinaire des Cèdres · Lyon",
+        "testimonials.t2.text": "„Es hat gutgetan, mit einer Kollegin zu sprechen, die den Alltag kennt. Die Fragen zur Ausstattung, zu den Bereitschaftsdiensten, zum Rhythmus: alles war präzise. Mein Wechsel in die Schweiz wurde dadurch deutlich einfacher.“",
+        "testimonials.t2.name": "Dr. Claire Lemoine",
+        "testimonials.t2.role": "Allgemeinpraktikerin · vermittelt in Genf",
+        "testimonials.t3.text": "„SaRecrute hat unsere Praxis treffend dargestellt, ohne die Stelle schönzureden. Die Kandidaten, die zum Gespräch kamen, waren vom Projekt bereits überzeugt. Für das Team ist das eine erhebliche Zeitersparnis.“",
+        "testimonials.t3.name": "Dr. Sophie Berthier",
+        "testimonials.t3.role": "Hôpital vétérinaire Atlantique · Bordeaux",
+        "testimonials.t4.text": "„Ich war nicht aktiv auf der Suche. Die Ansprache war direkt, klar, ohne Verkaufsgerede. Die Praxis entsprach wirklich dem, was ich wollte: stabiles Team, solides medizinisches Projekt. Ein Jahr später bereue ich nichts.“",
+        "testimonials.t4.name": "Dr. Antoine Tessier",
+        "testimonials.t4.role": "Fachtierarzt Bildgebung · vermittelt in Brüssel",
+
+        "team.kicker": "Team",
+        "team.title": "Zwei Tierärztinnen als Recruiterinnen, vier Schwerpunktmärkte.",
+        "team.lead": "SaRecrute setzt auf Recruiterinnen, die den Alltag in der Praxis kennen. Diese Erfahrung macht die Gespräche präziser, mit Kunden wie mit Kandidaten.",
+        "team.sarah.role": "Tierärztin & Recruiterin · Frankreich & Schweiz",
+        "team.sarah.text": "Spezialisiert auf die Begleitung von Praxen und tierärztlichen Kandidaten auf dem französischen und dem schweizerischen Markt. Ihre klinische Erfahrung erlaubt es ihr, die medizinischen, menschlichen und organisatorischen Bedürfnisse der Strukturen zu verstehen.",
+        "team.pamela.role": "Tierärztin & Recruiterin · Frankreich, Belgien & Spanien",
+        "team.pamela.text": "Spezialisiert auf tierärztliche Vermittlungen auf dem französischen, dem belgischen und dem spanischen Markt. Ihre Kenntnis des Alltags erleichtert die Einschätzung der Erwartungen von Kandidaten, der Mobilität und der lokalen Besonderheiten.",
+        "team.parcours": "Werdegang ansehen",
+
+        "contact.kicker": "Kontakt",
+        "contact.title": "Sie suchen einen Tierarzt oder planen Ihren nächsten Schritt?",
+        "contact.lead": "Sprechen wir über Ihren Bedarf: Art des Profils, gesuchte Fachrichtung, Zielmarkt, Dringlichkeit und die Argumente, die für die Stelle zählen.",
+        "contact.button": "SaRecrute schreiben <span class=\"btn-arrow\">→</span>",
+        "contact.direct": "Oder direkt:",
+        "contact.zoneSarah": "Frankreich & Schweiz:", "contact.zonePamela": "Frankreich, Belgien & Spanien:",
+
+        "footer.tagline": "Tierärztinnen, die Tierärzte vermitteln. Eine Beratung, die ausschließlich aus Praktikerinnen besteht, die in der Klinik arbeiten oder gearbeitet haben.",
+        "footer.col1": "Märkte",
+        "footer.markets": "Frankreich · Schweiz · Spanien · Belgien",
+        "footer.col2": "Informationen",
+        "footer.mentions": "Impressum",
+        "footer.privacy": "Datenschutzerklärung",
+        "footer.copy": "© 2026 SaRecrute. Alle Rechte vorbehalten.",
+        "footer.gdpr": "Daten werden im Einklang mit der DSGVO verarbeitet.",
+
+        "legal.parcoursSarah.title": "Sarah Vanhersel · Werdegang",
+        "legal.parcoursSarah.body": "<h3>Abschluss</h3><p>Tierärztin, Abschluss an der École Nationale Vétérinaire d'Alfort (ENVA) im Jahr 2019.</p><h3>Klinische Erfahrung</h3><p>Rund 5 Jahre in der Praxis, in der Region Paris und anschließend auf La Réunion: Mon Véto (2019-2023), Citiveto und Clinique Vétérinaire du Vieux Moulin. Gründerin von SaRecrute im Jahr 2025.</p><h3>Kompetenzen</h3><p>Notfallmedizin und Bereitschaftsdienste, Hospitalisation, Echokardiografie.</p>",
+        "legal.parcoursPamela.title": "Pamela Martinez · Werdegang",
+        "legal.parcoursPamela.body": "<h3>Abschluss</h3><p>Tierärztin (Universidad de Caldas, Kolumbien, 2013), französische Anerkennung 2025 erhalten (Oniris Nantes). Master 2 in epidemiologischer Überwachung an der École Nationale Vétérinaire d'Alfort (ENVA).</p><h3>Klinische Erfahrung</h3><p>Mehrere Jahre in der Kleintierpraxis, in Kolumbien (Dog Sano, Sabuesos) und anschließend auf La Réunion. Zusätzliche Erfahrung in der Epidemiologie (CIRAD).</p><h3>Kompetenzen</h3><p>Medizin und Chirurgie der Kleintiere, Epidemiologie, öffentliches Gesundheitswesen.</p>",
+        "legal.mentions.title": "Impressum",
+        "legal.mentions.body": "<h3>Herausgeber der Website</h3><p>SaRecrute, Personalberatung für tierärztliche Berufe.</p><p>E-Mail: contact@sarecrute.com</p><h3>Hosting</h3><p>Die Website wird gehostet von [Name und Adresse des Hosting-Anbieters ergänzen].</p><h3>Urheberrecht</h3><p>Alle Inhalte dieser Website (Texte, Bilder, grafische Identität) sind Eigentum von SaRecrute, sofern nicht anders angegeben. Jede Vervielfältigung ohne vorherige Genehmigung ist untersagt.</p><h3>Haftung</h3><p>SaRecrute ist bemüht, die Richtigkeit der veröffentlichten Informationen sicherzustellen, kann jedoch nicht garantieren, dass sie fehlerfrei sind. SaRecrute haftet nicht für Schäden, die aus der Nutzung der Website entstehen.</p>",
+        "legal.privacy.title": "Datenschutzerklärung",
+        "legal.privacy.body": "<h3>Erhobene Daten</h3><p>SaRecrute erhebt personenbezogene Daten ausschließlich im Rahmen der tierärztlichen Personalvermittlung: Kontaktdaten, beruflicher Werdegang, Erwartungen an eine Stelle sowie alle Informationen, die Kandidaten und Kunden freiwillig mitteilen.</p><h3>Zweck</h3><p>Diese Daten werden ausschließlich verwendet, um Vermittlungsaufträge durchzuführen, Kandidaten und Praxen zusammenzubringen und die Betreuung sicherzustellen.</p><h3>Speicherdauer</h3><p>Die Daten werden für die Dauer des Auftrags gespeichert und anschließend gemäß den gesetzlichen Vorgaben archiviert.</p><h3>Ihre Rechte (DSGVO)</h3><p>Nach der Datenschutz-Grundverordnung haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Übertragbarkeit und Widerspruch gegen die Verarbeitung Ihrer Daten. Um diese Rechte auszuüben, schreiben Sie uns an: contact@sarecrute.com</p><h3>Cookies und Reichweitenmessung</h3><p>Diese Website verwendet keine Tracking-Cookies von Dritten. Wir nutzen Cloudflare Web Analytics, ein anonymes und datenschutzfreundliches Werkzeug zur Reichweitenmessung: es setzt keine Cookies und erhebt keine personenbezogenen Daten.</p>"
       }
     };
 
@@ -2615,7 +2787,8 @@
     const titles = {
       fr: "SaRecrute · Recrutement vétérinaire France, Suisse, Espagne, Belgique",
       es: "SaRecrute · Selección veterinaria Francia, Suiza, España, Bélgica",
-      en: "SaRecrute · Veterinary recruitment France, Switzerland, Spain, Belgium"
+      en: "SaRecrute · Veterinary recruitment France, Switzerland, Spain, Belgium",
+      de: "SaRecrute · Tierärztliche Personalvermittlung Frankreich, Schweiz, Spanien, Belgien"
     };
 
     let currentLang = "fr";
@@ -2646,6 +2819,7 @@
     const browserLang = (navigator.language || "fr").toLowerCase();
     let initial = "fr";
     if (browserLang.startsWith("es")) initial = "es";
+    else if (browserLang.startsWith("de")) initial = "de";
     else if (browserLang.startsWith("en")) initial = "en";
     setLanguage(saved || initial);
 
