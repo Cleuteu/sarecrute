@@ -1,0 +1,13 @@
+{
+  "name": "SaRecrute",
+  "short_name": "SaRecrute",
+  "description": "Cabinet de recrutement vétérinaire composé exclusivement de vétérinaires.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F8F4EA",
+  "theme_color": "#6E9278",
+  "icons": [
+    { "src": "/images/sarecrute-icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/images/sarecrute-icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
