@@ -61,16 +61,12 @@
    "srcHash": "f124edd5a2572cd9"
   },
   "MFBwsW": {
-   "description": "Activité mixte rurale et canine, appétence faune sauvage bienvenue · Cabinets récemment rééquipés (nouveaux analyseurs biochimie/hématologie) · Ambiance familiale, clientèle d'éleveurs accueillante",
-   "srcHash": "1e93ed3d9daffec8"
+   "description": "Activité mixte rurale et canine, clientèle d'éleveurs accueillante · Équipement complet pour l'activité courante, analyseurs biochimie et hématologie récents · Accompagnement possible par le cédant lors de la reprise",
+   "srcHash": "565b836ffc166bdb"
   },
   "Qa6iWO": {
    "description": "Activité mixte canine/rurale/NAC · Plateau technique complet, cadre de travail agréable · Prime à la mobilité, logement possible",
    "srcHash": "5fc27ac1df9509a4"
-  },
-  "SKF1TO": {
-   "description": "Activités variées (chirurgie tissus mous, comportement, ostéopathie, NAC) · Équipement moderne : radio numérique, échographe récent, labo complet · Équipe avec coordinatrice bien-être dédiée",
-   "srcHash": "265c28ad1c35c745"
   },
   "UHB4JO": {
    "description": "Clinique bien équipée : radio, écho, labo, chirurgie · Poste évolutif, spécialités développées en interne · Peu ou pas de garde",
@@ -108,10 +104,6 @@
    "description": "Plateau technique complet : radio numérique, échographe, laboratoire · Médecine générale et chirurgie de convenance · Suivi hospitalier et prise en charge de la douleur",
    "srcHash": "0f14282356cef27f"
   },
-  "is2mBS": {
-   "description": "Grande structure de référés, plateau technique de haut niveau · Poste en médecine interne, cas complexes · Formation continue encouragée",
-   "srcHash": "fd201b152fbedc69"
-  },
   "k3OFFn": {
    "description": "Activité mixte : canine, rurale, équine · Consultations spécialisées (cardio, dermato, ophtalmo) · Logement possible",
    "srcHash": "361ad6d1c76678b3"
@@ -131,6 +123,10 @@
   "oDXBRR": {
    "description": "",
    "srcHash": "96a296d224f285c6"
+  },
+  "pGoKUz": {
+   "description": "Débutants bienvenus, accompagnement réel en consultation et chirurgie · Plateau technique complet : radiographie numérique, échographie, laboratoire, hospitalisation séparée · Semaine de quatre jours, aucune garde ni astreinte",
+   "srcHash": "5b72b5e2c2cffc3e"
   },
   "qztDWV": {
    "description": "Clinique canine bien équipée (2 blocs de chirurgie) · Encadrement pédagogue pour jeunes diplômés · Gardes tournantes limitées",
@@ -157,8 +153,8 @@
    "srcHash": "7a2e1655e605eef2"
   },
   "yTtXET": {
-   "description": "Plateau technique complet, endoscopie et monitoring · Neurologie et orthopédie sur place · Logement disponible",
-   "srcHash": "7022a89a38b9508a"
+   "description": "Plateau technique complet : radiographie numérique, échographie, endoscopie, monitoring · Suivi neurologique assuré par un spécialiste, pratique de l'orthopédie · Structure rénovée et spacieuse, espace dédié aux chats",
+   "srcHash": "7585e842b89dbb8b"
   },
   "yeRZGH": {
    "description": "Centre de référé pluridisciplinaire, scanner et IRM · Équipe large et spécialisée · Poste dédié en neurologie",
