@@ -38,7 +38,7 @@
   },
   "GRVASC": {
    "description": "Activité mixte rurale et canine, avec un peu de petits ruminants et d'équine · Équipement complet (radio numérique, échographie, gaz du sang, laser thérapeutique), véhicules fournis · Logement meublé pour démarrer, association envisageable",
-   "srcHash": "b54036a18011869b"
+   "srcHash": "f9f16a367c7c50a1"
   },
   "H3pCoU": {
    "description": "Plateau technique complet (scanner, échographie, endoscopie) · Grande équipe pluridisciplinaire, nombreuses spécialités · Possibilité d'évolution",
@@ -98,7 +98,7 @@
   },
   "dt8GH0": {
    "description": "Pôle référé en plein essor (ophtalmo, cardio, imagerie) · Plateau technique complet, monitoring et endoscopie · Gardes limitées, aide au logement",
-   "srcHash": "720a3e7f6685f747"
+   "srcHash": "bfdc00aaac606209"
   },
   "fSmBlC": {
    "description": "Plateau technique complet : radio numérique, échographe, laboratoire · Médecine générale et chirurgie de convenance · Suivi hospitalier et prise en charge de la douleur",
@@ -125,8 +125,8 @@
    "srcHash": "96a296d224f285c6"
   },
   "pGoKUz": {
-   "description": "Débutants bienvenus, accompagnement réel en consultation et chirurgie · Plateau technique complet : radiographie numérique, échographie, laboratoire, hospitalisation séparée · Semaine de quatre jours, aucune garde ni astreinte",
-   "srcHash": "5b72b5e2c2cffc3e"
+   "description": "Débutants bienvenus, accompagnement réel en consultation et chirurgie · Plateau technique complet : radiographie numérique, échographie, laboratoire, hospitalisation séparée · Aucune garde ni astreinte, temps plein ou temps partiel possible",
+   "srcHash": "9bf9025e4c4deacf"
   },
   "qztDWV": {
    "description": "Clinique canine bien équipée (2 blocs de chirurgie) · Encadrement pédagogue pour jeunes diplômés · Gardes tournantes limitées",
@@ -154,7 +154,7 @@
   },
   "yTtXET": {
    "description": "Plateau technique complet : radiographie numérique, échographie, endoscopie, monitoring · Suivi neurologique assuré par un spécialiste, pratique de l'orthopédie · Structure rénovée et spacieuse, espace dédié aux chats",
-   "srcHash": "7585e842b89dbb8b"
+   "srcHash": "ad87afd57ea0fd6a"
   },
   "yeRZGH": {
    "description": "Centre de référé pluridisciplinaire, scanner et IRM · Équipe large et spécialisée · Poste dédié en neurologie",
