@@ -1,9 +1,5 @@
 {
  "offers": {
-  "0u4DuJ": {
-   "description": "Activité mixte : rurale, canine et équine · Bloc opératoire, radio, échographie, laboratoire · Formation en canine possible pour les profils ruraux",
-   "srcHash": "37516879473b123c"
-  },
   "1OED8D": {
    "description": "Structure indépendante en forte croissance · Plateau technique complet et équipe autonome · Belle clientèle fidèle",
    "srcHash": "fbc918504e02dbd6"
@@ -16,9 +12,9 @@
    "description": "Activité canine et équine, plateau technique complet · Endoscopie, physiothérapie, gastroscope équin · Ambiance bienveillante, rémunération majorée",
    "srcHash": "7b1b2615acd5731c"
   },
-  "7C5XOX": {
-   "description": "Clinique indépendante à activité réellement mixte, bovin laitier et allaitant · Partie rurale accompagnée et formée progressivement · Gardes uniquement en rurale, véhicule professionnel possible",
-   "srcHash": "e86d948a1433feae"
+  "7NJjYS": {
+   "description": "Plateau technique complet (radiographie, échographie cardiaque, laboratoire, anesthésie gazeuse) · Urgences canines et félines, médicales et chirurgicales · Collaboration libérale, exclusivement le dimanche",
+   "srcHash": "43bf1264a4fdf0a6"
   },
   "A0JMtX": {
    "description": "Activité canine et féline avec une part importante de cas référés · Plateau technique complet (échographie, endoscopie digestive et respiratoire, radio numérique et dentaire) · Poste ouvert sur la médecine interne, sans garde",
