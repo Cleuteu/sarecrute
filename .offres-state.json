@@ -56,10 +56,6 @@
    "description": "Pratiques avancées : cardio, ophtalmo, orthopédie, ostéopathie, acupuncture · Aucune garde · Formation et logement possibles",
    "srcHash": "69eefc659560b3f9"
   },
-  "LIrx1B": {
-   "description": "Location de structure complète (murs + matériel) · Liberté totale d'organisation et de projet médical · Idéal pour un projet entrepreneurial",
-   "srcHash": "f124edd5a2572cd9"
-  },
   "MFBwsW": {
    "description": "Activité mixte rurale et canine, clientèle d'éleveurs accueillante · Équipement complet pour l'activité courante, analyseurs biochimie et hématologie récents · Accompagnement possible par le cédant lors de la reprise",
    "srcHash": "565b836ffc166bdb"
@@ -75,6 +71,10 @@
   "XFNNBE": {
    "description": "",
    "srcHash": "96a296d224f285c6"
+  },
+  "XJ0Op1": {
+   "description": "Plateau technique complet : scanner, fluoroscopie, endoscopie, radio numérique, échographie et laboratoire · Activité généraliste avec une part de référé en orthopédie, neurochirurgie et ophtalmologie · Débutants bienvenus, formation assurée et financée, ni garde ni astreinte",
+   "srcHash": "8e0f518993822b32"
   },
   "YD8rz1": {
    "description": "Plateau technique complet (radio numérique, échographe avec sondes cardio, labo) · Médecine interne, chirurgie tissus mous et orthopédie, chimiothérapie · Pas de garde ni astreinte, planning adaptable",
@@ -160,6 +160,10 @@
    "description": "75 % rurale / 25 % canine, pas d'équine · Nouveaux locaux en construction, échographe neuf · Logement, véhicule et ordinateur fournis",
    "srcHash": "7a2e1655e605eef2"
   },
+  "xPLMFL": {
+   "description": "Plateau technique complet : échographie abdominale et cardiaque, radio numérique, endoscopie, laboratoire, anesthésie gazeuse · Équipe pluridisciplinaire, centre de physiothérapie avec tapis immergé · Astreintes régulées par plateforme, association possible à terme, dépannage logement à l'arrivée",
+   "srcHash": "2c1a68f8a30a12a5"
+  },
   "yTtXET": {
    "description": "Plateau technique complet : radiographie numérique, échographie, endoscopie, monitoring · Suivi neurologique assuré par un spécialiste, pratique de l'orthopédie · Structure rénovée et spacieuse, espace dédié aux chats",
    "srcHash": "ad87afd57ea0fd6a"
@@ -182,7 +186,7 @@
   },
   "zynvDf": {
    "description": "Plateau technique complet : radio numérique, échographie, laser, ophtalmologie, chirurgie orthopédique · Aucune garde · Débutants bienvenus, formation continue et évolution possible vers l'association",
-   "srcHash": "11ebc8ba76cb1f85"
+   "srcHash": "9985b8894f5660dd"
   }
  }
 }
