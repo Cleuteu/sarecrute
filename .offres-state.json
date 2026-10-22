@@ -12,17 +12,9 @@
    "description": "Activité canine et équine, plateau technique complet · Endoscopie, physiothérapie, gastroscope équin · Ambiance bienveillante, rémunération majorée",
    "srcHash": "7b1b2615acd5731c"
   },
-  "7NJjYS": {
-   "description": "Plateau technique complet (radiographie, échographie cardiaque, laboratoire, anesthésie gazeuse) · Urgences canines et félines, médicales et chirurgicales · Collaboration libérale, exclusivement le dimanche",
-   "srcHash": "6cedba828003cc54"
-  },
   "8LQHlj": {
    "description": "Plateau technique rural complet, laboratoire avec laborantine à temps plein · Médecine et chirurgie bovines, suivi d'élevage et urgences de terrain · Véhicule de service, logement possible au démarrage, association envisageable à terme",
    "srcHash": "264ee6feb3953ba6"
-  },
-  "A0JMtX": {
-   "description": "Activité canine et féline avec une part importante de cas référés · Plateau technique complet (échographie, endoscopie digestive et respiratoire, radio numérique et dentaire) · Poste ouvert sur la médecine interne, sans garde",
-   "srcHash": "c84dfdaaa134c604"
   },
   "BE82AN": {
    "description": "Clinique récente et très bien équipée : radio numérique, échographie abdominale, endoscopie · Chirurgie tissus mous et orthopédie, activité en ophtalmologie · Pas de garde, association envisageable à moyen terme",
@@ -35,10 +27,6 @@
   "DVVPSr": {
    "description": "Plateau technique complet (radio numérique, échographie abdominale et cardiaque, laser, labo, anesthésie gazeuse) · Débutants bienvenus, carte verte possible · Nouvelle clinique en projet, aide au logement possible pendant l'essai",
    "srcHash": "e9de907da1ca8f48"
-  },
-  "DcBFWl": {
-   "description": "Débutants accompagnés, référents internes pour progresser sereinement · Plateau technique complet (radio numérique, échographie abdominale et cardiaque, endoscopie, laser thérapeutique) · Logement mis à disposition pour l'intégration",
-   "srcHash": "166360a11f325056"
   },
   "GRVASC": {
    "description": "Activité mixte rurale et canine, avec un peu de petits ruminants et d'équine · Équipement complet (radio numérique, échographie, gaz du sang, laser thérapeutique), véhicules fournis · Logement meublé pour démarrer, association envisageable",
@@ -60,9 +48,17 @@
    "description": "Activité mixte rurale et canine, clientèle d'éleveurs accueillante · Équipement complet pour l'activité courante, analyseurs biochimie et hématologie récents · Accompagnement possible par le cédant lors de la reprise",
    "srcHash": "565b836ffc166bdb"
   },
+  "NTd5Tc": {
+   "description": "Plateau technique complet (radio numérique, écho, laser, anesthésie gazeuse) · Clientèle familiale à dominante féline, locaux cat-friendly · Pas de garde, accompagnement au démarrage",
+   "srcHash": "58dc852231696394"
+  },
   "Qa6iWO": {
    "description": "Activité mixte canine/rurale/NAC · Plateau technique complet, cadre de travail agréable · Prime à la mobilité, logement possible",
    "srcHash": "5fc27ac1df9509a4"
+  },
+  "StmFiK": {
+   "description": "Plateau technique neuf et complet (labo, radio numérique, écho, anesthésie gazeuse) · Débutants bienvenus, accompagnement personnalisé et formation continue · Gardes mutualisées entre plusieurs structures, donc rares",
+   "srcHash": "13766ee9cbf74b37"
   },
   "UHB4JO": {
    "description": "Clinique bien équipée : radio, écho, labo, chirurgie · Poste évolutif, spécialités développées en interne · Peu ou pas de garde",
@@ -96,10 +92,6 @@
    "description": "Médecine interne avancée et chirurgie poussée · Équipement complet, laboratoire sur place · Pas de garde, débutants bienvenus",
    "srcHash": "b02d7b117fce2803"
   },
-  "ddz9y8": {
-   "description": "Activité mixte à dominante rurale · Formation assurée, montée en compétences · Association ou reprise possible à terme",
-   "srcHash": "092dffa35355acec"
-  },
   "dt8GH0": {
    "description": "Pôle référé en plein essor (ophtalmo, cardio, imagerie) · Plateau technique complet, monitoring et endoscopie · Gardes limitées, aide au logement",
    "srcHash": "bfdc00aaac606209"
@@ -115,10 +107,6 @@
   "k3OFFn": {
    "description": "Activité mixte : canine, rurale, équine · Consultations spécialisées (cardio, dermato, ophtalmo) · Logement possible",
    "srcHash": "361ad6d1c76678b3"
-  },
-  "kjkSn8": {
-   "description": "Grande équipe canine et rurale, ambiance conviviale · Plateau technique complet, laboratoire d'analyses interne · Pas de garde, logement possible au démarrage",
-   "srcHash": "0d852371d3cdcfb5"
   },
   "lLBo61": {
    "description": "Activité 100% rurale, bovin laitier principalement · Plateau technique complet, laboratoire sur place · Gardes équitables, logement possible",
@@ -167,10 +155,6 @@
   "xPLMFL": {
    "description": "Plateau technique complet : échographie abdominale et cardiaque, radio numérique, endoscopie, laboratoire, anesthésie gazeuse · Équipe pluridisciplinaire, centre de physiothérapie avec tapis immergé · Astreintes régulées par plateforme, association possible à terme, dépannage logement à l'arrivée",
    "srcHash": "2c1a68f8a30a12a5"
-  },
-  "yTtXET": {
-   "description": "Plateau technique complet : radiographie numérique, échographie, endoscopie, monitoring · Suivi neurologique assuré par un spécialiste, pratique de l'orthopédie · Structure rénovée et spacieuse, espace dédié aux chats",
-   "srcHash": "ad87afd57ea0fd6a"
   },
   "yeRZGH": {
    "description": "Centre de référé pluridisciplinaire, scanner et IRM · Équipe large et spécialisée · Poste dédié en neurologie",
