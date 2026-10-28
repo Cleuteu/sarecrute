@@ -131,7 +131,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 24px;
+      gap: 20px;
     }
 
     .logo {
@@ -156,13 +156,13 @@
     .logo-mark .lens { fill: var(--sage-dark); opacity: 0.16; }
     .logo .logo-r { color: var(--terracotta); }
 
-    .nav-right { display: flex; align-items: center; gap: 18px; }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
-      font-size: 0.93rem;
+      gap: 16px;
+      font-size: 0.9rem;
       color: var(--muted);
       font-weight: 500;
     }
@@ -371,6 +371,8 @@
       gap: 14px;
       flex-wrap: wrap;
     }
+    /* Offres et candidats restent côte à côte. */
+    .hero-actions-liens { display: flex; gap: 14px; flex-wrap: wrap; }
 
     /* Hero panel - editorial card stack */
     .hero-panel {
@@ -1342,6 +1344,37 @@
       margin-top: 32px;
       text-align: center;
     }
+    /* Nouvelles offres / nouveaux candidats : un sélecteur en pilule bascule entre les deux
+       carrousels, le titre suit. */
+    .teaser-titre { margin-bottom: 22px; }
+    .teaser-selecteur {
+      display: inline-flex;
+      gap: 4px;
+      margin-top: 18px;
+      padding: 4px;
+      border-radius: 999px;
+      background: var(--warm-white);
+      border: 1px solid var(--line);
+    }
+    .teaser-selecteur button {
+      font: inherit;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--muted);
+      background: transparent;
+      border: none;
+      border-radius: 999px;
+      padding: 8px 22px;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .teaser-selecteur button:hover { color: var(--deep); }
+    .teaser-selecteur button[aria-selected="true"] { background: var(--deep); color: var(--warm-white); }
+    .teaser-selecteur button:focus-visible { outline: 2px solid var(--sage); outline-offset: 2px; }
+    .teaser-lead { max-width: 720px; margin: 0 0 32px; color: var(--muted); }
+    .teaser-panneau[hidden] { display: none; }
+    .cand-teaser-zones { margin: 0; font-size: 0.8rem; line-height: 1.45; color: var(--deep); }
+    .cand-teaser-zones b { font-weight: 600; color: var(--sage-dark); }
     .apply-modal {
       max-width: 760px;
       padding: 0;
@@ -1365,13 +1398,14 @@
     }
 
     /* ============ RESPONSIVE ============ */
-    /* La nav complète (logo + 7 liens + pilule des langues + CTA) mesure jusqu'à 1122px
-       de contenu, en français qui est la langue la plus large. Le container faisant 92%
-       de la fenêtre, elle ne tient qu'à partir de 1220px : en dessous, le CTA sortait de
-       l'écran. On bascule donc sur le burger dès 1240px — un peu au-dessus du seuil
-       théorique, pour absorber les variations de rendu des polices — et non à 960px comme
-       le reste de la mise en page mobile, sinon la bande 961-1220px affiche une nav cassée. */
-    @media (max-width: 1240px) {
+    /* La nav complète (logo + 8 liens + pilule des langues + CTA) mesure jusqu'à ~1135px de
+       contenu (allemand et français, les plus larges ; mesuré le 29/10/2026 polices chargées,
+       espacements et taille des liens resserrés pour l'ajout du lien Candidats). Le container
+       faisant 92% de la fenêtre, elle ne tient qu'à partir de ~1230px : en dessous, le CTA
+       sortait de l'écran. On bascule donc sur le burger dès 1250px — un peu au-dessus du seuil
+       théorique, pour absorber les variations de rendu des polices — et non à 960px comme le
+       reste de la mise en page mobile, sinon la bande 961-1230px affiche une nav cassée. */
+    @media (max-width: 1250px) {
       .nav-links { display: none; }
       .mobile-toggle { display: inline-flex; }
       .nav-cta { display: none; }
@@ -1548,6 +1582,7 @@
       <div class="nav-right">
         <div class="nav-links">
           <a href="offres">Offres</a>
+          <a href="candidats" data-i18n="nav.candidates">Candidats</a>
           <a href="#services" data-i18n="nav.services">Services</a>
           <a href="#equipe" data-i18n="nav.team">Équipe</a>
           <a href="#profils" data-i18n="nav.profiles">Profils</a>
@@ -1585,8 +1620,10 @@
             Nous connaissons le terrain : les vétérinaires, leurs compétences, les cliniques et leurs contraintes.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary" data-i18n-html="hero.primary">Confier un recrutement <span class="btn-arrow">→</span></a>
-            <a href="offres" class="btn btn-secondary" data-i18n="hero.secondary">Consulter nos offres d'emploi</a>
+            <div class="hero-actions-liens">
+              <a href="offres" class="btn btn-secondary" data-i18n="hero.secondary">Consulter nos offres d'emploi</a>
+              <a href="candidats" class="btn btn-secondary" data-i18n="hero.candidates">Voir les candidats disponibles</a>
+            </div>
           </div>
         </div>
 
@@ -1632,12 +1669,20 @@
     <!-- OFFRES (teaser) -->
     <section id="offres" class="offres-teaser">
       <div class="container">
-        <div class="section-title">
-          <div class="section-kicker">Offres</div>
-          <h2>Nos nouvelles offres.</h2>
-          <p>Les derniers postes ajoutés, parmi plusieurs dizaines d'offres actives dans toute la France, en Suisse et en Belgique.</p>
+        <!-- Nouvelles offres et nouveaux candidats : une section, un sélecteur. Le carrousel des
+             offres garde exactement son balisage et son indentation : la routine des offres le
+             repère par ses identifiants (apply_offres.py, sync-offres.py). -->
+        <div class="section-title teaser-titre">
+          <div class="section-kicker">Offres et candidats</div>
+          <h2 id="teaser-h2">Nos nouvelles offres.</h2>
+          <div class="teaser-selecteur" role="tablist" aria-label="Afficher les offres ou les candidats">
+            <button type="button" role="tab" id="onglet-offres" aria-controls="panneau-offres" aria-selected="true" data-onglet="offres" data-titre="Nos nouvelles offres.">Offres</button>
+            <button type="button" role="tab" id="onglet-candidats" aria-controls="panneau-candidats" aria-selected="false" tabindex="-1" data-onglet="candidats" data-titre="Nos nouveaux candidats.">Candidats</button>
+          </div>
         </div>
 
+        <div class="teaser-panneau" id="panneau-offres" role="tabpanel" aria-labelledby="onglet-offres">
+        <p class="teaser-lead">Les derniers postes ajoutés, parmi plusieurs dizaines d'offres actives dans toute la France, en Suisse et en Belgique.</p>
         <div class="offres-carousel-wrap">
           <button type="button" class="offres-carousel-nav" id="offres-carousel-prev" aria-label="Offres précédentes">‹</button>
           <div class="offres-carousel" id="offres-carousel">
@@ -1742,6 +1787,137 @@
 
         <div class="offres-teaser-cta">
           <a href="offres" class="btn btn-primary">Voir toutes nos offres <span class="btn-arrow">→</span></a>
+        </div>
+        </div>
+
+        <div class="teaser-panneau" id="panneau-candidats" role="tabpanel" aria-labelledby="onglet-candidats" hidden>
+        <!-- NOUVEAUX CANDIDATS : panneau généré par build_page.py (chaîne de la page candidats), ne pas éditer à la main -->
+        <p class="teaser-lead">Les derniers vétérinaires appelés par nos recruteuses, parmi 47 candidats en recherche de poste en France, en Suisse et en Belgique.</p>
+        <div class="offres-carousel-wrap">
+          <button type="button" class="offres-carousel-nav" id="candidats-carousel-prev" aria-label="Candidats précédents">‹</button>
+          <div class="offres-carousel" id="candidats-carousel">
+            <article class="offre-teaser-card">
+              <div class="offre-teaser-head">
+                <span class="offre-loc">France</span>
+                <span class="offre-teaser-badge-corner">Débutant</span>
+              </div>
+              <h3>Vétérinaire canin</h3>
+              <p class="cand-teaser-zones"><b>Recherche :</b> Ain (01), Isère (38), Rhône (69) et 2 autres zones</p>
+              <p class="offre-teaser-desc">Convenance féline en autonomie, mâles et femelles · Consultations de vaccination, bilans de santé, motifs digestifs et dermatologiques courants · Recherche une équipe collégiale qui accompagne la montée en chirurgie canine</p>
+              
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Contrat souhaité</span><strong>Ouvert</strong></div><div class="offre-teaser-field"><span>Disponibilité</span><strong>févr. 2027</strong></div>
+              </div>
+              <a href="candidats?ref=SR-Z3PJG" class="btn btn-secondary">Voir le profil <span class="btn-arrow">→</span></a>
+            </article>
+            <article class="offre-teaser-card">
+              <div class="offre-teaser-head">
+                <span class="offre-loc">France</span>
+                <span class="offre-teaser-badge-corner">Débutant</span>
+              </div>
+              <h3>Vétérinaire canin</h3>
+              <p class="cand-teaser-zones"><b>Recherche :</b> Isère (38), Savoie (73), Haute-Savoie (74), Hautes-Alpes (05)</p>
+              <p class="offre-teaser-desc">Préconsultations, comptes rendus, soins de plaies et fermeture de chirurgies, aide opératoire · Stages de fin de cursus en urgence et en référé · Recherche une structure généraliste qui forme à la chirurgie de convenance</p>
+              
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Contrat souhaité</span><strong>CDI</strong></div><div class="offre-teaser-field"><span>Disponibilité</span><strong>févr. 2027</strong></div>
+              </div>
+              <a href="candidats?ref=SR-8GHJZ" class="btn btn-secondary">Voir le profil <span class="btn-arrow">→</span></a>
+            </article>
+            <article class="offre-teaser-card">
+              <div class="offre-teaser-head">
+                <span class="offre-loc">France</span>
+                <span class="offre-teaser-badge-corner">Débutant</span>
+              </div>
+              <h3>Vétérinaire canin</h3>
+              <p class="cand-teaser-zones"><b>Recherche :</b> Alpes-Maritimes (06), Var (83), Alpes-de-Haute-Provence (04) et 15 autres zones</p>
+              <p class="offre-teaser-desc">Consultation, convenance féline, extractions dentaires et retraits de masse en autonomie · Stages en canine et NAC, radiographie et échographie pratiquées · Recherche une équipe étoffée où demander conseil au quotidien</p>
+              
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Contrat souhaité</span><strong>CDD, CDI</strong></div><div class="offre-teaser-field"><span>Disponibilité</span><strong>Dès maintenant</strong></div>
+              </div>
+              <a href="candidats?ref=SR-41TFH" class="btn btn-secondary">Voir le profil <span class="btn-arrow">→</span></a>
+            </article>
+            <article class="offre-teaser-card">
+              <div class="offre-teaser-head">
+                <span class="offre-loc">Suisse · Belgique</span>
+                <span class="offre-teaser-badge-corner">Fin d&#x27;études</span>
+              </div>
+              <h3>Vétérinaire canin</h3>
+              <p class="cand-teaser-zones"><b>Recherche :</b> Toute la Suisse, toute la Belgique</p>
+              <p class="offre-teaser-desc">Autonome en consultation et convenance chien et chat, premières chirurgies des tissus mous · Long stage de dernière année avec un vrai volume de chirurgie · Recherche une équipe où les cas se discutent, idéalement en urgences</p>
+              
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Contrat souhaité</span><strong>CDI</strong></div><div class="offre-teaser-field"><span>Disponibilité</span><strong>déc. 2026</strong></div>
+              </div>
+              <a href="candidats?ref=SR-FYMG1" class="btn btn-secondary">Voir le profil <span class="btn-arrow">→</span></a>
+            </article>
+            <article class="offre-teaser-card">
+              <div class="offre-teaser-head">
+                <span class="offre-loc">France · Belgique · Luxembourg · Suisse</span>
+                <span class="offre-teaser-badge-corner">Fin d&#x27;études</span>
+              </div>
+              <h3>Vétérinaire canin/équin</h3>
+              <p class="cand-teaser-zones"><b>Recherche :</b> Toute la France, toute la Belgique, Luxembourg et 12 autres zones</p>
+              <p class="offre-teaser-desc">Équine ambulatoire en stage, avec beaucoup de boiteries et de coliques · Stages en centre de référé et en NAC, aide en chirurgie et en imagerie · Recherche un vrai encadrement pour gagner en autonomie en chirurgie de convenance</p>
+              
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Contrat souhaité</span><strong>Internat, CDD, CDI, Vacation</strong></div><div class="offre-teaser-field"><span>Disponibilité</span><strong>mars 2027</strong></div>
+              </div>
+              <a href="candidats?ref=SR-HIAM1" class="btn btn-secondary">Voir le profil <span class="btn-arrow">→</span></a>
+            </article>
+            <article class="offre-teaser-card">
+              <div class="offre-teaser-head">
+                <span class="offre-loc">France</span>
+                <span class="offre-teaser-badge-corner">Semi-autonome</span>
+              </div>
+              <h3>Vétérinaire canin</h3>
+              <p class="cand-teaser-zones"><b>Recherche :</b> Rhône (69), Isère (38)</p>
+              <p class="offre-teaser-desc">Consultation canine et convenance en autonomie, chiennes comprises, NAC en appoint · Premier poste en clientèle généraliste, après de nombreux stages · Recherche une équipe pour progresser en imagerie et en chirurgie</p>
+              
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Contrat souhaité</span><strong>Ouvert</strong></div><div class="offre-teaser-field"><span>Disponibilité</span><strong>févr. 2027</strong></div>
+              </div>
+              <a href="candidats?ref=SR-RJ13T" class="btn btn-secondary">Voir le profil <span class="btn-arrow">→</span></a>
+            </article>
+            <article class="offre-teaser-card">
+              <div class="offre-teaser-head">
+                <span class="offre-loc">Isère (38)</span>
+                <span class="offre-teaser-badge-corner">Semi-autonome</span>
+              </div>
+              <h3>Vétérinaire canin</h3>
+              <p class="cand-teaser-zones"><b>Recherche :</b> Isère (38)</p>
+              <p class="offre-teaser-desc">Consultation courante, ovariectomie de chatte et castrations chien et chat en autonomie · Expérience en clientèle mixte puis en canine · Recherche un poste logé, week-ends libres, intérêt pour la prévention et la nutrition</p>
+              
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Contrat souhaité</span><strong>CDI, CDD</strong></div><div class="offre-teaser-field"><span>Disponibilité</span><strong>Dès maintenant</strong></div>
+              </div>
+              <a href="candidats?ref=SR-CKVK5" class="btn btn-secondary">Voir le profil <span class="btn-arrow">→</span></a>
+            </article>
+            <article class="offre-teaser-card">
+              <div class="offre-teaser-head">
+                <span class="offre-loc">France</span>
+                <span class="offre-teaser-badge-corner">Semi-autonome</span>
+              </div>
+              <h3>Vétérinaire canin</h3>
+              <p class="cand-teaser-zones"><b>Recherche :</b> Nord (59), Pas-de-Calais (62)</p>
+              <p class="offre-teaser-desc">Autonome en consultation chien et chat, prévention, prises de sang, castrations, détartrages · Expérience généraliste à rythme soutenu et remplacement en solo · Recherche un accompagnement en imagerie et en médecine interne</p>
+              
+              <div class="offre-teaser-fields">
+                <div class="offre-teaser-field"><span>Contrat souhaité</span><strong>CDI</strong></div><div class="offre-teaser-field"><span>Disponibilité</span><strong>Dès maintenant</strong></div>
+              </div>
+              <a href="candidats?ref=SR-MIAAT" class="btn btn-secondary">Voir le profil <span class="btn-arrow">→</span></a>
+            </article>
+          </div>
+          <button type="button" class="offres-carousel-nav" id="candidats-carousel-next" aria-label="Candidats suivants">›</button>
+        </div>
+
+        <div class="offres-carousel-dots" id="candidats-carousel-dots"></div>
+
+        <div class="offres-teaser-cta">
+          <a href="candidats" class="btn btn-primary">Voir tous les candidats <span class="btn-arrow">→</span></a>
+        </div>
+        <!-- /NOUVEAUX CANDIDATS -->
         </div>
       </div>
     </section>
@@ -2153,12 +2329,13 @@
         "nav.team": "Équipe",
         "nav.contact": "Contact",
         "nav.cta": "Prendre contact",
+        "nav.candidates": "Candidats",
 
         "hero.kicker": "Des vétérinaires pour recruter des vétérinaires",
         "hero.title": "Des vétérinaires<br>pour recruter <em>vos équipes.</em>",
         "hero.lead": "<strong>SaRecrute est un cabinet exclusivement composé de vétérinaires exerçant ou ayant exercé en clinique.</strong> Nous connaissons le terrain : les vétérinaires, leurs compétences, les cliniques et leurs contraintes.",
-        "hero.primary": "Confier un recrutement <span class=\"btn-arrow\">→</span>",
         "hero.secondary": "Consulter nos offres d'emploi",
+        "hero.candidates": "Voir les candidats disponibles",
         "hero.cardTitle": "Nos champs d'action",
         "hero.cardText": "Recrutement de vétérinaires · Accompagnement à la cession de clinique.",
         "hero.info1.label": "Marchés", "hero.info1.text": "France · Suisse · Espagne · Belgique",
@@ -2305,12 +2482,13 @@
         "nav.team": "Equipo",
         "nav.contact": "Contacto",
         "nav.cta": "Contactar",
+        "nav.candidates": "Candidatos",
 
         "hero.kicker": "Veterinarias que reclutan a veterinarios",
         "hero.title": "Veterinarias<br>que reclutan a <em>vuestros equipos.</em>",
         "hero.lead": "<strong>SaRecrute es una consultora compuesta exclusivamente por veterinarias con experiencia clínica.</strong> Conocemos el terreno: los veterinarios, sus competencias, las clínicas y sus limitaciones.",
-        "hero.primary": "Encargar un proceso <span class=\"btn-arrow\">→</span>",
         "hero.secondary": "Ver nuestras ofertas de empleo",
+        "hero.candidates": "Ver los candidatos disponibles",
         "hero.cardTitle": "Nuestros ámbitos de actuación",
         "hero.cardText": "Selección de veterinarios · Acompañamiento en la cesión de clínicas.",
         "hero.info1.label": "Mercados", "hero.info1.text": "Francia · Suiza · España · Bélgica",
@@ -2457,12 +2635,13 @@
         "nav.team": "Team",
         "nav.contact": "Contact",
         "nav.cta": "Get in touch",
+        "nav.candidates": "Candidates",
 
         "hero.kicker": "Vets who recruit vets",
         "hero.title": "Veterinarians<br>recruiting <em>your teams.</em>",
         "hero.lead": "<strong>SaRecrute is a recruitment firm made up exclusively of veterinarians with clinical experience.</strong> We know the field: veterinarians, their skills, practices and their constraints.",
-        "hero.primary": "Start a search <span class=\"btn-arrow\">→</span>",
         "hero.secondary": "View our job openings",
+        "hero.candidates": "See available candidates",
         "hero.cardTitle": "What we do",
         "hero.cardText": "Veterinary recruitment · Practice-sale support.",
         "hero.info1.label": "Markets", "hero.info1.text": "France · Switzerland · Spain · Belgium",
@@ -2609,12 +2788,13 @@
         "nav.team": "Team",
         "nav.contact": "Kontakt",
         "nav.cta": "Kontakt aufnehmen",
+        "nav.candidates": "Kandidaten",
 
         "hero.kicker": "Tierärztinnen, die Tierärzte vermitteln",
         "hero.title": "Tierärztinnen,<br>die <em>Ihre Teams</em> finden.",
         "hero.lead": "<strong>SaRecrute ist eine Personalberatung, die ausschließlich aus Tierärztinnen mit Praxiserfahrung besteht.</strong> Wir kennen das Feld: die Tierärzte, ihre Kompetenzen, die Praxen und ihre Rahmenbedingungen.",
-        "hero.primary": "Suche beauftragen <span class=\"btn-arrow\">→</span>",
         "hero.secondary": "Unsere Stellenangebote ansehen",
+        "hero.candidates": "Verfügbare Kandidaten ansehen",
         "hero.cardTitle": "Unsere Tätigkeitsfelder",
         "hero.cardText": "Vermittlung von Tierärzten · Begleitung bei der Praxisübergabe.",
         "hero.info1.label": "Märkte", "hero.info1.text": "Frankreich · Schweiz · Spanien · Belgien",
@@ -2824,55 +3004,87 @@
       if (e.key === "Escape") overlay.classList.remove("open");
     });
 
-    // Offres carousel (homepage teaser)
-    const offresCarousel = document.getElementById("offres-carousel");
-    if (offresCarousel) {
-      const scrollStep = () => offresCarousel.querySelector(".offre-teaser-card").offsetWidth + 18;
-      document.getElementById("offres-carousel-prev").addEventListener("click", () => {
-        offresCarousel.scrollBy({ left: -scrollStep(), behavior: "smooth" });
+    // Carrousels de l'accueil (nouvelles offres, nouveaux candidats) : flèches sur ordinateur,
+    // pastilles de position sur mobile.
+    function initCarousel(id, nomCarte) {
+      const carousel = document.getElementById(id);
+      if (!carousel) return;
+      const scrollStep = () => carousel.querySelector(".offre-teaser-card").offsetWidth + 18;
+      document.getElementById(`${id}-prev`).addEventListener("click", () => {
+        carousel.scrollBy({ left: -scrollStep(), behavior: "smooth" });
       });
-      document.getElementById("offres-carousel-next").addEventListener("click", () => {
-        offresCarousel.scrollBy({ left: scrollStep(), behavior: "smooth" });
+      document.getElementById(`${id}-next`).addEventListener("click", () => {
+        carousel.scrollBy({ left: scrollStep(), behavior: "smooth" });
       });
 
-      // Pastilles de position (mobile) : une par offre, la pastille active suit le défilement
-      // et un appui fait glisser jusqu'à l'offre correspondante.
-      const dotsBox = document.getElementById("offres-carousel-dots");
-      const cards = [...offresCarousel.querySelectorAll(".offre-teaser-card")];
+      // Pastilles de position (mobile) : une par carte, la pastille active suit le défilement
+      // et un appui fait glisser jusqu'à la carte correspondante.
+      const dotsBox = document.getElementById(`${id}-dots`);
+      const cards = [...carousel.querySelectorAll(".offre-teaser-card")];
+      let syncDots = () => {};
       if (dotsBox && cards.length > 1) {
         cards.forEach((card, i) => {
           const dot = document.createElement("button");
           dot.type = "button";
           dot.className = "offres-carousel-dot";
-          dot.setAttribute("aria-label", `Offre ${i + 1} sur ${cards.length}`);
+          dot.setAttribute("aria-label", `${nomCarte} ${i + 1} sur ${cards.length}`);
           dot.addEventListener("click", () => {
-            offresCarousel.scrollTo({ left: card.offsetLeft - offresCarousel.offsetLeft, behavior: "smooth" });
+            carousel.scrollTo({ left: card.offsetLeft - carousel.offsetLeft, behavior: "smooth" });
           });
           dotsBox.appendChild(dot);
         });
 
         const dots = [...dotsBox.children];
-        const syncDots = () => {
-          // L'offre active est celle dont le bord gauche est le plus proche du bord du carousel.
-          const x = offresCarousel.scrollLeft;
+        syncDots = () => {
+          // La carte active est celle dont le bord gauche est le plus proche du bord du carousel.
+          const x = carousel.scrollLeft;
           let best = 0;
           let bestDist = Infinity;
           cards.forEach((card, i) => {
-            const dist = Math.abs(card.offsetLeft - offresCarousel.offsetLeft - x);
+            const dist = Math.abs(card.offsetLeft - carousel.offsetLeft - x);
             if (dist < bestDist) { bestDist = dist; best = i; }
           });
           dots.forEach((d, i) => d.classList.toggle("is-active", i === best));
         };
 
         let scrollRaf = null;
-        offresCarousel.addEventListener("scroll", () => {
+        carousel.addEventListener("scroll", () => {
           if (scrollRaf) return;
           scrollRaf = requestAnimationFrame(() => { scrollRaf = null; syncDots(); });
         }, { passive: true });
         window.addEventListener("resize", syncDots);
         syncDots();
       }
+      return syncDots;
     }
+
+    // Nouvelles offres / nouveaux candidats : le sélecteur montre un carrousel, cache l'autre et
+    // change le titre. Flèches gauche / droite au clavier, comme des onglets.
+    const syncCarousels = {
+      offres: initCarousel("offres-carousel", "Offre"),
+      candidats: initCarousel("candidats-carousel", "Candidat"),
+    };
+    const onglets = [...document.querySelectorAll(".teaser-selecteur [role=tab]")];
+    function choisirOnglet(onglet) {
+      onglets.forEach((o) => {
+        const actif = o === onglet;
+        o.setAttribute("aria-selected", String(actif));
+        o.tabIndex = actif ? 0 : -1;
+        document.getElementById(o.getAttribute("aria-controls")).hidden = !actif;
+      });
+      document.getElementById("teaser-h2").textContent = onglet.dataset.titre;
+      const sync = syncCarousels[onglet.dataset.onglet];
+      if (sync) sync();   // pastilles calculées pendant que le carrousel était caché
+    }
+    onglets.forEach((o, i) => {
+      o.addEventListener("click", () => choisirOnglet(o));
+      o.addEventListener("keydown", (e) => {
+        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+        const voisin = onglets[(i + (e.key === "ArrowRight" ? 1 : onglets.length - 1)) % onglets.length];
+        voisin.focus();
+        choisirOnglet(voisin);
+      });
+    });
 
     // Candidature (teaser cards)
     const OFFRES_TEASER = {
