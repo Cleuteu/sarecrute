@@ -1,0 +1,382 @@
+{
+ "version": 1,
+ "candidats": {
+  "012cc96a50": {
+   "description": "Exercice canin en autonomie depuis plusieurs années · Ouverture aux remplacements courts comme à un poste durable · Recherche une clinique indépendante",
+   "empreinte": "14c5f5011f228de7",
+   "ajustements": {
+    "contrat": [
+     "CDI",
+     "CDD"
+    ],
+    "specialites": []
+   },
+   "publie_le": "2026-10-28"
+  },
+  "059410be46": {
+   "description": "Consultation courante, ovariectomie de chatte et castrations chien et chat en autonomie · Expérience en clientèle mixte puis en canine · Recherche un poste logé, week-ends libres, intérêt pour la prévention et la nutrition",
+   "empreinte": "91e2252744b34e99",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "0613a193ac": {
+   "description": "Autonome en médecine interne féline et en consultation canine courante · Plusieurs années en urgences et soins intensifs · Recherche un poste médical tourné vers le chat, avec accompagnement en échographie",
+   "empreinte": "9824479e08f00f92",
+   "ajustements": {
+    "specialites": [
+     "Médecine interne",
+     "Urgences"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "12cfdc52fa": {
+   "description": "Urgences, échographie abdominale et consultation canine et féline maîtrisées · Chirurgie courante pratiquée, petites abdominales comprises · Recherche une clinique où la médecine prime sur la chirurgie, gardes occasionnelles",
+   "empreinte": "d614aa4ca3515529",
+   "ajustements": {
+    "specialites": [
+     "Echographie",
+     "Urgences"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "1b005fafc8": {
+   "description": "Autonome en consultation chien et chat, prévention, prises de sang, castrations, détartrages · Expérience généraliste à rythme soutenu et remplacement en solo · Recherche un accompagnement en imagerie et en médecine interne",
+   "empreinte": "5fb70372cb3f3ede",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "282c8bb969": {
+   "description": "Équine ambulatoire en stage, avec beaucoup de boiteries et de coliques · Stages en centre de référé et en NAC, aide en chirurgie et en imagerie · Recherche un vrai encadrement pour gagner en autonomie en chirurgie de convenance",
+   "empreinte": "56f521b3071dec7e",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "31bbaee79a": {
+   "description": "Autonome en consultation canine courante et sutures, prophylaxie bovine pratiquée · Nombreux stages en clientèle mixte et remplacements d'ASV · Recherche une mixte indépendante à dominante rurale, avec une équipe pédagogue",
+   "empreinte": "c0bd93d5f7f85eeb",
+   "ajustements": {
+    "titre": "Vétérinaire canin/rural",
+    "pratiques": [
+     "Bovins",
+     "Laitier",
+     "Canine"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "3569c2b976": {
+   "description": "Consultation canine, convenance cryptorchides compris et échographie abdominale en autonomie · Chirurgie plus lourde et d'urgence déjà abordée · Poste généraliste visé, avec une équipe qui appuie une formation en médecine interne",
+   "empreinte": "5da15f32a0765843",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "35cf0a89d5": {
+   "description": "Autonome en convenance, césarienne, entérotomie et cystotomie, grandes chiennes comprises · Plusieurs années de pratique surtout canine · Recherche un poste en canine avec un confrère sur qui s'appuyer les premières semaines",
+   "empreinte": "c4185e2e09b8ea6c",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "3e58375465": {
+   "description": "Consultation généraliste, maladies chroniques, plaies et castrations en autonomie · Première expérience en structure familiale, autonomie prise très tôt · Recherche une équipe soudée et bienveillante qui forme à l'ovariectomie",
+   "empreinte": "bf1d10dfb33c2562",
+   "ajustements": {
+    "specialites": []
+   },
+   "publie_le": "2026-10-28"
+  },
+  "3fc82cedbb": {
+   "description": "Autonome en consultation, chirurgie de convenance, exérèse de masses et dentisterie · Urgences puis longue pratique généraliste, analyses au quotidien · Recherche une équipe organisée et soudée, où approfondir la médecine interne",
+   "empreinte": "11027316eaa49d04",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "4259ebe318": {
+   "description": "Triage des urgences, consultation courante, castration du chat et ovariectomie de chatte · Stages en clientèle canine et en structure d'urgences · Recherche un premier poste orienté urgences, avec un accompagnement en chirurgie",
+   "empreinte": "116e3fb33b760c5f",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "44446c24f7": {
+   "description": "Médecine canine et NAC en autonomie, chirurgie de convenance et tissus mous, échographie de base · Longue pratique généraliste, dentisterie courante · Recherche une structure indépendante où les cas s'échangent entre confrères",
+   "empreinte": "6c226a6376c0ec48",
+   "ajustements": {
+    "pratiques": [
+     "Canine",
+     "NAC"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "69a00af771": {
+   "description": "Consultation canine et NAC en autonomie, retrait de masses, prédilection pour la cancérologie · Longue expérience de direction de clinique et d'équipe · Recherche des remplacements ou renforts, logement de préférence",
+   "empreinte": "6858403dc78b94cc",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "6a0ba4f70e": {
+   "description": "Autonome en consultation chien, chat et NAC, en urgence et en convenance féline · Expérience en urgences, puis plusieurs CDD en canine · Recherche une clinique moyenne à grande, bien équipée, idéalement avec une patientèle NAC",
+   "empreinte": "4b36adf25dece047",
+   "ajustements": {
+    "pratiques": [
+     "Canine",
+     "NAC"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "6a73d9fe60": {
+   "description": "Autonome en médecine courante bovine et canine, à l'aise en médecine interne canine · Convenance chien et chat, vêlages et césariennes pratiqués · Recherche une équipe rurale pour progresser en obstétrique et en chirurgie bovine",
+   "empreinte": "3b94e699d89282b4",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "6d021a1d0f": {
+   "description": "Consultation canine et urgences en autonomie · Nombreuses années d'exercice en urgences · Recherche un poste durable en structure indépendante, association envisageable, soirées et dimanches possibles, sans nuits en routine",
+   "empreinte": "a4aee28274b89c88",
+   "ajustements": {
+    "specialites": [
+     "Urgences"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "727e5e64ac": {
+   "description": "Autonome en gynécologie de la jument, inséminations, consultation et anesthésie équines · Parcours équin, canine vue en stage · Recherche une équipe pédagogue pour reprendre la canine, urgences ou généraliste",
+   "empreinte": "58ef8273857469c5",
+   "ajustements": {
+    "specialites": []
+   },
+   "publie_le": "2026-10-28"
+  },
+  "7d853cbd49": {
+   "description": "Ovariectomies de chatte en autonomie, castrations, prises de sang et cathéters pratiqués · Stage de fin d'études riche en pratique · Recherche un plateau équipé et un encadrement pour progresser en urgences et hospitalisation",
+   "empreinte": "4e3d6cae03a0b04c",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "808d556de8": {
+   "description": "Prises de sang, cathéters et anesthésie fixe simple, médecine générale sous supervision · Stages universitaires, intérêt marqué pour l'échographie · Recherche une structure formatrice à l'encadrement solide, sans samedi",
+   "empreinte": "512baeb1692051b7",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "81e3999a99": {
+   "description": "Médecine d'urgence et médecine interne en autonomie, à l'aise en traumatologie · Parcours en clientèle généraliste, convenance féline et quelques entérectomies · Recherche un poste exclusivement en urgences, chirurgie comprise",
+   "empreinte": "77250d2c9fe2db05",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "839a2f72fc": {
+   "description": "Consultation chien et chat, castrations en autonomie, stérilisations déjà pratiquées · Stages en clientèle canine durant le cursus · Recherche une clinique canine qui forme à la stérilisation, NAC appréciés",
+   "empreinte": "4303d2e92cd591b5",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "8d25fdba14": {
+   "description": "Attirance pour la rurale, bovins et ovins, autant que pour la canine · Formation tout juste achevée, aucun poste encore occupé · Recherche une structure indépendante qui prend le temps d'encadrer",
+   "empreinte": "4d833172533a436b",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "a319ae4479": {
+   "description": "Autonome en consultation et médecine générale canine et féline · Échographie abdominale en autonomie, formation suivie à l'appui · Recherche un poste qui laisse une place à l'échographie, attrait pour la médecine interne",
+   "empreinte": "ceab3e98aba27392",
+   "ajustements": {
+    "specialites": [
+     "Echographie"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "a3b0bffb6d": {
+   "description": "Médecine préventive canine pratiquée en stage, en assistance aux praticiens · Stages cliniques en canine, rurale et mixte · Recherche un premier poste encadré en canine, attrait pour les NAC et l'urgence",
+   "empreinte": "8a30b40735790d95",
+   "ajustements": {
+    "experience": "Débutant"
+   },
+   "publie_le": "2026-10-28"
+  },
+  "a54306656f": {
+   "description": "Consultation, convenance féline, extractions dentaires et retraits de masse en autonomie · Stages en canine et NAC, radiographie et échographie pratiquées · Recherche une équipe étoffée où demander conseil au quotidien",
+   "empreinte": "c0a13600a2ad97ac",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "abe1d9135c": {
+   "description": "Urgences en autonomie (chats bloqués, intoxications, convulsions) et médecine des NAC · Nuits d'urgences en structure hospitalière · Recherche un poste d'urgentiste incluant des NAC, en référé avec formation continue",
+   "empreinte": "ea7596c1db41c44c",
+   "ajustements": {
+    "pratiques": [
+     "Canine",
+     "NAC"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "addffa8121": {
+   "description": "Consultation et convenance féline en autonomie, à l'aise en urgence · Gros volume de gardes, nuits d'hospitalisation et soins intensifs · Recherche une structure à taille humaine, avec des confrères expérimentés pour progresser",
+   "empreinte": "a51f0780ac601e4c",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "afaa5e2ec6": {
+   "description": "Médecine bovine courante en autonomie, quelques vêlages réalisés · Remplacement canin pendant les études, consultations et castrations de chat · Recherche une mixte équilibrée, avec une équipe qui forme à la césarienne bovine",
+   "empreinte": "afc845001dbeedaa",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "b63bc8e3b2": {
+   "description": "En équine, prises de sang et cathéters en autonomie, sutures, radiographie · Canine vue pendant les études, hospitalisation, imagerie et anesthésie · Recherche un encadrement pour démarrer en canine, médecine interne et urgences",
+   "empreinte": "2bf04eb925acdad0",
+   "ajustements": {
+    "titre": "Vétérinaire canin/équin",
+    "pratiques": [
+     "Canine",
+     "Equine"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "c0dd0f60e6": {
+   "description": "Goût marqué pour l'imagerie et la formation continue · Chirurgie acceptée dans un cadre accompagné, gardes envisagées une fois l'autonomie acquise · Recherche une clinique généraliste formatrice, avec une perspective sur la durée",
+   "empreinte": "625611dedce79e30",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "c93dba1dd6": {
+   "description": "Consultation canine en autonomie, à l'aise en radiologie, échographie pratiquée · Cursus orienté équine, attrait pour l'orthopédie, l'imagerie et la cardiologie · Recherche une structure canine et équine pour y progresser",
+   "empreinte": "32b0f3cb5cc68bf5",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "d0c442af0d": {
+   "description": "Consultation canine et convenance en autonomie, chiennes comprises, NAC en appoint · Premier poste en clientèle généraliste, après de nombreux stages · Recherche une équipe pour progresser en imagerie et en chirurgie",
+   "empreinte": "25e66b72feedce3b",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "d5d14ffc07": {
+   "description": "Consultations canines en stage, ovariectomies et castrations de chat sous supervision · Stages en canine et en équine, du petit cabinet au centre hospitalier · Recherche une structure formatrice, idéalement avec de l'équine",
+   "empreinte": "878e2addebc94142",
+   "ajustements": {
+    "pratiques": [
+     "Canine",
+     "Equine"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "d5e306cc7c": {
+   "description": "Médecine générale canine et chirurgie de convenance en autonomie · Première année aux urgences, puis gestion en solo d'une petite structure · Recherche une équipe qui forme en interne et finance les formations externes",
+   "empreinte": "29dc8b79bf407dd1",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "d80934a0b2": {
+   "description": "Projet de démarrer en mixte, rurale en priorité et canine en complément · Diplôme récent, sans pratique depuis la sortie d'école · Recherche une clinique mixte prête à former à la rurale",
+   "empreinte": "85c57864dfc4a882",
+   "ajustements": {
+    "titre": "Vétérinaire canin/rural",
+    "pratiques": [
+     "Bovins",
+     "Canine"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "dec4e4e855": {
+   "description": "Parage, castrations, fièvre de lait, mammites et diarrhées des veaux en autonomie · Stages répétés en rurale bovine à dominante laitière · Recherche une structure rurale formatrice, ouverture à l'allaitant et aux petits ruminants",
+   "empreinte": "2f3714b092fb7106",
+   "ajustements": {
+    "pratiques": [
+     "Bovins",
+     "Laitier",
+     "Allaitant",
+     "Ovin/Caprin"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "e468aa2443": {
+   "description": "Convenance, gastrotomies, exérèses de masses, urgences, échographie abdominale en autonomie · Gardes de nuit dès les études, premier poste en cours · Recherche une équipe collégiale et bien équipée pour progresser en tissus mous",
+   "empreinte": "df46e1e75fd33b02",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "e75f8768e1": {
+   "description": "Consultations vaccinales, convenance féline et prophylaxie bovine en autonomie · Expérience d'ASV et stages encadrés par des spécialistes · Recherche un poste durable en canine pour se former aux urgences, rurale en complément",
+   "empreinte": "1df84a286c1d54c6",
+   "ajustements": {
+    "titre": "Vétérinaire canin/rural",
+    "pratiques": [
+     "Canine",
+     "Bovins"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  },
+  "ea66b8fcf9": {
+   "description": "Autonome en consultation et convenance chien et chat, premières chirurgies des tissus mous · Long stage de dernière année avec un vrai volume de chirurgie · Recherche une équipe où les cas se discutent, idéalement en urgences",
+   "empreinte": "51ae1add4a197605",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "efd4156341": {
+   "description": "Vêlages, césariennes, déplacements de caillette, convenance et tissus mous en petits animaux, en autonomie · Plusieurs années de mixte, gardes comprises · Recherche une structure mixte, sans besoin de logement",
+   "empreinte": "d4bcebfe442a3d68",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "f921db5087": {
+   "description": "Autonome en vêlage, césarienne bovine, médecine individuelle et chirurgie de convenance · Mixte à dominante rurale, gardes mixtes déjà assurées en autonomie · Recherche une vraie mixte et une formation à l'échographie de gestation",
+   "empreinte": "94faf1d56cd56e71",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "fa7c75ab9e": {
+   "description": "Autonome en consultation générale et en convenance du chat, mâle comme femelle · Remplacement en clientèle généraliste, stages en référé · Recherche une équipe qui encadre les débutants et forme aux gardes, attrait pour l'imagerie",
+   "empreinte": "c45315ba80071e97",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "fc1ff68a71": {
+   "description": "Préconsultations, comptes rendus, soins de plaies et fermeture de chirurgies, aide opératoire · Stages de fin de cursus en urgence et en référé · Recherche une structure généraliste qui forme à la chirurgie de convenance",
+   "empreinte": "5399f8232ed42012",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "fefb5a6a25": {
+   "description": "Convenance féline en autonomie, mâles et femelles · Consultations de vaccination, bilans de santé, motifs digestifs et dermatologiques courants · Recherche une équipe collégiale qui accompagne la montée en chirurgie canine",
+   "empreinte": "1b79875fc4da24bf",
+   "ajustements": {},
+   "publie_le": "2026-10-28"
+  },
+  "ff2797c37d": {
+   "description": "Consultation, médecine générale et médecine interne · Expérience confirmée en canine, débuts en remplacements · Recherche un poste salarié à dominante médicale, avec peu de gardes",
+   "empreinte": "33f198bd2014a68c",
+   "ajustements": {
+    "specialites": [
+     "Médecine interne"
+    ]
+   },
+   "publie_le": "2026-10-28"
+  }
+ },
+ "retenus": {
+  "6a3a2dc905": "recherche à reconfirmer"
+ },
+ "anciens": {
+  "ac591aac54": {
+   "ajustements": {
+    "specialites": [
+     "Chirurgie",
+     "Echographie",
+     "Médecine interne",
+     "Urgences"
+    ]
+   }
+  }
+ }
+}
