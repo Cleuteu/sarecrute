@@ -3,7 +3,7 @@
  "candidats": {
   "SR-41TFH": {
    "description": "Consultation, convenance féline, extractions dentaires et retraits de masse en autonomie · Stages en canine et NAC, radiographie et échographie pratiquées · Recherche une équipe étoffée où demander conseil au quotidien",
-   "empreinte": "c0a13600a2ad97ac",
+   "empreinte": "620b67e2b1e92004",
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
@@ -24,27 +24,21 @@
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
-  "SR-7WHO4": {
-   "description": "Consultation canine en autonomie, à l'aise en radiologie, échographie pratiquée · Cursus orienté équine, attrait pour l'orthopédie, l'imagerie et la cardiologie · Recherche une structure canine et équine pour y progresser",
-   "empreinte": "32b0f3cb5cc68bf5",
-   "ajustements": {},
-   "publie_le": "2026-10-28"
-  },
   "SR-8EQP1": {
    "description": "Médecine d'urgence et médecine interne en autonomie, à l'aise en traumatologie · Parcours en clientèle généraliste, convenance féline et quelques entérectomies · Recherche un poste exclusivement en urgences, chirurgie comprise",
-   "empreinte": "77250d2c9fe2db05",
+   "empreinte": "7e7ec68c93ae7dc1",
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
   "SR-8GHJZ": {
    "description": "Préconsultations, comptes rendus, soins de plaies et fermeture de chirurgies, aide opératoire · Stages de fin de cursus en urgence et en référé · Recherche une structure généraliste qui forme à la chirurgie de convenance",
-   "empreinte": "5399f8232ed42012",
+   "empreinte": "a2576be24dc45999",
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
   "SR-AU1Y8": {
    "description": "Autonome en médecine interne féline et en consultation canine courante · Plusieurs années en urgences et soins intensifs · Recherche un poste médical tourné vers le chat, avec accompagnement en échographie",
-   "empreinte": "9824479e08f00f92",
+   "empreinte": "9c9d3c1dcc39c968",
    "ajustements": {
     "specialites": [
      "Médecine interne",
@@ -73,7 +67,7 @@
   },
   "SR-BEMQN": {
    "description": "Consultation, médecine générale et médecine interne · Expérience confirmée en canine, débuts en remplacements · Recherche un poste salarié à dominante médicale, avec peu de gardes",
-   "empreinte": "33f198bd2014a68c",
+   "empreinte": "d353ca6e9516e121",
    "ajustements": {
     "specialites": [
      "Médecine interne"
@@ -83,7 +77,7 @@
   },
   "SR-BR2OG": {
    "description": "Urgences en autonomie (chats bloqués, intoxications, convulsions) et médecine des NAC · Nuits d'urgences en structure hospitalière · Recherche un poste d'urgentiste incluant des NAC, en référé avec formation continue",
-   "empreinte": "ea7596c1db41c44c",
+   "empreinte": "8f98e39065a294c9",
    "ajustements": {
     "pratiques": [
      "Canine",
@@ -94,7 +88,7 @@
   },
   "SR-CKVK5": {
    "description": "Consultation courante, ovariectomie de chatte et castrations chien et chat en autonomie · Expérience en clientèle mixte puis en canine · Recherche un poste logé, week-ends libres, intérêt pour la prévention et la nutrition",
-   "empreinte": "91e2252744b34e99",
+   "empreinte": "7ed9ab8bfb8d7578",
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
@@ -201,9 +195,15 @@
   },
   "SR-JPQJD": {
    "description": "Consultation chien et chat, castrations en autonomie, stérilisations déjà pratiquées · Stages en clientèle canine durant le cursus · Recherche une clinique canine qui forme à la stérilisation, NAC appréciés",
-   "empreinte": "4303d2e92cd591b5",
+   "empreinte": "6413b9e901431615",
    "ajustements": {},
    "publie_le": "2026-10-28"
+  },
+  "SR-KLTGJ": {
+   "description": "Consultations de médecine préventive et motifs courants, soins pré et post-opératoires · Parcours construit en stages en clientèle généraliste canine · Recherche une structure formatrice, avec un référent disponible au quotidien",
+   "empreinte": "f1fc073d44cb0319",
+   "ajustements": {},
+   "publie_le": "2026-11-02"
   },
   "SR-KNWZO": {
    "description": "Urgences, échographie abdominale et consultation canine et féline maîtrisées · Chirurgie courante pratiquée, petites abdominales comprises · Recherche une clinique où la médecine prime sur la chirurgie, gardes occasionnelles",
@@ -308,7 +308,7 @@
   },
   "SR-RJ13T": {
    "description": "Consultation canine et convenance en autonomie, chiennes comprises, NAC en appoint · Premier poste en clientèle généraliste, après de nombreux stages · Recherche une équipe pour progresser en imagerie et en chirurgie",
-   "empreinte": "25e66b72feedce3b",
+   "empreinte": "90452a1404848828",
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
@@ -353,13 +353,13 @@
   },
   "SR-YFO8L": {
    "description": "Médecine bovine courante en autonomie, quelques vêlages réalisés · Remplacement canin pendant les études, consultations et castrations de chat · Recherche une mixte équilibrée, avec une équipe qui forme à la césarienne bovine",
-   "empreinte": "afc845001dbeedaa",
+   "empreinte": "8c0bdd71b40bcb12",
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
   "SR-Z3PJG": {
    "description": "Convenance féline en autonomie, mâles et femelles · Consultations de vaccination, bilans de santé, motifs digestifs et dermatologiques courants · Recherche une équipe collégiale qui accompagne la montée en chirurgie canine",
-   "empreinte": "1b79875fc4da24bf",
+   "empreinte": "a839a5dab14eb32f",
    "ajustements": {},
    "publie_le": "2026-10-28"
   }

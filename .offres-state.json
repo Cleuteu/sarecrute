@@ -16,9 +16,13 @@
    "description": "Plateau technique rural complet, laboratoire avec laborantine à temps plein · Médecine et chirurgie bovines, suivi d'élevage et urgences de terrain · Véhicule de service, logement possible au démarrage, association envisageable à terme",
    "srcHash": "264ee6feb3953ba6"
   },
+  "A0JMtX": {
+   "description": "Plateau technique complet : échographie, radio numérique et dentaire, endoscopie digestive et respiratoire, vidéo-otoscopie · Médecine générale et médecine interne, nombreux cas référés · Pas de garde, équipe pluridisciplinaire et formations internes",
+   "srcHash": "c84dfdaaa134c604"
+  },
   "BE82AN": {
    "description": "Clinique récente et très bien équipée : radio numérique, échographie abdominale, endoscopie · Chirurgie tissus mous et orthopédie, activité en ophtalmologie · Pas de garde, association envisageable à moyen terme",
-   "srcHash": "ce9d81a2a89c132b"
+   "srcHash": "161af0baf6304573"
   },
   "CVCjH7": {
    "description": "Clinique à taille humaine, locaux spacieux · Plateau technique complet (radio, écho, labo) · Logement pris en charge le premier mois",
@@ -112,10 +116,6 @@
    "description": "Activité 100% rurale, bovin laitier principalement · Plateau technique complet, laboratoire sur place · Gardes équitables, logement possible",
    "srcHash": "8fb9da633fa09973"
   },
-  "mZ7Hvp": {
-   "description": "Plateau technique complet (écho, radio numérique, labo, unité dentaire) · Médecine générale canine et féline · Équipe soudée, débutants bienvenus",
-   "srcHash": "536f78d654b9a006"
-  },
   "n0tpzz": {
    "description": "Matériel moderne, espace physiothérapie sur place · Petite équipe soudée, aucune garde · Association possible à moyen terme",
    "srcHash": "8474a1b7f625d79f"
@@ -146,7 +146,7 @@
   },
   "sTJuHg": {
    "description": "Postes d'urgences répartis sur plusieurs sites, mobilité possible entre les structures · Accompagnement complet des jeunes diplômés dès la prise de poste · ASV présente sur chaque garde, espaces de repos privatifs et aide au logement",
-   "srcHash": "353b82f5a662cd50"
+   "srcHash": "5363011a781a2fe8"
   },
   "sUs0xi": {
    "description": "75 % rurale / 25 % canine, pas d'équine · Nouveaux locaux en construction, échographe neuf · Logement, véhicule et ordinateur fournis",
