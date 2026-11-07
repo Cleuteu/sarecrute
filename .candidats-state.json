@@ -59,12 +59,6 @@
    },
    "publie_le": "2026-10-28"
   },
-  "SR-B561J": {
-   "description": "Ovariectomies de chatte en autonomie, castrations, prises de sang et cathéters pratiqués · Stage de fin d'études riche en pratique · Recherche un plateau équipé et un encadrement pour progresser en urgences et hospitalisation",
-   "empreinte": "4e3d6cae03a0b04c",
-   "ajustements": {},
-   "publie_le": "2026-10-28"
-  },
   "SR-BEMQN": {
    "description": "Consultation, médecine générale et médecine interne · Expérience confirmée en canine, débuts en remplacements · Recherche un poste salarié à dominante médicale, avec peu de gardes",
    "empreinte": "d353ca6e9516e121",
@@ -119,7 +113,7 @@
   },
   "SR-DPUNC": {
    "description": "En équine, prises de sang et cathéters en autonomie, sutures, radiographie · Canine vue pendant les études, hospitalisation, imagerie et anesthésie · Recherche un encadrement pour démarrer en canine, médecine interne et urgences",
-   "empreinte": "2bf04eb925acdad0",
+   "empreinte": "be3de36ad829cfdf",
    "ajustements": {
     "titre": "Vétérinaire canin/équin",
     "pratiques": [
@@ -281,19 +275,6 @@
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
-  "SR-QHPNP": {
-   "description": "Parage, castrations, fièvre de lait, mammites et diarrhées des veaux en autonomie · Stages répétés en rurale bovine à dominante laitière · Recherche une structure rurale formatrice, ouverture à l'allaitant et aux petits ruminants",
-   "empreinte": "2f3714b092fb7106",
-   "ajustements": {
-    "pratiques": [
-     "Bovins",
-     "Laitier",
-     "Allaitant",
-     "Ovin/Caprin"
-    ]
-   },
-   "publie_le": "2026-10-28"
-  },
   "SR-RELMH": {
    "description": "Exercice canin en autonomie depuis plusieurs années · Ouverture aux remplacements courts comme à un poste durable · Recherche une clinique indépendante",
    "empreinte": "14c5f5011f228de7",
@@ -368,6 +349,16 @@
   "SR-BZTSA": "recherche à reconfirmer"
  },
  "anciens": {
+  "SR-QHPNP": {
+   "ajustements": {
+    "pratiques": [
+     "Bovins",
+     "Laitier",
+     "Allaitant",
+     "Ovin/Caprin"
+    ]
+   }
+  },
   "SR-RR6SO": {
    "ajustements": {
     "specialites": [
