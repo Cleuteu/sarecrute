@@ -217,17 +217,6 @@
    "ajustements": {},
    "publie_le": "2026-11-02"
   },
-  "SR-KNWZO": {
-   "description": "Urgences, échographie abdominale et consultation canine et féline maîtrisées · Chirurgie courante pratiquée, petites abdominales comprises · Recherche une clinique où la médecine prime sur la chirurgie, gardes occasionnelles",
-   "empreinte": "d614aa4ca3515529",
-   "ajustements": {
-    "specialites": [
-     "Echographie",
-     "Urgences"
-    ]
-   },
-   "publie_le": "2026-10-28"
-  },
   "SR-KSBSP": {
    "description": "Autonome en consultation générale et en convenance du chat, mâle comme femelle · Remplacement en clientèle généraliste, stages en référé · Recherche une équipe qui encadre les débutants et forme aux gardes, attrait pour l'imagerie",
    "empreinte": "c45315ba80071e97",
@@ -273,12 +262,6 @@
      "Equine"
     ]
    },
-   "publie_le": "2026-10-28"
-  },
-  "SR-NPWZ5": {
-   "description": "Autonome en consultation, chirurgie de convenance, exérèse de masses et dentisterie · Urgences puis longue pratique généraliste, analyses au quotidien · Recherche une équipe organisée et soudée, où approfondir la médecine interne",
-   "empreinte": "11027316eaa49d04",
-   "ajustements": {},
    "publie_le": "2026-10-28"
   },
   "SR-OSCNI": {
@@ -367,6 +350,14 @@
   "SR-BZTSA": "recherche à reconfirmer"
  },
  "anciens": {
+  "SR-KNWZO": {
+   "ajustements": {
+    "specialites": [
+     "Echographie",
+     "Urgences"
+    ]
+   }
+  },
   "SR-QHPNP": {
    "ajustements": {
     "pratiques": [
