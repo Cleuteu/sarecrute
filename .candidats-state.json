@@ -7,17 +7,6 @@
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
-  "SR-4VY7L": {
-   "description": "Médecine canine et NAC en autonomie, chirurgie de convenance et tissus mous, échographie de base · Longue pratique généraliste, dentisterie courante · Recherche une structure indépendante où les cas s'échangent entre confrères",
-   "empreinte": "6c226a6376c0ec48",
-   "ajustements": {
-    "pratiques": [
-     "Canine",
-     "NAC"
-    ]
-   },
-   "publie_le": "2026-10-28"
-  },
   "SR-68OPD": {
    "description": "Triage des urgences, consultation courante, castration du chat et ovariectomie de chatte · Stages en clientèle canine et en structure d'urgences · Recherche un premier poste orienté urgences, avec un accompagnement en chirurgie",
    "empreinte": "116e3fb33b760c5f",
@@ -55,7 +44,7 @@
   },
   "SR-AYZOG": {
    "description": "Consultations vaccinales, convenance féline et prophylaxie bovine en autonomie · Expérience d'ASV et stages encadrés par des spécialistes · Recherche un poste durable en canine pour se former aux urgences, rurale en complément",
-   "empreinte": "1df84a286c1d54c6",
+   "empreinte": "b67e3bbc81f96855",
    "ajustements": {
     "titre": "Vétérinaire canin/rural",
     "pratiques": [
@@ -350,6 +339,14 @@
   "SR-BZTSA": "recherche à reconfirmer"
  },
  "anciens": {
+  "SR-4VY7L": {
+   "ajustements": {
+    "pratiques": [
+     "Canine",
+     "NAC"
+    ]
+   }
+  },
   "SR-KNWZO": {
    "ajustements": {
     "specialites": [
