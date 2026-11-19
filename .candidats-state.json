@@ -9,7 +9,7 @@
   },
   "SR-68OPD": {
    "description": "Triage des urgences, consultation courante, castration du chat et ovariectomie de chatte · Stages en clientèle canine et en structure d'urgences · Recherche un premier poste orienté urgences, avec un accompagnement en chirurgie",
-   "empreinte": "116e3fb33b760c5f",
+   "empreinte": "573d1d6cc15f96d5",
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
@@ -30,17 +30,6 @@
    "empreinte": "1ab8ea45ce25fef8",
    "ajustements": {},
    "publie_le": "2026-11-11"
-  },
-  "SR-AU1Y8": {
-   "description": "Autonome en médecine interne féline et en consultation canine courante · Plusieurs années en urgences et soins intensifs · Recherche un poste médical tourné vers le chat, avec accompagnement en échographie",
-   "empreinte": "9c9d3c1dcc39c968",
-   "ajustements": {
-    "specialites": [
-     "Médecine interne",
-     "Urgences"
-    ]
-   },
-   "publie_le": "2026-10-28"
   },
   "SR-AYZOG": {
    "description": "Consultations vaccinales, convenance féline et prophylaxie bovine en autonomie · Expérience d'ASV et stages encadrés par des spécialistes · Recherche un poste durable en canine pour se former aux urgences, rurale en complément",
@@ -144,6 +133,12 @@
    },
    "publie_le": "2026-10-28"
   },
+  "SR-FOUOB": {
+   "description": "Imagerie, cardiologie et analyses de laboratoire, consultation canine en autonomie · Exercice exclusif en animaux de compagnie, généraliste comme référé · Cherche une structure équipée, ouverte à la reprise de la chirurgie",
+   "empreinte": "b0574efee3edd05e",
+   "ajustements": {},
+   "publie_le": "2026-11-19"
+  },
   "SR-FPVWP": {
    "description": "Autonome en consultation et médecine générale canine et féline · Échographie abdominale en autonomie, formation suivie à l'appui · Recherche un poste qui laisse une place à l'échographie, attrait pour la médecine interne",
    "empreinte": "ceab3e98aba27392",
@@ -178,7 +173,7 @@
   },
   "SR-HMH6B": {
    "description": "Autonome en médecine générale, échographie abdominale et chirurgie des tissus mous · Exercice exclusif en animaux de compagnie, montée en orthopédie en cours · Cherche une structure indépendante où s'investir sur le long terme",
-   "empreinte": "b4a3c6b2c5efd436",
+   "empreinte": "91488baac2c7c821",
    "ajustements": {},
    "publie_le": "2026-11-11"
   },
@@ -344,6 +339,14 @@
     "pratiques": [
      "Canine",
      "NAC"
+    ]
+   }
+  },
+  "SR-AU1Y8": {
+   "ajustements": {
+    "specialites": [
+     "Médecine interne",
+     "Urgences"
     ]
    }
   },
