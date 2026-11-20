@@ -201,12 +201,6 @@
    "ajustements": {},
    "publie_le": "2026-11-02"
   },
-  "SR-KSBSP": {
-   "description": "Autonome en consultation générale et en convenance du chat, mâle comme femelle · Remplacement en clientèle généraliste, stages en référé · Recherche une équipe qui encadre les débutants et forme aux gardes, attrait pour l'imagerie",
-   "empreinte": "c45315ba80071e97",
-   "ajustements": {},
-   "publie_le": "2026-10-28"
-  },
   "SR-MAGZO": {
    "description": "Convenance, gastrotomies, exérèses de masses, urgences, échographie abdominale en autonomie · Gardes de nuit dès les études, premier poste en cours · Recherche une équipe collégiale et bien équipée pour progresser en tissus mous",
    "empreinte": "df46e1e75fd33b02",
@@ -254,12 +248,6 @@
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
-  "SR-PGCTW": {
-   "description": "Prises de sang, cathéters et anesthésie fixe simple, médecine générale sous supervision · Stages universitaires, intérêt marqué pour l'échographie · Recherche une structure formatrice à l'encadrement solide, sans samedi",
-   "empreinte": "512baeb1692051b7",
-   "ajustements": {},
-   "publie_le": "2026-10-28"
-  },
   "SR-RELMH": {
    "description": "Exercice canin en autonomie depuis plusieurs années · Ouverture aux remplacements courts comme à un poste durable · Recherche une clinique indépendante",
    "empreinte": "14c5f5011f228de7",
@@ -276,14 +264,6 @@
    "description": "Consultation canine et convenance en autonomie, chiennes comprises, NAC en appoint · Premier poste en clientèle généraliste, après de nombreux stages · Recherche une équipe pour progresser en imagerie et en chirurgie",
    "empreinte": "90452a1404848828",
    "ajustements": {},
-   "publie_le": "2026-10-28"
-  },
-  "SR-RK1HN": {
-   "description": "Autonome en gynécologie de la jument, inséminations, consultation et anesthésie équines · Parcours équin, canine vue en stage · Recherche une équipe pédagogue pour reprendre la canine, urgences ou généraliste",
-   "empreinte": "58ef8273857469c5",
-   "ajustements": {
-    "specialites": []
-   },
    "publie_le": "2026-10-28"
   },
   "SR-TIV0X": {
@@ -366,6 +346,11 @@
      "Allaitant",
      "Ovin/Caprin"
     ]
+   }
+  },
+  "SR-RK1HN": {
+   "ajustements": {
+    "specialites": []
    }
   },
   "SR-RR6SO": {
