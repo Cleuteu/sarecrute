@@ -76,10 +76,6 @@
    "description": "Pôle référé en imagerie : échographie abdominale, échocardiographie, scanner · Plateau technique complet (radio numérique, endoscopie, blocs chirurgicaux, laboratoire) · Aucune garde ni astreinte, logement possible",
    "srcHash": "a9c544e7a36ae975"
   },
-  "bEvj2S": {
-   "description": "100 % canine, aucune astreinte · Nouveaux locaux en construction, échographe neuf · Possibilité d'association à terme",
-   "srcHash": "2325b5e186523ccf"
-  },
   "cYxLRy": {
    "description": "Consultations à domicile, pas de garde ni d'urgence · Débutants bienvenus, formation et tutorat hebdomadaire · Planning flexible, temps plein ou partiel",
    "srcHash": "dc399cf3d7b762c6"
@@ -107,6 +103,10 @@
   "k3OFFn": {
    "description": "Activité mixte : canine, rurale, équine · Consultations spécialisées (cardio, dermato, ophtalmo) · Logement possible",
    "srcHash": "361ad6d1c76678b3"
+  },
+  "l4EJ9E": {
+   "description": "Débutants bienvenus, accompagnement au quotidien et transmission des compétences · Imagerie numérique, échographie abdominale et cardiaque, laboratoire, bloc chirurgical · Aucune astreinte, un samedi par mois environ",
+   "srcHash": "324e04e32a6c8366"
   },
   "lLBo61": {
    "description": "Activité 100% rurale, bovin laitier principalement · Plateau technique complet, laboratoire sur place · Gardes équitables, logement possible",
@@ -141,12 +141,16 @@
    "srcHash": "5363011a781a2fe8"
   },
   "sUs0xi": {
-   "description": "75 % rurale / 25 % canine, pas d'équine · Nouveaux locaux en construction, échographe neuf · Logement, véhicule et ordinateur fournis",
-   "srcHash": "7a2e1655e605eef2"
+   "description": "Forte dominante rurale, de mixte à intégralement rurale selon votre envie · Élevages techniques, éleveurs investis · Échographie rurale et canine, radio numérique, laboratoire complet",
+   "srcHash": "d0e613492c79860a"
   },
   "xPLMFL": {
    "description": "Plateau technique complet : échographie abdominale et cardiaque, radio numérique, endoscopie, laboratoire, anesthésie gazeuse · Équipe pluridisciplinaire, centre de physiothérapie avec tapis immergé · Astreintes régulées par plateforme, association possible à terme, dépannage logement à l'arrivée",
    "srcHash": "2c1a68f8a30a12a5"
+  },
+  "xRWKY0": {
+   "description": "Poste orienté médecine interne, la chirurgie reste possible sans être indispensable · Plateau technique complet : échographie, radio numérique, laboratoire · Aucune astreinte, temps plein ou temps partiel",
+   "srcHash": "db606d2eff3a04fa"
   },
   "yeRZGH": {
    "description": "Centre de référé pluridisciplinaire, scanner et IRM · Équipe large et spécialisée · Poste dédié en neurologie",

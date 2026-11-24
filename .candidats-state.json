@@ -9,7 +9,7 @@
   },
   "SR-68OPD": {
    "description": "Triage des urgences, consultation courante, castration du chat et ovariectomie de chatte · Stages en clientèle canine et en structure d'urgences · Recherche un premier poste orienté urgences, avec un accompagnement en chirurgie",
-   "empreinte": "573d1d6cc15f96d5",
+   "empreinte": "92126a8d2779bee2",
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
@@ -85,14 +85,6 @@
    "description": "Autonome en vêlage, césarienne bovine, médecine individuelle et chirurgie de convenance · Mixte à dominante rurale, gardes mixtes déjà assurées en autonomie · Recherche une vraie mixte et une formation à l'échographie de gestation",
    "empreinte": "94faf1d56cd56e71",
    "ajustements": {},
-   "publie_le": "2026-10-28"
-  },
-  "SR-D4SVF": {
-   "description": "Médecine préventive canine pratiquée en stage, en assistance aux praticiens · Stages cliniques en canine, rurale et mixte · Recherche un premier poste encadré en canine, attrait pour les NAC et l'urgence",
-   "empreinte": "8a30b40735790d95",
-   "ajustements": {
-    "experience": "Débutant"
-   },
    "publie_le": "2026-10-28"
   },
   "SR-DNLLX": {
@@ -200,6 +192,12 @@
    "empreinte": "f1fc073d44cb0319",
    "ajustements": {},
    "publie_le": "2026-11-02"
+  },
+  "SR-KSBSP": {
+   "description": "Consultations canines courantes et chirurgie de convenance du chat en autonomie · Remplacement en clientèle généraliste et stages en référé · Cherche un premier poste qui encadre et accompagne, gardes comprises",
+   "empreinte": "c45315ba80071e97",
+   "ajustements": {},
+   "publie_le": "2026-11-24"
   },
   "SR-MAGZO": {
    "description": "Convenance, gastrotomies, exérèses de masses, urgences, échographie abdominale en autonomie · Gardes de nuit dès les études, premier poste en cours · Recherche une équipe collégiale et bien équipée pour progresser en tissus mous",
@@ -328,6 +326,11 @@
      "Médecine interne",
      "Urgences"
     ]
+   }
+  },
+  "SR-D4SVF": {
+   "ajustements": {
+    "experience": "Débutant"
    }
   },
   "SR-KNWZO": {
