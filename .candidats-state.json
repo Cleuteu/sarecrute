@@ -53,17 +53,6 @@
    },
    "publie_le": "2026-10-28"
   },
-  "SR-BR2OG": {
-   "description": "Urgences en autonomie (chats bloqués, intoxications, convulsions) et médecine des NAC · Nuits d'urgences en structure hospitalière · Recherche un poste d'urgentiste incluant des NAC, en référé avec formation continue",
-   "empreinte": "8f98e39065a294c9",
-   "ajustements": {
-    "pratiques": [
-     "Canine",
-     "NAC"
-    ]
-   },
-   "publie_le": "2026-10-28"
-  },
   "SR-CKVK5": {
    "description": "Consultation courante, ovariectomie de chatte et castrations chien et chat en autonomie · Expérience en clientèle mixte puis en canine · Recherche un poste logé, week-ends libres, intérêt pour la prévention et la nutrition",
    "empreinte": "7ed9ab8bfb8d7578",
@@ -252,6 +241,12 @@
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
+  "SR-PCOYE": {
+   "description": "Castrations de chat et consultations courantes en autonomie · Début de parcours, intérêt pour la médecine interne et l'échographie abdominale · Recherche une structure formatrice et un accompagnement en chirurgie",
+   "empreinte": "9947ae7d5c88cf24",
+   "ajustements": {},
+   "publie_le": "2026-11-27"
+  },
   "SR-RELMH": {
    "description": "Exercice canin en autonomie depuis plusieurs années · Ouverture aux remplacements courts comme à un poste durable · Recherche une clinique indépendante",
    "empreinte": "14c5f5011f228de7",
@@ -276,6 +271,12 @@
    "ajustements": {},
    "publie_le": "2026-10-28"
   },
+  "SR-TTOC1": {
+   "description": "Castrations de chat et consultations simples en autonomie · Formation clinique en chirurgie, médecine interne, imagerie et urgences · Souhaite une équipe qui forme les juniors, avec un appui en chirurgie et en échographie",
+   "empreinte": "1cec11f07288724a",
+   "ajustements": {},
+   "publie_le": "2026-11-27"
+  },
   "SR-VVKGZ": {
    "description": "Autonome en médecine courante bovine et canine, à l'aise en médecine interne canine · Convenance chien et chat, vêlages et césariennes pratiqués · Recherche une équipe rurale pour progresser en obstétrique et en chirurgie bovine",
    "empreinte": "3b94e699d89282b4",
@@ -294,6 +295,12 @@
     ]
    },
    "publie_le": "2026-10-28"
+  },
+  "SR-WDN1N": {
+   "description": "Consultation, médecine préventive, castrations et stérilisation de la chatte en autonomie · Passage par la clientèle mixte au fil des stages · Souhaite une équipe où les cas complexes se discutent et un appui en échographie",
+   "empreinte": "3bcd90a15ecd34cf",
+   "ajustements": {},
+   "publie_le": "2026-11-27"
   },
   "SR-Y8NEK": {
    "description": "Médecine générale canine et chirurgie de convenance en autonomie · Première année aux urgences, puis gestion en solo d'une petite structure · Recherche une équipe qui forme en interne et finance les formations externes",
@@ -331,6 +338,14 @@
     "specialites": [
      "Médecine interne",
      "Urgences"
+    ]
+   }
+  },
+  "SR-BR2OG": {
+   "ajustements": {
+    "pratiques": [
+     "Canine",
+     "NAC"
     ]
    }
   },
